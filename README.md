@@ -1,29 +1,31 @@
-# README #
+![Developped by Cheetah Mobile](https://upload.wikimedia.org/wikipedia/en/f/f9/Cheetah_Mobile_Logo.png)
 
-This README would normally document whatever steps are necessary to get your application up and running.
+# oRion #
 
-### What is this repository for? ###
+Fetch data on [Cheetah Mobile](https://www.cmcm.com/en-us/) [Orion](http://manager.ori.cmcm.com/) platform via its [API](http://api.ori.cmcm.com/doc/).
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+### functions ###
 
-### How do I get set up? ###
+list
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+* `listCampaigns`
+* `listAdsets`
+* `listAds`
 
-### Contribution guidelines ###
+show
 
-* Writing tests
-* Code review
-* Other guidelines
+* `showCampaigns`
+* `showAdsets`
+* `showAds`
 
-### Who do I talk to? ###
+### Install ###
 
-* Repo owner or admin
-* Other community or team contact
+`devtools::install_bitbucket("JohnCheetah/orion", auth_user = "your_login", password = "your_password")`
+
+### Documentation ###
+
+WIP
+
+### Contributors ###
+
+* John Coene <john.coene@cmcm.com>
