@@ -1,5 +1,17 @@
 #' orionAuthenticate
 #' 
+#' @description Authenticate the Orion API
+#' 
+#' @param client.id Your \code{client_id}
+#' @param client.secret Your \code{client_secret}
+#' @param grant.type Currently only supports \code{client_credentials} 
+#' (default).
+#' 
+#' @details Please see the official documentation to apply for the API and 
+#' get your \code{client_id} and \code{client_secret}: 
+#' \url{api.ori.cmcm.com/doc/#api-Auth-access_token}
+#' 
+#' @author John Coene \email{john.coene@@cmcm.com}
 #' 
 #' @export
 orionOAuth <- function (client.id, client.secret, 
@@ -11,7 +23,6 @@ orionOAuth <- function (client.id, client.secret,
   } else if (missing(client.secret)){
     stop("must specify client.secret", call. = FALSE)
   }
-  
   
   # POST
   response <- httr::POST(paste0(getOption("base_url"), "/oauth/access_token"),

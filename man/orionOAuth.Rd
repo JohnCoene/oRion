@@ -6,7 +6,23 @@
 \usage{
 orionOAuth(client.id, client.secret, grant.type = "client_credentials")
 }
+\arguments{
+\item{client.id}{Your \code{client_id}}
+
+\item{client.secret}{Your \code{client_secret}}
+
+\item{grant.type}{Currently only supports \code{client_credentials} 
+(default).}
+}
 \description{
-orionAuthenticate
+Authenticate the Orion API
+}
+\details{
+Please see the official documentation to apply for the API and 
+get your \code{client_id} and \code{client_secret}: 
+\url{api.ori.cmcm.com/doc/#api-Auth-access_token}
+}
+\author{
+John Coene \email{john.coene@cmcm.com}
 }
 
