@@ -3,7 +3,7 @@
 #' @export
 grabCampaigns <- function(){
   
-  cred <- get("credentials", envir=cred_env)
+  cred <- orionToken()
   
   # GET
   response <- httr::GET(url = paste0(getOption("base_url"), "/campaign"),
