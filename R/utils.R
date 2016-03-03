@@ -18,7 +18,7 @@ construct.cred <- function(json, pars) {
 
 parse.cred <- function(response){
   
-  json <- jsonlite::fromJSON(rawToChar(httr::content(response)))
+  json <- jsonlite::fromJSON(rawToChar(response$content))
   
   # check if success
   if(json$status != 200){
@@ -33,5 +33,19 @@ parse.cred <- function(response){
     return(json)
     
   }
+  
+}
+
+orionToken <- function() {
+  
+  cred <- get("credentials", envir=cred_env)
+  
+  if(cred$expires_in_date <= Sys.time()) {
+    
+    cred <- orionOAuth(cred$client.id, cred$client.secret)
+    
+  }
+  
+  return(cred)
   
 }
