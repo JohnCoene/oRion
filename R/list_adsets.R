@@ -18,7 +18,7 @@
 #' @export
 listAdsets <- function(n = 50){
   
-  res <- listObjects(object = "adset")
+  res <- listObjects(object = "adset", n = n)
   
   # return
   return(res)

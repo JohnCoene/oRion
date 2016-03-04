@@ -60,7 +60,7 @@ listObjects <- function(object, n = 50){
   
   if(length(content$data)) {
     
-    dat <- as.data.frame(do.call("rbind", content$data$data))
+    dat <- do.call(plyr::"rbind.fill", lapply(content$data$data, parseJSON))
     
     while(nrow(dat) < n && length(content$data$next_page_url)) {
       
@@ -71,8 +71,10 @@ listObjects <- function(object, n = 50){
       
       content <- httr::content(response)
       
-      dat <- rbind.data.frame(dat, 
-                              as.data.frame(do.call("rbind", content$data$data)))
+      page_dat <- do.call(plyr::"rbind.fill", 
+                          lapply(content$data$data, parseJSON))
+      
+      dat <- rbind.data.frame(dat, page_dat)
       
     }
     

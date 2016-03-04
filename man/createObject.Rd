@@ -12,7 +12,7 @@ createObject(body, object)
 \item{object}{Object to be created, see details for valid values.}
 }
 \description{
-Create any objects, see details.
+Create any objects, see details and example.
 }
 \details{
 Valid values for \code{object}: 
@@ -20,7 +20,7 @@ Valid values for \code{object}:
 \item \code{audience} see \code{\link{createAudience}} for details.
 \item \code{campaign} see \code{\link{createCampaign}} for details.
 \item \code{adset} see \code{\link{createAdset}} for details.
-\item \code{ad} see \code{\link{createAds}} for details.
+\item \code{ad} see \code{\link{createAd}} for details.
 }
 }
 \examples{
@@ -44,6 +44,9 @@ createObject(body = camp, object = "campaign")
 
 # equivalent to
 # createCampaign(body = camp)
+
+# list campaigns
+listCampaigns()
 }
 
 }

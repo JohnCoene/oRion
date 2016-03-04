@@ -1,6 +1,6 @@
 #' createObject
 #' 
-#' @description Create any objects, see details.
+#' @description Create any objects, see details and example.
 #' 
 #' @param body Body of request that includes campaigns settings. See examples.
 #' @param object Object to be created, see details for valid values.
@@ -26,6 +26,9 @@
 #' 
 #' # equivalent to
 #' # createCampaign(body = camp)
+#' 
+#' # list campaigns
+#' listCampaigns()
 #' }
 #' 
 #' @details Valid values for \code{object}: 
@@ -33,7 +36,7 @@
 #' \item \code{audience} see \code{\link{createAudience}} for details.
 #' \item \code{campaign} see \code{\link{createCampaign}} for details.
 #' \item \code{adset} see \code{\link{createAdset}} for details.
-#' \item \code{ad} see \code{\link{createAds}} for details.
+#' \item \code{ad} see \code{\link{createAd}} for details.
 #' }
 #' 
 #' @author John Coene \email{john.coene@@cmcm.com}
@@ -45,9 +48,9 @@ createObject <- function(body, object){
     stop("body must be a list. see examples", call. = FALSE)
   }
   
-  object <- checkObjects(object)
-  
   cred <- orionToken()
+  
+  object <- checkObjects(object)
   
   response <- httr::POST(paste0(getOption("base_url"), "/", object),
                          encode = "multipart", body = body, 
@@ -55,17 +58,23 @@ createObject <- function(body, object){
                                            Authorization = paste0("Bearer ",
                                                                   cred$token)))
   
+  content <- httr::content(response)
+  
   if(content$status == 200){
-    
-    content <- httr::content(response)
     
     result <- as.data.frame(t(do.call("rbind", content$data)))
     
     return(result)
     
+  } else if (content$status == 422) {
+    
+    error <- do.call("rbind.data.frame", content$errors)
+    
+    stop(as.character(error[1,]), call. = FALSE)
+    
   } else {
     
-    stop(paste0("Unsuccessful query: ", content$message), call. = FALSE)
+    stop(paste0("Unsuccessful query. ", content$message), call. = FALSE)
     
   }
   

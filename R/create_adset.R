@@ -28,7 +28,7 @@
 #' @details The list of valid values for the body can be found 
 #' \href{here}{http://alpha.api.ori.cmcm.com/doc/#api-Ad_Set-create_adset}
 #' 
-#' Campaign settings(\code{body}):
+#' Campaign settings (\code{body}):
 #' \itemize{
 #' \item \code{campaign_id} The campaign id which the ad set is to belongs to
 #' \item \code{audience_create_way} \code{0}: Create audience targeting 
@@ -59,8 +59,8 @@
 #' \code{bid_type = 4}
 #' \item \code{budget_lifetime} Your budget is the maximum amount you want to 
 #' spend. If you choose lifetime, the amount you enter is the maximum you'll 
-#' spend during the lifetime of your ad set. At least one of "budget_daily" 
-#' and "budget_lifetime" is filled.
+#' spend during the lifetime of your ad set. At least one of \code{budget_daily} 
+#' and \code{budget_lifetime} is filled.
 #' \item \code{budget_daily} Your budget is the maximum amount you want to 
 #' spend. If you choose Per Day, the amount you enter is the maximum you'll 
 #' spend each day. At least one of "budget_daily" and "budget_lifetime" is 

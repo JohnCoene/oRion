@@ -18,7 +18,7 @@
 #' @export
 listAds <- function(n = 50){
   
-  res <- listObjects(object = "ad", n = 50)
+  res <- listObjects(object = "ad", n = n)
   
   # return
   return(res)

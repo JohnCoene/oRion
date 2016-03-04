@@ -47,5 +47,7 @@ orionOAuth <- function (client.id, client.secret,
                                      client.secret = client.secret))
   
   cat("authentication successful")
+  
+  return(get("credentials", envir=cred_env))
 
 }

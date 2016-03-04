@@ -1,7 +1,9 @@
 #' createAudience
 #' 
-#' @param body body of request that includes campaigns settings. See examples 
-#' and details
+#' @description Create an audience template.
+#' 
+#' @param body body of request that includes audience template settings. 
+#' See examples and details.
 #' 
 #' @examples 
 #' \dontrun{
@@ -13,7 +15,9 @@
 #' createAudience(body = list(
 #'    audience_template_name = "test",
 #'    audience_template_desc = "test",
-#'    country = "CN|BE|IN"))
+#'    country = "CN|BE|IN", 
+#'    language = "fr",
+#'    net_type = 1))
 #'    
 #' # retrieve audience
 #' aud <- listAudiences(n = 100)

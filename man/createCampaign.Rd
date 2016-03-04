@@ -17,7 +17,7 @@ Create campaigns
 The list of valid values for the body can be found 
 \href{here}{http://api.ori.cmcm.com/doc/#api-Campaign-create_campaign}
 
-Campaign settings(\code{body}): 
+Campaign settings (\code{body}): 
 \itemize{
 \item \code{name} Campaign name should be unique under the same user account.
 \item \code{budget_type} can take either \code{daily} or \code{lifetime}
