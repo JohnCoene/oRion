@@ -38,7 +38,10 @@ parse.cred <- function(response){
 
 orionToken <- function() {
   
-  cred <- get("credentials", envir=cred_env)
+  cred <- tryCatch(get("credentials", envir=cred_env),
+                   error = function(e){
+                     stop("No credentials see orionOAuth", call. = FALSE)
+                   })
   
   if(cred$expires_in_date <= Sys.time()) {
     
@@ -71,4 +74,10 @@ encodeBody <- function(body){
   body <- jsonlite::toJSON(auto_unbox = TRUE, x = body)
   
   return(body)
+}
+
+parseJSON <- function(data){
+  data <- as.data.frame(t(unlist(data)), stringsAsFactors = FALSE)
+  
+  return(data)
 }
