@@ -49,3 +49,26 @@ orionToken <- function() {
   return(cred)
   
 }
+
+checkObjects <- function(objects){
+  
+  valid <- c("campaign", "ad", "adset", "audience")
+  
+  sapply(objects, function(x) {
+    if(objects %in% valid == FALSE){
+      stop("invalid object", call. = FALSE)
+    }
+  })
+  
+  objects[objects %in% "audience"] <- "audience/targeting/template"
+  
+  return (objects)
+  
+}
+
+encodeBody <- function(body){
+  
+  body <- jsonlite::toJSON(auto_unbox = TRUE, x = body)
+  
+  return(body)
+}

@@ -1,18 +1,25 @@
-#' grabCampaigns
+#' listCampaigns
+#' 
+#' @description Fetch the list of campaigns under the authenticated account.
+#' 
+#' @param n Number of campaigns to retrieve, defaults to \code{50}
+#' 
+#' @examples 
+#' \dontrun{
+#' # authenticate
+#' orionOAuth(client.id = 0000,
+#'            client.secret = "0x00000000x00x0x000xxx0000x0xx0")
+#'            
+#' (camps <- listCampaigns(n = 100))
+#' }
+#' 
+#' @author John Coene \email{john.coene@@cmcm.com}
 #' 
 #' @export
-grabCampaigns <- function(){
+listCampaigns <- function(n = 50){
   
-  cred <- orionToken()
-  
-  # GET
-  response <- httr::GET(url = paste0(getOption("base_url"), "/campaign"),
-                        httr::add_headers(Accept = getOption("accept"),
-                                          Authorization = paste0("Bearer ",
-                                                                 cred$token)))
-  
-  content <- httr::content(response)
+  res <- listObjects(object = "campaign")
   
   # return
-  return(content)
+  return(res)
 }

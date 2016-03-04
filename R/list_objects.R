@@ -1,9 +1,54 @@
-#' grabCampaigns
+#' listObjects
+#' 
+#' @description List any objects from the API, see details for valid 
+#' values.
+#' 
+#' @param object Nodes to target. See details
+#' @param n Number of objects to retrieve, defaults to \code{50}
+#' 
+#' @details Valid values for \code{objects}:
+#' \itemize{
+#' \item \code{audience}
+#' \item \code{campaign}
+#' \item \code{adset}
+#' \item \code{ad}
+#' }
+#' 
+#' @details \code{listObject} can essentially replace any other \code{list} 
+#' family functions, namely \code{\link{listCampaigns}}. See examples.
+#' 
+#' @examples 
+#' \dontrun{
+#' # authenticate
+#' orionOAuth(client.id = 0000,
+#'            client.secret = "0x00000000x00x0x000xxx0000x0xx0")
+#'            
+#' # list campaigns with listCampaigns
+#' camps <- listCampaigns()
+#' 
+#' # list campaigns with listObjects
+#' obj <- listObjects(object = "campaign")
+#' 
+#' # identical results
+#' identical(camps, obj)
+#' }
+#' 
+#' @author John Coene \email{john.coene@@cmcm.com}
 #' 
 #' @export
-grabObjects <- function(object = c("campaign", "adset", "ad")){
+listObjects <- function(object, n = 50){
+  
+  obj_print <- object
+  
+  if(missing(object)) {
+    stop("missing object", call. = FALSE)
+  } else if(length(object) > 1){
+    stop("can only pass one object", call. = FALSE)
+  }
   
   cred <- orionToken()
+  
+  object <- checkObjects(object)
   
   # GET
   response <- httr::GET(url = paste0(getOption("base_url"), "/", object),
@@ -13,6 +58,31 @@ grabObjects <- function(object = c("campaign", "adset", "ad")){
   
   content <- httr::content(response)
   
-  # return
-  return(content)
+  if(length(content$data)) {
+    
+    dat <- as.data.frame(do.call("rbind", content$data$data))
+    
+    while(nrow(dat) < n && length(content$data$next_page_url)) {
+      
+      response <- httr::GET(url = content$data$next_page_url, 
+                            httr::add_headers(Accept = getOption("accept"),
+                                              Authorization = paste0("Bearer ",
+                                                                     cred$token)))
+      
+      content <- httr::content(response)
+      
+      dat <- rbind.data.frame(dat, 
+                              as.data.frame(do.call("rbind", content$data$data)))
+      
+    }
+    
+    # return
+    return(dat)
+    
+  } else {
+    
+    warning("No ", obj_print, " found", call. = FALSE)
+    
+  }
+
 }

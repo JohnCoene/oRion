@@ -9,7 +9,14 @@
 #' 
 #' @details Please see the official documentation to apply for the API and 
 #' get your \code{client_id} and \code{client_secret}: 
-#' \url{api.ori.cmcm.com/doc/#api-Auth-access_token}
+#' \url{api.ori.cmcm.com/doc/#api-Auth-access_token}.
+#' 
+#' @examples 
+#' \dontrun{
+#' # authenticate
+#' orionOAuth(client.id = 0000,
+#'            client.secret = "0x00000000x00x0x000xxx0000x0xx0")
+#' }
 #' 
 #' @author John Coene \email{john.coene@@cmcm.com}
 #' 
@@ -22,6 +29,8 @@ orionOAuth <- function (client.id, client.secret,
     stop("must specify client.id", call. = FALSE)
   } else if (missing(client.secret)){
     stop("must specify client.secret", call. = FALSE)
+  } else if (grant.type != "client_credentials"){
+    stop("currently grant.type only supports 'client_credentials'")
   }
   
   # POST
@@ -31,14 +40,12 @@ orionOAuth <- function (client.id, client.secret,
                                      client_id = client.id,
                                      client_secret = client.secret))
   
-  pars <- list(client.id = client.id,
-               client.secret = client.secret)
-  
   # parse
   return <- parse.cred(response)
   
-  construct.cred(return, pars = pars)
+  construct.cred(return, pars = list(client.id = client.id, 
+                                     client.secret = client.secret))
   
-  return(get("credentials", envir=cred_env))
+  cat("authentication successful")
 
 }
