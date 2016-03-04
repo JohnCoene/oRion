@@ -12,6 +12,7 @@ LazyData: TRUE
 RoxygenNote: 5.0.1
 Imports: 
     jsonlite,
-    httr
+    httr,
+    plyr
 URL: https://bitbucket.org/JohnCheetah/oRion
 BugReports: https://bitbucket.org/JohnCheetah/oRion/issues
