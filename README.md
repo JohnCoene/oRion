@@ -6,17 +6,39 @@ Fetch data on [Cheetah Mobile](https://www.cmcm.com/en-us/) [Orion](http://manag
 
 ### functions ###
 
-list
+##### OAuth #####
+
+* `orionOAuth`
+
+##### GET family #####
+
+* `getReport`
+
+##### List family #####
 
 * `listCampaigns`
 * `listAdsets`
 * `listAds`
+* `listImages`
+* `listAudiences`
+* `listObjects`
 
-show
+##### Create family #####
 
-* `showCampaigns`
-* `showAdsets`
-* `showAds`
+* `createObject`
+* `createAd`
+* `createAdset`
+* `createCampaign`
+* `createAudience`
+* `createImage`
+
+##### Delete family #####
+
+* `deleteObject`
+* `deleteAd`
+* `deleteAdset`
+* `deleteAd`
+* `deleteCampaign`
 
 ### Install ###
 
