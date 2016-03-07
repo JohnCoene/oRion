@@ -13,6 +13,59 @@ and details.}
 \description{
 Create an ad, see details and example.
 }
+\details{
+The list of valid values for the body can be found 
+\href{here}{http://alpha.api.ori.cmcm.com/doc/#api-Ad-create_ad}
+
+Ad settings (\code{body}):
+\itemize{
+\item \code{adset_id} Adset id to which the ad belongs.
+\item \code{name} Ad name, unique.
+\item \code{icon_url} Logo image url. Must be larger than 84*84 px and have 
+an aspect ratio of 1:1, in JPG or PNG format. File must not exceed 100KB.
+\item \code{title} Ad headline
+\item \code{desc} Description tells people a bit more about your Application. 
+Make sure to clearly explain what you are promoting.
+\item \code{button_text} Button display text \code{1}: Download, 
+\code{2}: Install, \code{3}: Check, \code{4}: Free, \code{5}: Play, 
+\code{6}: Buy, \code{7}: More.
+\item \code{image_url} Image url. Must be larger than 600*314 px and have an 
+aspect ratio of 1.9:1. Best is 1200*628 px, JPG or PNG format. File size 
+must not exceed 500KB. Image should come from Orion CDN server, please 
+upload image using \code{\link{createImage}}.
+\item \code{video_url} URL to video
+\item \code{video_img_before_url} Image which will be show before video 
+starts.
+\item \code{video_img_after_url} Image which will be show after video ends.
+}
+}
+\examples{
+\dontrun{
+# authenticate
+orionOAuth(client.id = 0000,
+           client.secret = "0x00000000x00x0x000xxx0000x0xx0")
+           
+# list adsets
+adsets <- listAdsets()
+
+# list images
+images <- listimages()
+
+# define adset
+body <- list(
+   adset_id = adsets$id[1],
+   name = "testAd",
+   icon_url = images$thumb[1],
+   title = "Download oRion",
+   desc = "Download oRion and interact with Orion from your R console",
+   button_text = 1,
+   image_url = images$local_url[1])
+   
+# post ad
+createAd(body = body)
+}
+
+}
 \author{
 John Coene \email{john.coene@cmcm.com}
 }

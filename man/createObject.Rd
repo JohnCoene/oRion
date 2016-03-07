@@ -4,12 +4,12 @@
 \alias{createObject}
 \title{createObject}
 \usage{
-createObject(body, object)
+createObject(object, body)
 }
 \arguments{
-\item{body}{Body of request that includes campaigns settings. See examples.}
-
 \item{object}{Object to be created, see details for valid values.}
+
+\item{body}{Body of request that includes campaigns settings. See examples.}
 }
 \description{
 Create any objects, see details and example.

@@ -40,11 +40,13 @@ orionOAuth <- function (client.id, client.secret,
                                      client_id = client.id,
                                      client_secret = client.secret))
   
-  # parse
-  return <- parse.cred(response)
+  testReturn(response)
   
-  construct.cred(return, pars = list(client.id = client.id, 
-                                     client.secret = client.secret))
+  # parse
+  return <- jsonlite::fromJSON(rawToChar(response$content))
+  
+  constructCred(return, pars = list(client.id = client.id, 
+                                    client.secret = client.secret))
   
   cat("authentication successful")
   

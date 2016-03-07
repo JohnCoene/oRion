@@ -1,7 +1,7 @@
 cred_env <- new.env(hash=TRUE)
 
 .onAttach <- function(libname = find.package("oRion"), pkgname = "oRion") {
-  packageStartupMessage("oRion by Cheetah Mobile")
+  packageStartupMessage("package?oRion for examples")
 }
 
 .onLoad <- function(libname = find.package("oRion"), pkgname = "oRion") {

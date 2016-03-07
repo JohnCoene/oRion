@@ -95,19 +95,25 @@ condition meets.
 # authenticate
 orionOAuth(client.id = 0000,
            client.secret = "0x00000000x00x0x000xxx0000x0xx0")
-           
-# set body of request
-camp <- list(name = "test",
-             budget_type = "daily",
-             budget_daily = "1000", 
-             pkg_name = "test",
-             objective = "1", 
-             app_type = "2",
-             web_type = "1", 
-             landing_page = "2")
+ 
+# get list of campaigns
+camps <- listCampaigns()
 
-# create Adset            
-createAdset(body = camp)
+# get list of audience templates
+audiences <- listAudiences()
+                                                
+# create adset using random template, in random campaign
+createAdset(body = list(
+   name = paste0("testAdset", i),
+   bid_type = 1,
+   unit_price = 1000,
+   budget_lifetime = 10000,
+   campaign_id = sample(camps$id, 1),
+   audience_create_way = 2,
+   app_show_type = 50000,
+   audience_template_id = sample(audiences$id, 1),
+   click_url = "http://app.adjust.io"))
+
 }
 
 }

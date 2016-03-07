@@ -8,6 +8,7 @@
 #' 
 #' @details Valid values for \code{objects}:
 #' \itemize{
+#' \item \code{image}
 #' \item \code{audience}
 #' \item \code{campaign}
 #' \item \code{adset}
