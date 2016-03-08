@@ -138,6 +138,21 @@ body <- list(
 # post ad
 createAd(body = body)
 
+# list ads
+ads <- listAds()
+
+# update ad name
+update <- updateAd(ad.id = ad$id[1], body = list(name = "New Ad Name"))
+               
+# show updated ad
+showAd(ad.id = ads$id[1])
+
+# dict countries
+countries <- dictCountry()
+
+# dict us states
+states <- dictStates(location.code = "US")
+
 # get data
 # get daily campaign impressions and conversions for the past 7 days
 dat <- getReport(column = c("impression", "conversion"), 

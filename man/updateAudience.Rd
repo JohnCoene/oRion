@@ -50,10 +50,10 @@ condition meets.
 orionOAuth(client.id = 0000,
            client.secret = "0x00000000x00x0x000xxx0000x0xx0")
            
-# list campaigns
+# list audiences
 audiences <- listAudiences()
 
-# update campaign name
+# update audience name
 update <- updateAudience(audience.id = audiences$id[1], body = list(
                audience_template_name = "New Audienced Name",
                audience_template_desc = "New Description"))

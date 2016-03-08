@@ -12,10 +12,10 @@
 #' orionOAuth(client.id = 0000,
 #'            client.secret = "0x00000000x00x0x000xxx0000x0xx0")
 #'            
-#' # list campaigns
+#' # list ads
 #' ads <- listAds()
 #' 
-#' # update campaign name
+#' # update ad name
 #' update <- updateAd(ad.id = ad$id[1], body = list(
 #'                switch = 0, 
 #'                name = "New Ad Name"))
