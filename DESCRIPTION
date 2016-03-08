@@ -1,18 +1,21 @@
 Package: oRion
 Type: Package
-Title: Fetch data from Cheetah Mobile Orion platform
+Title: Integration of R and Cheetah Mobile's Orion platform 
 Version: 0.1
 Date: 2016-03-02
-Author: John Coene
+Authors@R: c(
+    person("John", "Coene", , "john.coene@cmcm.com", role = c("aut", "cre")),
+    person("Cheetah Mobile", role = "cph")
+    )
 Maintainer: John Coene <john.coene@cmcm.com>
-Description: Integrate R and Cheetah Mobile Orion platform. 
-  Implementation of GET functions from the API.
+Description: Integrate R and Cheetah Mobile Orion platform. All API calls are implemented as individual functions.
 License: MIT + file LICENSE
 LazyData: TRUE
 RoxygenNote: 5.0.1
+Depends:
+    R (>= 3.0.0)
 Imports: 
     jsonlite,
-    httr,
-    plyr
+    httr
 URL: https://bitbucket.org/JohnCheetah/oRion
 BugReports: https://bitbucket.org/JohnCheetah/oRion/issues
