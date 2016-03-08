@@ -2,9 +2,11 @@
 
 # oRion #
 
-Fetch data on [Cheetah Mobile](https://www.cmcm.com/en-us/) [Orion](http://manager.ori.cmcm.com/) platform via its [API](http://api.ori.cmcm.com/doc/).
+Interact with [Cheetah Mobile](https://www.cmcm.com/en-us/) [Orion](http://manager.ori.cmcm.com/) platform from your R console.
 
 ### Get Started ###
+
+Visit the [documentation](http://api.ori.cmcm.com/doc/#api-Auth-access_token) to get access to the API.
 
 ```
 # Install
