@@ -68,6 +68,8 @@ createObject <- function(object, body){
     
     result <- as.data.frame(t(do.call("rbind", content$data)))
     
+    message("object successfully created")
+    
     return(result)
     
   } else if (content$status == 422) {
