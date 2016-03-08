@@ -1,6 +1,6 @@
-#' createObject
+#' Create any object
 #' 
-#' @description Create any objects, see details and example.
+#' @description Create any object, see details.
 #' 
 #' @param body Body of request that includes campaigns settings. See examples.
 #' @param object Object to be created, see details for valid values.
@@ -33,11 +33,18 @@
 #' 
 #' @details Valid values for \code{object}: 
 #' \itemize{
-#' \item \code{audience} see \code{\link{createAudience}} for details.
-#' \item \code{campaign} see \code{\link{createCampaign}} for details.
-#' \item \code{adset} see \code{\link{createAdset}} for details.
-#' \item \code{ad} see \code{\link{createAd}} for details.
+#' \item \code{audience}, see \code{\link{createAudience}} for details.
+#' \item \code{campaign}, see \code{\link{createCampaign}} for details.
+#' \item \code{adset}, see \code{\link{createAdset}} for details.
+#' \item \code{ad}, see \code{\link{createAd}} for details.
 #' }
+#' 
+#' \code{createObject} can essentially replace any other \code{create} 
+#' family functions. See examples.
+#' 
+#' @seealso \code{\link{orionOAuth}}, \code{\link{createAudience}}, 
+#' \code{\link{createCampaign}}, \code{\link{createAdset}} and 
+#' \code{\link{createAd}}
 #' 
 #' @author John Coene \email{john.coene@@cmcm.com}
 #' 

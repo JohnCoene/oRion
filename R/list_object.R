@@ -1,4 +1,4 @@
-#' listObjects
+#' List any object
 #' 
 #' @description List any objects from the API, see details for valid 
 #' values.
@@ -8,15 +8,15 @@
 #' 
 #' @details Valid values for \code{objects}:
 #' \itemize{
-#' \item \code{image}
-#' \item \code{audience}
-#' \item \code{campaign}
-#' \item \code{adset}
-#' \item \code{ad}
+#' \item \code{image}, see \code{\link{listImages}}
+#' \item \code{audience}, see \code{\link{listAudiences}}
+#' \item \code{campaign}, see \code{\link{listCampaigns}}
+#' \item \code{adset}, see \code{\link{listAdsets}}
+#' \item \code{ad}, see \code{\link{listAds}}
 #' }
 #' 
 #' @details \code{listObject} can essentially replace any other \code{list} 
-#' family functions, namely \code{\link{listCampaigns}}. See examples.
+#' family functions. See examples.
 #' 
 #' @examples 
 #' \dontrun{
@@ -33,6 +33,10 @@
 #' # identical results
 #' identical(camps, obj)
 #' }
+#' 
+#' @seealso \code{\link{orionOAuth}}, \code{\link{listImages}}, 
+#' \code{\link{listAudiences}}, \code{\link{listCampaigns}}, 
+#' \code{\link{listAdsets}} and \code{\link{listAds}}
 #' 
 #' @author John Coene \email{john.coene@@cmcm.com}
 #' 
@@ -61,7 +65,7 @@ listObjects <- function(object, n = 50){
   
   if(length(content$data)) {
     
-    dat <- do.call(plyr::"rbind.fill", lapply(content$data$data, parseJSON))
+    dat <- do.call("rbind.data.frame", lapply(content$data$data, parseJSON))
     
     while(nrow(dat) < n && length(content$data$next_page_url)) {
       
@@ -72,7 +76,7 @@ listObjects <- function(object, n = 50){
       
       content <- httr::content(response)
       
-      page_dat <- do.call(plyr::"rbind.fill", 
+      page_dat <- do.call("rbind.data.frame", 
                           lapply(content$data$data, parseJSON))
       
       dat <- rbind.data.frame(dat, page_dat)
@@ -87,5 +91,5 @@ listObjects <- function(object, n = 50){
     warning("No ", obj_print, " found", call. = FALSE)
     
   }
-
+  
 }
