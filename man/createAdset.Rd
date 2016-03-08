@@ -17,7 +17,7 @@ Create campaigns
 The list of valid values for the body can be found 
 \href{here}{http://alpha.api.ori.cmcm.com/doc/#api-Ad_Set-create_adset}
 
-Campaign settings (\code{body}):
+Adset settings (\code{body}):
 \itemize{
 \item \code{campaign_id} The campaign id which the ad set is to belongs to
 \item \code{audience_create_way} \code{0}: Create audience targeting 
@@ -32,7 +32,7 @@ affect this audience.
 \item \code{app_show_type} \code{50000}: Native News Feed, 
 \code{50001}: Mini Native News Feed, \code{50003}: Video Ad, 
 \code{50008}: App Locker Ad
-\code{name} Ad set name (unique)
+\item \code{name} Ad set name (unique)
 \item \code{unit_price} Unit Price. Amount you want to spend to pay per click 
 (CPC) or per 1,000 impressions (CPM)
 \item \code{click_url} click_url, protocol is required (http://, https://).
