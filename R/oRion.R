@@ -1,4 +1,4 @@
-#' \pkg{oRion} visualise Twitter Interactions.
+#' \pkg{oRion} Integrate R and Orion.
 #' 
 #' Interact with Cheetah Mobile's Orion Platform from your R console.
 #' 
@@ -12,6 +12,15 @@
 #' Get
 #' \itemize{
 #' \item \code{\link{getReport}}
+#' }
+#' 
+#' \code{show} family
+#' Show items
+#' \itemize{
+#' \item \code{\link{showAd}}
+#' \item \code{\link{showAdset}}
+#' \item \code{\link{showCampaign}}
+#' \item \code{\link{showObject}}
 #' }
 #' 
 #' \code{create} family

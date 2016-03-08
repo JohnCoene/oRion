@@ -4,7 +4,7 @@
 \name{oRion}
 \alias{oRion}
 \alias{oRion-package}
-\title{\pkg{oRion} visualise Twitter Interactions.}
+\title{\pkg{oRion} Integrate R and Orion.}
 \description{
 Interact with Cheetah Mobile's Orion Platform from your R console.
 }
@@ -19,6 +19,15 @@ OAuth
 Get
 \itemize{
 \item \code{\link{getReport}}
+}
+
+\code{show} family
+Show items
+\itemize{
+\item \code{\link{showAd}}
+\item \code{\link{showAdset}}
+\item \code{\link{showCampaign}}
+\item \code{\link{showObject}}
 }
 
 \code{create} family
