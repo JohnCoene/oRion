@@ -14,6 +14,13 @@ Fetch data on [Cheetah Mobile](https://www.cmcm.com/en-us/) [Orion](http://manag
 
 * `getReport`
 
+##### Show family #####
+
+* `showObject`
+* `showAd`
+* `showAdset`
+* `showCampaign`
+
 ##### List family #####
 
 * `listCampaigns`
