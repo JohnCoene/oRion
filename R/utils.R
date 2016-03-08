@@ -36,8 +36,7 @@ orionToken <- function() {
   
   cred <- tryCatch(get("credentials", envir=cred_env),
                    error = function(e){
-                     stop("No credentials see ?orionOAuth", call. = FALSE)
-                   })
+                     stop("No credentials see ?orionOAuth", call. = FALSE)})
   
   if(cred$expires_in_date <= Sys.time()) {
     
