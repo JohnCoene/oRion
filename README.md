@@ -21,6 +21,16 @@ Fetch data on [Cheetah Mobile](https://www.cmcm.com/en-us/) [Orion](http://manag
 * `showAdset`
 * `showCampaign`
 
+##### Dict family #####
+
+* `dictCity`
+* `dictCountry`
+* `dictDevice`
+* `dictInterest`
+* `dictLanguage`
+* `dictOS`
+* `dictState`
+
 ##### List family #####
 
 * `listCampaigns`
