@@ -4,6 +4,19 @@
 
 Fetch data on [Cheetah Mobile](https://www.cmcm.com/en-us/) [Orion](http://manager.ori.cmcm.com/) platform via its [API](http://api.ori.cmcm.com/doc/).
 
+### Install ###
+
+`devtools::install_bitbucket("JohnCheetah/orion", auth_user = "your_login", password = "your_password")`
+
+### Documentation ###
+
+See [download section](https://bitbucket.org/JohnCheetah/orion/downloads/oRion.pdf) for the manual.
+
+```
+# Examples
+package?oRion
+```
+
 ### functions ###
 
 ##### OAuth #####
@@ -63,14 +76,6 @@ Fetch data on [Cheetah Mobile](https://www.cmcm.com/en-us/) [Orion](http://manag
 * `updateAd`
 * `updateAdset`
 * `updateCampaign`
-
-### Install ###
-
-`devtools::install_bitbucket("JohnCheetah/orion", auth_user = "your_login", password = "your_password")`
-
-### Documentation ###
-
-See [download section](https://bitbucket.org/JohnCheetah/orion/downloads/oRion.pdf) for the manual.
 
 ### Contributors ###
 
