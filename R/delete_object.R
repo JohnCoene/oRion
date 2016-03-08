@@ -8,10 +8,10 @@
 #' 
 #' @details Valid values for \code{object}: 
 #' \itemize{
-#' \item \code{audience} see \code{\link{createAudience}} for details.
-#' \item \code{campaign} see \code{\link{createCampaign}} for details.
-#' \item \code{adset} see \code{\link{createAdset}} for details.
-#' \item \code{ad} see \code{\link{createAd}} for details.
+#' \item \code{audience} see \code{\link{deleteAudience}} for details.
+#' \item \code{campaign} see \code{\link{deleteCampaign}} for details.
+#' \item \code{adset} see \code{\link{deleteAdset}} for details.
+#' \item \code{ad} see \code{\link{deleteAd}} for details.
 #' }
 #' 
 #' @examples 
@@ -20,20 +20,31 @@
 #' orionOAuth(client.id = 0000,
 #'            client.secret = "0x00000000x00x0x000xxx0000x0xx0")
 #'            
-#' # get ads
+#' # list ads
 #' ads <- listObjects(object = "ad")
+#' 
+#' # delete
+#' # set seed for reproducibility
+#' set.seed(19880525)
 #' 
 #' # delete random ad
 #' deleteObject(object = "ad", id = sample(ads$id, 1))
+#' 
+#' # the above is equivalent to
+#' # deleteCampaign(campaign.id = sample(ads$id, 1))
 #' }
 #' 
 #' @author John Coene \email{john.coene@@cmcm.com}
 #' 
 #' @export
-deleteObject <- function(object = "campaign", id) {
+deleteObject <- function(object, id) {
   
   if(missing(id)){
     stop("must specify id", call. = FALSE)
+  }
+  
+  if(missing(object)){
+    stop("must specify object see details", call. = FALSE)
   }
   
   cred <- orionToken()
