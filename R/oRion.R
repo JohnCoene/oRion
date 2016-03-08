@@ -33,6 +33,15 @@
 #' \item \code{\link{createObject}}
 #' }
 #' 
+#' \code{update} family
+#' Update items
+#' \itemize{
+#' \item \code{\link{updateAd}}
+#' \item \code{\link{updateAdset}}
+#' \item \code{\link{updateCampaign}}
+#' \item \code{\link{updateObject}}
+#' }
+#' 
 #' \code{list} family
 #' List items
 #' \itemize{
