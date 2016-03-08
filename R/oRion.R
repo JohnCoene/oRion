@@ -33,6 +33,18 @@
 #' \item \code{\link{createObject}}
 #' }
 #' 
+#' \code{dict} family
+#' Fetch dictionaries
+#' \itemize{
+#' \item \code{\link{dictCity}}
+#' \item \code{\link{dictCountry}}
+#' \item \code{\link{dictDevice}}
+#' \item \code{\link{dictInterest}}
+#' \item \code{\link{dictLanguage}}
+#' \item \code{\link{dictOS}}
+#' \item \code{\link{dictState}}
+#' }
+#' 
 #' \code{update} family
 #' Update items
 #' \itemize{
