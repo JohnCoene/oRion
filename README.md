@@ -47,6 +47,13 @@ Fetch data on [Cheetah Mobile](https://www.cmcm.com/en-us/) [Orion](http://manag
 * `deleteAd`
 * `deleteCampaign`
 
+##### Update family #####
+
+* `updateObject`
+* `updateAd`
+* `updateAdset`
+* `updateCampaign`
+
 ### Install ###
 
 `devtools::install_bitbucket("JohnCheetah/orion", auth_user = "your_login", password = "your_password")`
