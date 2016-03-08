@@ -70,7 +70,7 @@ Fetch data on [Cheetah Mobile](https://www.cmcm.com/en-us/) [Orion](http://manag
 
 ### Documentation ###
 
-WIP
+See [download section](https://bitbucket.org/JohnCheetah/orion/downloads) for the manual.
 
 ### Contributors ###
 
