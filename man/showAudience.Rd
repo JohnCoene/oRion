@@ -2,7 +2,7 @@
 % Please edit documentation in R/show_audience.R
 \name{showAudience}
 \alias{showAudience}
-\title{showAudience}
+\title{Show an audience targeting template}
 \usage{
 showAudience(audience.id)
 }
@@ -28,5 +28,8 @@ adudiences <- listAudiences(n = 100)
 }
 \author{
 John Coene \email{john.coene@cmcm.com}
+}
+\seealso{
+\code{\link{orionOAuth}}, \code{\link{listAudiences}}
 }
 

@@ -2,7 +2,7 @@
 % Please edit documentation in R/show_object.R
 \name{showObject}
 \alias{showObject}
-\title{showObject}
+\title{Show any object settings}
 \usage{
 showObject(object, id)
 }
@@ -22,6 +22,9 @@ Valid values for \code{object}:
 \item \code{adset} see \code{\link{showAdset}} for details.
 \item \code{ad} see \code{\link{showAd}} for details.
 }
+
+\code{showObject} can essentially replace any other \code{show} 
+family functions. See examples.
 }
 \examples{
 \dontrun{
@@ -50,5 +53,10 @@ identical(campaign, campaign2)
 }
 \author{
 John Coene \email{john.coene@cmcm.com}
+}
+\seealso{
+\code{\link{orionOAuth}}, \code{\link{showAudience}}, 
+\code{\link{showCampaign}}, \code{\link{showAdset}} and 
+\code{\link{showAd}}
 }
 

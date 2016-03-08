@@ -2,7 +2,7 @@
 % Please edit documentation in R/create_ad.R
 \name{createAd}
 \alias{createAd}
-\title{createAd}
+\title{Create an ad}
 \usage{
 createAd(body)
 }
@@ -11,13 +11,10 @@ createAd(body)
 and details.}
 }
 \description{
-Create an ad, see details and example.
+Create an ad.
 }
 \details{
-The list of valid values for the body can be found 
-\href{here}{http://alpha.api.ori.cmcm.com/doc/#api-Ad-create_ad}
-
-Ad settings (\code{body}):
+Valid ad settings (\code{body}):
 \itemize{
 \item \code{adset_id} Adset id to which the ad belongs.
 \item \code{name} Ad name, unique.
@@ -68,5 +65,9 @@ createAd(body = body)
 }
 \author{
 John Coene \email{john.coene@cmcm.com}
+}
+\seealso{
+\code{\link{orionOAuth}}, \code{\link{createAdset}}, 
+\code{\link{createImage}}
 }
 

@@ -1,6 +1,6 @@
-#' dictInterest
+#' List available interests
 #' 
-#' @description fetch list of interests
+#' @description Fetch list of interests.
 #' 
 #' @examples 
 #' \dontrun{
@@ -27,7 +27,7 @@ dictInterest <- function(){
   
   content <- httr::content(response)
   
-  dat <- do.call(plyr::"rbind.fill", lapply(content$data, parseJSON))
+  dat <- do.call("rbind.data.frame", lapply(content$data, parseJSON))
   
   # return
   return(dat)

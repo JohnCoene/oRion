@@ -1,6 +1,6 @@
-#' createCampaign
+#' Create a campaign.
 #' 
-#' @description Create campaigns
+#' @description Create a campaign
 #' 
 #' @param body Body of request that includes campaigns settings. See examples 
 #' and details.
@@ -25,10 +25,7 @@
 #' createCampaign(body = camp)
 #' }
 #' 
-#' @details The list of valid values for the body can be found 
-#' \href{here}{http://api.ori.cmcm.com/doc/#api-Campaign-create_campaign}
-#' 
-#' Campaign settings (\code{body}): 
+#' @details Valid campaign settings (\code{body}): 
 #' \itemize{
 #' \item \code{name} Campaign name should be unique under the same user account.
 #' \item \code{budget_type} can take either \code{daily} or \code{lifetime}
@@ -44,6 +41,7 @@
 #' \code{2}: Website
 #' }
 #' 
+#' @seealso \code{\link{orionOAuth}}
 #' 
 #' @author John Coene \email{john.coene@@cmcm.com}
 #' 

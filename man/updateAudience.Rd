@@ -2,7 +2,7 @@
 % Please edit documentation in R/update_audience.R
 \name{updateAudience}
 \alias{updateAudience}
-\title{updateAudience}
+\title{Update an audience targeting template}
 \usage{
 updateAudience(audience.id, body)
 }
@@ -65,5 +65,9 @@ showAudience(audience.id = audiences$id[1])
 }
 \author{
 John Coene \email{john.coene@cmcm.com}
+}
+\seealso{
+\code{\link{orionOAuth}}, \code{\link{listAudiences}}, 
+\code{\link{createAudience}}
 }
 

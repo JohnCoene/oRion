@@ -1,6 +1,6 @@
-#' dictLanguage
+#' List valid languages
 #' 
-#' @description fetch list of languages
+#' @description Fetch list of languages.
 #' 
 #' @examples 
 #' \dontrun{
@@ -27,7 +27,7 @@ dictLanguage <- function(){
   
   content <- httr::content(response)
   
-  dat <- do.call(plyr::"rbind.fill", lapply(content$data, parseJSON))
+  dat <- do.call("rbind.data.frame", lapply(content$data, parseJSON))
   
   # return
   return(dat)

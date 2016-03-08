@@ -2,22 +2,19 @@
 % Please edit documentation in R/create_adset.R
 \name{createAdset}
 \alias{createAdset}
-\title{createAdset}
+\title{Create and adset}
 \usage{
 createAdset(body)
 }
 \arguments{
-\item{body}{body of request that includes campaigns settings. See examples 
+\item{body}{body of request that includes adset settings. See examples 
 and details}
 }
 \description{
-Create campaigns
+Create an adset.
 }
 \details{
-The list of valid values for the body can be found 
-\href{here}{http://alpha.api.ori.cmcm.com/doc/#api-Ad_Set-create_adset}
-
-Adset settings (\code{body}):
+Valid adset settings (\code{body}):
 \itemize{
 \item \code{campaign_id} The campaign id which the ad set is to belongs to
 \item \code{audience_create_way} \code{0}: Create audience targeting 
@@ -113,11 +110,13 @@ createAdset(body = list(
    app_show_type = 50000,
    audience_template_id = sample(audiences$id, 1),
    click_url = "http://app.adjust.io"))
-
 }
 
 }
 \author{
 John Coene \email{john.coene@cmcm.com}
+}
+\seealso{
+\code{\link{orionOAuth}}, \code{\link{createCampaign}}
 }
 

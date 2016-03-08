@@ -1,4 +1,4 @@
-#' listAdsets
+#' List adsets
 #' 
 #' @description Fetch the list of adsets under the authenticated account.
 #' 
@@ -12,6 +12,8 @@
 #'            
 #' (adsets <- listAdsets(n = 50))
 #' }
+#' 
+#' @seealso \code{\link{orionOAuth}}
 #' 
 #' @author John Coene \email{john.coene@@cmcm.com}
 #' 

@@ -1,4 +1,4 @@
-#' showAudience
+#' Show an audience targeting template
 #' 
 #' @description Retrieve settings of a specfic audience targeting template
 #' 
@@ -16,6 +16,8 @@
 #' # fetch random adset settings
 #' (audience <- showAudiences(audience.id = sample(audiences$id, 1)))
 #' }
+#' 
+#' @seealso \code{\link{orionOAuth}}, \code{\link{listAudiences}}
 #' 
 #' @author John Coene \email{john.coene@@cmcm.com}
 #' 

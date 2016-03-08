@@ -2,7 +2,7 @@
 % Please edit documentation in R/list_adsets.R
 \name{listAdsets}
 \alias{listAdsets}
-\title{listAdsets}
+\title{List adsets}
 \usage{
 listAdsets(n = 50)
 }
@@ -24,5 +24,8 @@ orionOAuth(client.id = 0000,
 }
 \author{
 John Coene \email{john.coene@cmcm.com}
+}
+\seealso{
+\code{\link{orionOAuth}}
 }
 

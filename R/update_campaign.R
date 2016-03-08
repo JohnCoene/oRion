@@ -1,4 +1,4 @@
-#' updateCampaign
+#' Update a campaign
 #' 
 #' @description Update campaign settings, see details and example.
 #' 
@@ -34,6 +34,9 @@
 #' \item \code{budget_lifetime} Required when \code{budget_type} equals to 
 #' \code{lifetime}
 #' }
+#' 
+#' @seealso \code{\link{orionOAuth}}, \code{\link{listCampaigns}}, 
+#' \code{\link{createCampaign}}
 #' 
 #' @author John Coene \email{john.coene@@cmcm.com}
 #' 

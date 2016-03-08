@@ -2,7 +2,7 @@
 % Please edit documentation in R/update_campaign.R
 \name{updateCampaign}
 \alias{updateCampaign}
-\title{updateCampaign}
+\title{Update a campaign}
 \usage{
 updateCampaign(campaign.id, body)
 }
@@ -48,5 +48,9 @@ showCampaign(campaign.id = camps$id[1])
 }
 \author{
 John Coene \email{john.coene@cmcm.com}
+}
+\seealso{
+\code{\link{orionOAuth}}, \code{\link{listCampaigns}}, 
+\code{\link{createCampaign}}
 }
 

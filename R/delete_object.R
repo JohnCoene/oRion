@@ -1,18 +1,21 @@
-#' deleteObject
+#' Delete any object
 #' 
 #' @description Delete campaign, adsets, ads or audience temapltes, 
 #' see details and examples.
 #' 
-#' @param object Object to be created, see details for valid values.
+#' @param object Object to be deleted, see details for valid values.
 #' @param id id of object to delete
 #' 
 #' @details Valid values for \code{object}: 
 #' \itemize{
-#' \item \code{audience} see \code{\link{deleteAudience}} for details.
-#' \item \code{campaign} see \code{\link{deleteCampaign}} for details.
-#' \item \code{adset} see \code{\link{deleteAdset}} for details.
-#' \item \code{ad} see \code{\link{deleteAd}} for details.
+#' \item \code{audience}, see \code{\link{deleteAudience}} for details.
+#' \item \code{campaign}, see \code{\link{deleteCampaign}} for details.
+#' \item \code{adset}, see \code{\link{deleteAdset}} for details.
+#' \item \code{ad}, see \code{\link{deleteAd}} for details.
 #' }
+#' 
+#' \code{deleteObject} can essentially replace any other \code{delete} 
+#' family functions. See examples.
 #' 
 #' @examples 
 #' \dontrun{
@@ -34,6 +37,10 @@
 #' # deleteCampaign(campaign.id = sample(ads$id, 1))
 #' }
 #' 
+#' @seealso \code{\link{orionOAuth}}, \code{\link{deleteAudience}}, 
+#' \code{\link{deleteCampaign}}, \code{\link{deleteAdset}} and 
+#' \code{\link{deleteAd}}
+#' 
 #' @author John Coene \email{john.coene@@cmcm.com}
 #' 
 #' @export
@@ -51,7 +58,7 @@ deleteObject <- function(object, id) {
   
   object <- checkObjects(object)
   
-  response <- httr::POST(paste0(getOption("base_url"), "/", object, "/", id),
+  response <- httr::DELETE(paste0(getOption("base_url"), "/", object, "/", id),
                          encode = "multipart", 
                          httr::add_headers(Accept = getOption("accept"),
                                            Authorization = paste0("Bearer ",

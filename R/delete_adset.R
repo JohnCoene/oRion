@@ -1,6 +1,6 @@
-#' deleteAdset
+#' Delete an adset
 #' 
-#' @description Delete adset.
+#' @description Delete an adset.
 #' 
 #' @param adset.id id of object to delete
 #' 
@@ -10,12 +10,14 @@
 #' orionOAuth(client.id = 0000,
 #'            client.secret = "0x00000000x00x0x000xxx0000x0xx0")
 #'            
-#' # get ads
+#' # list adsets
 #' adsets <- listAdsets()
 #' 
-#' # delete random adsets
+#' # delete random adset
 #' deleteAdset(adset.id = sample(adsets$id, 1))
 #' }
+#' 
+#' @seealso \code{\link{orionOAuth}}, \code{\link{createAdset}}
 #' 
 #' @author John Coene \email{john.coene@@cmcm.com}
 #' 

@@ -2,12 +2,12 @@
 % Please edit documentation in R/dict_behaviour.R
 \name{dictBehaviour}
 \alias{dictBehaviour}
-\title{dictBehaviour}
+\title{List available behaviours}
 \usage{
 dictBehaviour()
 }
 \description{
-fetch list of behaviours
+Fetch list of behaviours.
 }
 \examples{
 \dontrun{

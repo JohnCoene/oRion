@@ -2,7 +2,7 @@
 % Please edit documentation in R/update_adset.R
 \name{updateAdset}
 \alias{updateAdset}
-\title{updateAdset}
+\title{Update an adset}
 \usage{
 updateAdset(adset.id, body)
 }
@@ -98,5 +98,9 @@ showAdset(adset.id = adsets$id[1])
 }
 \author{
 John Coene \email{john.coene@cmcm.com}
+}
+\seealso{
+\code{\link{orionOAuth}}, \code{\link{listAdsets}}, 
+\code{\link{createAdset}}
 }
 

@@ -2,12 +2,12 @@
 % Please edit documentation in R/dict_city.R
 \name{dictCity}
 \alias{dictCity}
-\title{dictCity}
+\title{List valid cities}
 \usage{
 dictCity()
 }
 \description{
-fetch list of cities
+Fetch list of cities.
 }
 \examples{
 \dontrun{

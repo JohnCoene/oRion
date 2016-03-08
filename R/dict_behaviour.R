@@ -1,6 +1,6 @@
-#' dictBehaviour
+#' List available behaviours
 #' 
-#' @description fetch list of behaviours
+#' @description Fetch list of behaviours.
 #' 
 #' @examples 
 #' \dontrun{
@@ -27,7 +27,7 @@ dictBehaviour <- function(){
   
   content <- httr::content(response)
 
-  dat <- do.call(plyr::"rbind.fill", lapply(content$data, parseJSON))
+  dat <- do.call("rbind.data.frame", lapply(content$data, parseJSON))
   
   # return
   return(dat)

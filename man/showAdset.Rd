@@ -2,7 +2,7 @@
 % Please edit documentation in R/show_adset.R
 \name{showAdset}
 \alias{showAdset}
-\title{showAdset}
+\title{Show an adset settings}
 \usage{
 showAdset(adset.id)
 }
@@ -28,5 +28,8 @@ adsets <- listAdsets(n = 100)
 }
 \author{
 John Coene \email{john.coene@cmcm.com}
+}
+\seealso{
+\code{\link{orionOAuth}}, \code{\link{listAdsets}}
 }
 

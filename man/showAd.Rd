@@ -2,7 +2,7 @@
 % Please edit documentation in R/show_ad.R
 \name{showAd}
 \alias{showAd}
-\title{showAd}
+\title{Show an ad settings}
 \usage{
 showAd(ad.id)
 }
@@ -28,5 +28,8 @@ ads <- listAds(n = 100)
 }
 \author{
 John Coene \email{john.coene@cmcm.com}
+}
+\seealso{
+\code{\link{orionOAuth}}, \code{\link{listAds}}
 }
 

@@ -2,7 +2,7 @@
 % Please edit documentation in R/delete_adset.R
 \name{deleteAdset}
 \alias{deleteAdset}
-\title{deleteAdset}
+\title{Delete an adset}
 \usage{
 deleteAdset(adset.id)
 }
@@ -10,7 +10,7 @@ deleteAdset(adset.id)
 \item{adset.id}{id of object to delete}
 }
 \description{
-Delete adset.
+Delete an adset.
 }
 \examples{
 \dontrun{
@@ -18,15 +18,18 @@ Delete adset.
 orionOAuth(client.id = 0000,
            client.secret = "0x00000000x00x0x000xxx0000x0xx0")
            
-# get ads
+# list adsets
 adsets <- listAdsets()
 
-# delete random adsets
+# delete random adset
 deleteAdset(adset.id = sample(adsets$id, 1))
 }
 
 }
 \author{
 John Coene \email{john.coene@cmcm.com}
+}
+\seealso{
+\code{\link{orionOAuth}}, \code{\link{createAdset}}
 }
 

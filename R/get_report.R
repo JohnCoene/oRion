@@ -1,6 +1,6 @@
-#' getReport
+#' GET data
 #' 
-#' @description fetch data from Cheetah Mobile Orion platform.
+#' @description Fetch data.
 #' 
 #' @param column Variables to retrieve, see details for valid values. Defaults 
 #' to \code{c("impression", "click")}. Must pass  at least 2 values 
@@ -57,6 +57,8 @@
 #'                  end = "2016-02-01")
 #' }
 #' 
+#' @seealso \code{\link{orionOAuth}}
+#' 
 #' @author John Coene \email{john.coene@@cmcm.com}
 #' 
 #' @export
@@ -87,7 +89,7 @@ getReport <- function(column = c("impression", "click"),
   
   content <- httr::content(response)
   
-  dat <- do.call(plyr::"rbind.fill", lapply(content$data$data, parseJSON))
+  dat <- do.call("rbind.data.frame", lapply(content$data$data, parseJSON))
   
   return(dat)
 }

@@ -2,7 +2,7 @@
 % Please edit documentation in R/create_campaign.R
 \name{createCampaign}
 \alias{createCampaign}
-\title{createCampaign}
+\title{Create a campaign.}
 \usage{
 createCampaign(body)
 }
@@ -11,13 +11,10 @@ createCampaign(body)
 and details.}
 }
 \description{
-Create campaigns
+Create a campaign
 }
 \details{
-The list of valid values for the body can be found 
-\href{here}{http://api.ori.cmcm.com/doc/#api-Campaign-create_campaign}
-
-Campaign settings (\code{body}): 
+Valid campaign settings (\code{body}): 
 \itemize{
 \item \code{name} Campaign name should be unique under the same user account.
 \item \code{budget_type} can take either \code{daily} or \code{lifetime}
@@ -56,5 +53,8 @@ createCampaign(body = camp)
 }
 \author{
 John Coene \email{john.coene@cmcm.com}
+}
+\seealso{
+\code{\link{orionOAuth}}
 }
 

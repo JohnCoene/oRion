@@ -1,4 +1,4 @@
-#' deleteAudience
+#' Delete an audience targeting template
 #' 
 #' @description Delete audience targeting template.
 #' 
@@ -10,12 +10,14 @@
 #' orionOAuth(client.id = 0000,
 #'            client.secret = "0x00000000x00x0x000xxx0000x0xx0")
 #'            
-#' # get ads
+#' # list audiences
 #' ads <- listAudiences()
 #' 
-#' # delete random adsets
+#' # delete random aduience template
 #' deleteAudience(audience.id = sample(audiences$id, 1))
 #' }
+#' 
+#' @seealso \code{\link{orionOAuth}}, \code{\link{createAudience}}
 #' 
 #' @author John Coene \email{john.coene@@cmcm.com}
 #' 

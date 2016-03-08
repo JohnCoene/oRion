@@ -2,7 +2,7 @@
 % Please edit documentation in R/list_audiences.R
 \name{listAudiences}
 \alias{listAudiences}
-\title{listAudiences}
+\title{List audience targeting templates}
 \usage{
 listAudiences(n = 50)
 }
@@ -25,5 +25,8 @@ orionOAuth(client.id = 0000,
 }
 \author{
 John Coene \email{john.coene@cmcm.com}
+}
+\seealso{
+\code{\link{orionOAuth}}
 }
 

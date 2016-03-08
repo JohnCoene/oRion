@@ -1,4 +1,4 @@
-#' listAds
+#' List ads
 #' 
 #' @description Fetch the list of ads under the authenticated account.
 #' 
@@ -12,6 +12,8 @@
 #' 
 #' (ads <- listAds(n = 100))
 #' }
+#' 
+#' @seealso \code{\link{orionOAuth}}
 #' 
 #' @author John Coene \email{john.coene@@cmcm.com}
 #' 

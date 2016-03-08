@@ -2,7 +2,7 @@
 % Please edit documentation in R/update_object.R
 \name{updateObject}
 \alias{updateObject}
-\title{updateObject}
+\title{Update any object}
 \usage{
 updateObject(object, body, id)
 }
@@ -24,35 +24,40 @@ Valid values for \code{object}:
 \item \code{adset} see \code{\link{updateAdset}} for details.
 \item \code{ad} see \code{\link{updateAd}} for details.
 }
+
+\code{upodateObject} can essentially replace any other \code{update} 
+family functions. See examples.
 }
 \examples{
 \dontrun{
 # authenticate
 orionOAuth(client.id = 0000,
            client.secret = "0x00000000x00x0x000xxx0000x0xx0")
-           
-# set body of request for campaign
-camp <- list(name = "test",
-             budget_type = "daily",
-             budget_daily = "1000", 
-             pkg_name = "test",
-             objective = "1", 
-             app_type = "2",
-             web_type = "1", 
-             landing_page = "2")
 
-# create campaign             
-createObject(body = camp, object = "campaign")
+# list current adsets
+adsets <- listAdsets()
+
+# new settings                       
+settings <- list(switch = 0, name = "New Adset Name")
+
+# update adset
+update <- updateObject(object = "adset", adset.id = adsets$id[1], 
+                       body = settings)
 
 # equivalent to
-# createCampaign(body = camp)
+# update <- updateAdset(adset.id = adsets$id[1], body = settings)
 
-# list campaigns
-listCampaigns()
+# fetch updated list
+adsets <- listAdsets()
 }
 
 }
 \author{
 John Coene \email{john.coene@cmcm.com}
+}
+\seealso{
+\code{\link{orionOAuth}}, \code{\link{updateAudience}}, 
+\code{\link{updateCampaign}}, \code{\link{updateAdset}} and 
+\code{\link{updateAd}}
 }
 

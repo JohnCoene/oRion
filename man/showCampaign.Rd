@@ -2,7 +2,7 @@
 % Please edit documentation in R/show_campaign.R
 \name{showCampaign}
 \alias{showCampaign}
-\title{showCampaign}
+\title{Show a campaign settings}
 \usage{
 showCampaign(campaign.id)
 }
@@ -28,5 +28,8 @@ camps <- listCampaigns(n = 100)
 }
 \author{
 John Coene \email{john.coene@cmcm.com}
+}
+\seealso{
+\code{\link{orionOAuth}}, \code{\link{listCampaigns}}
 }
 

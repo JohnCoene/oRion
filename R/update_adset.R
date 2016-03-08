@@ -1,4 +1,4 @@
-#' updateAdset
+#' Update an adset
 #' 
 #' @description Update adset settings, see details and example.
 #' 
@@ -84,6 +84,9 @@
 #' \item \code{dsp_url} Bid request url of DSP when this pre-targeting 
 #' condition meets.
 #' }
+#' 
+#' @seealso \code{\link{orionOAuth}}, \code{\link{listAdsets}}, 
+#' \code{\link{createAdset}}
 #' 
 #' @author John Coene \email{john.coene@@cmcm.com}
 #' 

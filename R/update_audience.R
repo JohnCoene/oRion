@@ -1,4 +1,4 @@
-#' updateAudience
+#' Update an audience targeting template
 #' 
 #' @description Update audience targeting template settings, see details and 
 #' example.
@@ -51,6 +51,9 @@
 #' \item \code{dsp_url} Bid request url of DSP when this pre-targeting 
 #' condition meets.
 #' }
+#' 
+#' @seealso \code{\link{orionOAuth}}, \code{\link{listAudiences}}, 
+#' \code{\link{createAudience}}
 #' 
 #' @author John Coene \email{john.coene@@cmcm.com}
 #' 

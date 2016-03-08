@@ -2,12 +2,12 @@
 % Please edit documentation in R/dict_device.R
 \name{dictDevice}
 \alias{dictDevice}
-\title{dictDevice}
+\title{List valid device models}
 \usage{
 dictDevice()
 }
 \description{
-fetch list of device models
+Fetch list of device models.
 }
 \examples{
 \dontrun{

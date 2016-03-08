@@ -1,6 +1,6 @@
-#' dictState
+#' List valid states
 #' 
-#' @description fetch list of States
+#' @description Fetch list of states.
 #' 
 #' @param country.code Code of country as returned by \code{\link{dictCountry}}, 
 #' see examples.
@@ -15,10 +15,10 @@
 #' country <- dictCountry()
 #' 
 #' # dict states of random country
-#' states <- dictState(country.mode = sample(country$code, 1))
+#' states <- dictState(country.code = sample(country$code, 1))
 #' 
 #' # dict US states
-#' us <- dictState(country.mode = "US")
+#' us <- dictState(country.code = "US")
 #' }
 #' 
 #' @author John Coene \email{john.coene@@cmcm.com}
@@ -38,7 +38,7 @@ dictState <- function(country.code){
   
   content <- httr::content(response)
   
-  dat <- do.call(plyr::"rbind.fill", lapply(content$data, parseJSON))
+  dat <- do.call("rbind.data.frame", lapply(content$data, parseJSON))
   
   # return
   return(dat)

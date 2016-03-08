@@ -1,8 +1,8 @@
-#' createImage
+#' Upload an image
 #' 
-#' @description Create campaigns
+#' @description Upload an image
 #' 
-#' @param file Image data,support JPEG,GIF and PNG.
+#' @param file Image data, supports JPEG, GIF and PNG.
 #' 
 #' @examples 
 #' \dontrun{
@@ -17,7 +17,7 @@
 #' @details The list of valid values for the body can be found 
 #' \href{here}{http://api.ori.cmcm.com/doc/#api-Campaign-create_campaign}
 #' 
-#' 
+#' @seealso \code{\link{orionOAuth}}
 #' 
 #' @author John Coene \email{john.coene@@cmcm.com}
 #' 

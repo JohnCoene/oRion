@@ -1,6 +1,6 @@
-#' dictCity
+#' List valid cities
 #' 
-#' @description fetch list of cities
+#' @description Fetch list of cities.
 #' 
 #' @examples 
 #' \dontrun{
@@ -27,7 +27,7 @@ dictCity <- function(){
   
   content <- httr::content(response)
   
-  dat <- do.call(plyr::"rbind.fill", lapply(content$data, parseJSON))
+  dat <- do.call("rbind.data.frame", lapply(content$data, parseJSON))
   
   # return
   return(dat)

@@ -2,12 +2,12 @@
 % Please edit documentation in R/dict_language.R
 \name{dictLanguage}
 \alias{dictLanguage}
-\title{dictLanguage}
+\title{List valid languages}
 \usage{
 dictLanguage()
 }
 \description{
-fetch list of languages
+Fetch list of languages.
 }
 \examples{
 \dontrun{

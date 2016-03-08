@@ -1,4 +1,4 @@
-#' listImages
+#' List images
 #' 
 #' @description Fetch the list of images under the authenticated account.
 #' 
@@ -12,6 +12,8 @@
 #'            
 #' (images <- listImages())
 #' }
+#' 
+#' @seealso \code{\link{orionOAuth}}
 #' 
 #' @author John Coene \email{john.coene@@cmcm.com}
 #' 

@@ -2,7 +2,7 @@
 % Please edit documentation in R/update_ad.R
 \name{updateAd}
 \alias{updateAd}
-\title{updateAdset}
+\title{Update an ad}
 \usage{
 updateAd(ad.id, body)
 }
@@ -59,5 +59,9 @@ showAd(ad.id = ads$id[1])
 }
 \author{
 John Coene \email{john.coene@cmcm.com}
+}
+\seealso{
+\code{\link{orionOAuth}}, \code{\link{listAds}}, 
+\code{\link{createAd}}
 }
 

@@ -2,12 +2,12 @@
 % Please edit documentation in R/delete_object.R
 \name{deleteObject}
 \alias{deleteObject}
-\title{deleteObject}
+\title{Delete any object}
 \usage{
 deleteObject(object, id)
 }
 \arguments{
-\item{object}{Object to be created, see details for valid values.}
+\item{object}{Object to be deleted, see details for valid values.}
 
 \item{id}{id of object to delete}
 }
@@ -18,11 +18,14 @@ see details and examples.
 \details{
 Valid values for \code{object}: 
 \itemize{
-\item \code{audience} see \code{\link{deleteAudience}} for details.
-\item \code{campaign} see \code{\link{deleteCampaign}} for details.
-\item \code{adset} see \code{\link{deleteAdset}} for details.
-\item \code{ad} see \code{\link{deleteAd}} for details.
+\item \code{audience}, see \code{\link{deleteAudience}} for details.
+\item \code{campaign}, see \code{\link{deleteCampaign}} for details.
+\item \code{adset}, see \code{\link{deleteAdset}} for details.
+\item \code{ad}, see \code{\link{deleteAd}} for details.
 }
+
+\code{deleteObject} can essentially replace any other \code{delete} 
+family functions. See examples.
 }
 \examples{
 \dontrun{
@@ -47,5 +50,10 @@ deleteObject(object = "ad", id = sample(ads$id, 1))
 }
 \author{
 John Coene \email{john.coene@cmcm.com}
+}
+\seealso{
+\code{\link{orionOAuth}}, \code{\link{deleteAudience}}, 
+\code{\link{deleteCampaign}}, \code{\link{deleteAdset}} and 
+\code{\link{deleteAd}}
 }
 

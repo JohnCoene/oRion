@@ -2,12 +2,12 @@
 % Please edit documentation in R/dict_interest.R
 \name{dictInterest}
 \alias{dictInterest}
-\title{dictInterest}
+\title{List available interests}
 \usage{
 dictInterest()
 }
 \description{
-fetch list of interests
+Fetch list of interests.
 }
 \examples{
 \dontrun{

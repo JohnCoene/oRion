@@ -1,4 +1,4 @@
-#' updateAdset
+#' Update an ad
 #' 
 #' @description Update ad settings, see details and example.
 #' 
@@ -45,6 +45,9 @@
 #' starts.
 #' \item \code{video_img_after_url} Image which will be show after video ends.
 #' }
+#' 
+#' @seealso \code{\link{orionOAuth}}, \code{\link{listAds}}, 
+#' \code{\link{createAd}}
 #' 
 #' @author John Coene \email{john.coene@@cmcm.com}
 #' 

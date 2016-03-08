@@ -1,4 +1,4 @@
-#' listCampaigns
+#' List campaigns
 #' 
 #' @description Fetch the list of campaigns under the authenticated account.
 #' 
@@ -12,6 +12,8 @@
 #'            
 #' (camps <- listCampaigns(n = 100))
 #' }
+#' 
+#' @seealso \code{\link{orionOAuth}}
 #' 
 #' @author John Coene \email{john.coene@@cmcm.com}
 #' 

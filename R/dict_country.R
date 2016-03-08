@@ -1,6 +1,6 @@
-#' dictCountry
+#' List valid countries
 #' 
-#' @description fetch list of countries
+#' @description Fetch list of countries.
 #' 
 #' @examples 
 #' \dontrun{
@@ -27,7 +27,7 @@ dictCountry <- function(){
   
   content <- httr::content(response)
   
-  dat <- do.call(plyr::"rbind.fill", lapply(content$data, parseJSON))
+  dat <- do.call("rbind.data.frame", lapply(content$data, parseJSON))
   
   # return
   return(dat)

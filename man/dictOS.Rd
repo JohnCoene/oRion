@@ -2,12 +2,12 @@
 % Please edit documentation in R/dict_os.R
 \name{dictOS}
 \alias{dictOS}
-\title{dictOS}
+\title{List valid OS versions}
 \usage{
 dictOS()
 }
 \description{
-fetch list of OS versions
+Fetch list of OS versions.
 }
 \examples{
 \dontrun{

@@ -2,15 +2,15 @@
 % Please edit documentation in R/create_image.R
 \name{createImage}
 \alias{createImage}
-\title{createImage}
+\title{Upload an image}
 \usage{
 createImage(file)
 }
 \arguments{
-\item{file}{Image data,support JPEG,GIF and PNG.}
+\item{file}{Image data, supports JPEG, GIF and PNG.}
 }
 \description{
-Create campaigns
+Upload an image
 }
 \details{
 The list of valid values for the body can be found 
@@ -29,5 +29,8 @@ createImage(file = "path_to_R_version/library/pn/img/Rlogo.png")
 }
 \author{
 John Coene \email{john.coene@cmcm.com}
+}
+\seealso{
+\code{\link{orionOAuth}}
 }
 

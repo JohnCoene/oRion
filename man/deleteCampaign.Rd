@@ -2,7 +2,7 @@
 % Please edit documentation in R/delete_campaign.R
 \name{deleteCampaign}
 \alias{deleteCampaign}
-\title{deleteCampaign}
+\title{Delete a campaign}
 \usage{
 deleteCampaign(campaign.id)
 }
@@ -10,7 +10,7 @@ deleteCampaign(campaign.id)
 \item{campaign.id}{id of object to delete}
 }
 \description{
-Delete campaign.
+Delete a campaign.
 }
 \examples{
 \dontrun{
@@ -18,7 +18,7 @@ Delete campaign.
 orionOAuth(client.id = 0000,
            client.secret = "0x00000000x00x0x000xxx0000x0xx0")
            
-# get ads
+# get campaigns
 campaigns <- listCampaigns()
 
 # delete random campaign
@@ -28,5 +28,8 @@ deleteCampaign(campaign.id = sample(campaigns$id, 1))
 }
 \author{
 John Coene \email{john.coene@cmcm.com}
+}
+\seealso{
+\code{\link{orionOAuth}}, \code{\link{createCampaign}}
 }
 

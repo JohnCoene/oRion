@@ -2,7 +2,7 @@
 % Please edit documentation in R/dict_state.R
 \name{dictState}
 \alias{dictState}
-\title{dictState}
+\title{List valid states}
 \usage{
 dictState(country.code)
 }
@@ -11,7 +11,7 @@ dictState(country.code)
 see examples.}
 }
 \description{
-fetch list of States
+Fetch list of states.
 }
 \examples{
 \dontrun{
@@ -23,10 +23,10 @@ orionOAuth(client.id = 0000,
 country <- dictCountry()
 
 # dict states of random country
-states <- dictState(country.mode = sample(country$code, 1))
+states <- dictState(country.code = sample(country$code, 1))
 
 # dict US states
-us <- dictState(country.mode = "US")
+us <- dictState(country.code = "US")
 }
 
 }

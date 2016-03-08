@@ -2,7 +2,7 @@
 % Please edit documentation in R/list_images.R
 \name{listImages}
 \alias{listImages}
-\title{listImages}
+\title{List images}
 \usage{
 listImages(n = 50)
 }
@@ -24,5 +24,8 @@ orionOAuth(client.id = 0000,
 }
 \author{
 John Coene \email{john.coene@cmcm.com}
+}
+\seealso{
+\code{\link{orionOAuth}}
 }
 

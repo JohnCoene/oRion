@@ -2,18 +2,19 @@
 % Please edit documentation in R/create_audience.R
 \name{createAudience}
 \alias{createAudience}
-\title{createAudience}
+\title{Create an audience targeting template}
 \usage{
 createAudience(body)
 }
 \arguments{
-\item{body}{body of request that includes audience template settings. 
-See examples and details.}
+\item{body}{body of request that includes audience targeting template 
+settings. See examples and details.}
 }
 \description{
-Create an audience template.
+Create an audience targeting template.
 }
 \details{
+Valid audience target template settings (\code{body}): 
 \itemize{
 \item \code{audience_template_name} Audience targeting template name 
 (unique). 
@@ -61,5 +62,8 @@ aud <- listAudiences(n = 100)
 }
 \author{
 John Coene \email{john.coene@cmcm.com}
+}
+\seealso{
+\code{\link{orionOAuth}}
 }
 

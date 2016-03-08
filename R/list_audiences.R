@@ -1,4 +1,4 @@
-#' listAudiences
+#' List audience targeting templates
 #' 
 #' @description Fetch the list of audience templates under the authenticated 
 #' account.
@@ -13,6 +13,8 @@
 #'            
 #' (aud <- listAudiences(n = 50))
 #' }
+#' 
+#' @seealso \code{\link{orionOAuth}}
 #' 
 #' @author John Coene \email{john.coene@@cmcm.com}
 #' 

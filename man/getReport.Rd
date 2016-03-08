@@ -2,7 +2,7 @@
 % Please edit documentation in R/get_report.R
 \name{getReport}
 \alias{getReport}
-\title{getReport}
+\title{GET data}
 \usage{
 getReport(column = c("impression", "click"), group.by = c("datetime",
   "campaign"), filter = NULL, start, end = Sys.Date())
@@ -24,7 +24,7 @@ Required.}
 \item{end}{End date (YYYY-MM-DD), defaults to \code{Sys.Date()}. Required.}
 }
 \description{
-fetch data from Cheetah Mobile Orion platform.
+Fetch data.
 }
 \details{
 Valid values for \code{column}:
@@ -74,5 +74,8 @@ dat <- getReport(column = c("impression", "click"),
 }
 \author{
 John Coene \email{john.coene@cmcm.com}
+}
+\seealso{
+\code{\link{orionOAuth}}
 }
 

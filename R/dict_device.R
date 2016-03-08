@@ -1,6 +1,6 @@
-#' dictDevice
+#' List valid device models
 #' 
-#' @description fetch list of device models
+#' @description Fetch list of device models.
 #' 
 #' @examples 
 #' \dontrun{
@@ -27,7 +27,7 @@ dictDevice <- function(){
   
   content <- httr::content(response)
   
-  dat <- do.call(plyr::"rbind.fill", lapply(content$data, parseJSON))
+  dat <- do.call("rbind.data.frame", lapply(content$data, parseJSON))
   
   # return
   return(dat)

@@ -1,9 +1,9 @@
-#' createAudience
+#' Create an audience targeting template
 #' 
-#' @description Create an audience template.
+#' @description Create an audience targeting template.
 #' 
-#' @param body body of request that includes audience template settings. 
-#' See examples and details.
+#' @param body body of request that includes audience targeting template 
+#' settings. See examples and details.
 #' 
 #' @examples 
 #' \dontrun{
@@ -23,7 +23,7 @@
 #' aud <- listAudiences(n = 100)
 #' }
 #' 
-#' @details 
+#' @details Valid audience target template settings (\code{body}): 
 #' \itemize{
 #' \item \code{audience_template_name} Audience targeting template name 
 #' (unique). 
@@ -49,6 +49,8 @@
 #' \item \code{dsp_url} Bid request url of DSP when this pre-targeting 
 #' condition meets.
 #' }
+#' 
+#' @seealso \code{\link{orionOAuth}}
 #' 
 #' @author John Coene \email{john.coene@@cmcm.com}
 #' 

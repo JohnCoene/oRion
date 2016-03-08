@@ -1,6 +1,6 @@
-#' dictOS
+#' List valid OS versions
 #' 
-#' @description fetch list of OS versions
+#' @description Fetch list of OS versions.
 #' 
 #' @examples 
 #' \dontrun{
@@ -27,7 +27,7 @@ dictOS <- function(){
   
   content <- httr::content(response)
   
-  dat <- do.call(plyr::"rbind.fill", lapply(content$data, parseJSON))
+  dat <- do.call("rbind.data.frame", lapply(content$data, parseJSON))
   
   # return
   return(dat)

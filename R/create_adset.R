@@ -1,8 +1,8 @@
-#' createAdset
+#' Create and adset
 #' 
-#' @description Create campaigns
+#' @description Create an adset.
 #' 
-#' @param body body of request that includes campaigns settings. See examples 
+#' @param body body of request that includes adset settings. See examples 
 #' and details
 #' 
 #' @examples 
@@ -28,13 +28,9 @@
 #'    app_show_type = 50000,
 #'    audience_template_id = sample(audiences$id, 1),
 #'    click_url = "http://app.adjust.io"))
-#' 
 #' }
 #' 
-#' @details The list of valid values for the body can be found 
-#' \href{here}{http://alpha.api.ori.cmcm.com/doc/#api-Ad_Set-create_adset}
-#' 
-#' Adset settings (\code{body}):
+#' @details Valid adset settings (\code{body}):
 #' \itemize{
 #' \item \code{campaign_id} The campaign id which the ad set is to belongs to
 #' \item \code{audience_create_way} \code{0}: Create audience targeting 
@@ -106,6 +102,8 @@
 #' \item \code{dsp_url} Bid request url of DSP when this pre-targeting 
 #' condition meets.
 #' }
+#' 
+#' @seealso \code{\link{orionOAuth}}, \code{\link{createCampaign}}
 #' 
 #' @author John Coene \email{john.coene@@cmcm.com}
 #' 

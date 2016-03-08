@@ -1,4 +1,4 @@
-#' showAdset
+#' Show an adset settings
 #' 
 #' @description Retrieve settings of a specfic adset
 #' 
@@ -16,6 +16,8 @@
 #' # fetch random adset settings
 #' (adset <- showAdset(adset.id = sample(adsets$id, 1)))
 #' }
+#' 
+#' @seealso \code{\link{orionOAuth}}, \code{\link{listAdsets}}
 #' 
 #' @author John Coene \email{john.coene@@cmcm.com}
 #' 

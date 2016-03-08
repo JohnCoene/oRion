@@ -1,14 +1,12 @@
-#' createAd
+#' Create an ad
 #' 
-#' @description Create an ad, see details and example.
+#' @description Create an ad.
 #' 
 #' @param body Body of request that includes ad settings. See examples 
 #' and details.
 #' 
-#' @details The list of valid values for the body can be found 
-#' \href{here}{http://alpha.api.ori.cmcm.com/doc/#api-Ad-create_ad}
-#' 
-#' Ad settings (\code{body}):
+#' @details
+#' Valid ad settings (\code{body}):
 #' \itemize{
 #' \item \code{adset_id} Adset id to which the ad belongs.
 #' \item \code{name} Ad name, unique.
@@ -55,6 +53,9 @@
 #' # post ad
 #' createAd(body = body)
 #' }
+#' 
+#' @seealso \code{\link{orionOAuth}}, \code{\link{createAdset}}, 
+#' \code{\link{createImage}}
 #' 
 #' @author John Coene \email{john.coene@@cmcm.com}
 #' 

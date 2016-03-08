@@ -1,4 +1,4 @@
-#' showCampaign
+#' Show a campaign settings
 #' 
 #' @description Retrieve settings of a specfic campaign
 #' 
@@ -16,6 +16,8 @@
 #' # fetch random campaign settings
 #' (camp <- showCampaign(campaign.id = sample(camps$id, 1)))
 #' }
+#' 
+#' @seealso \code{\link{orionOAuth}}, \code{\link{listCampaigns}}
 #' 
 #' @author John Coene \email{john.coene@@cmcm.com}
 #' 

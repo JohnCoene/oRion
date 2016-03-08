@@ -2,12 +2,12 @@
 % Please edit documentation in R/dict_country.R
 \name{dictCountry}
 \alias{dictCountry}
-\title{dictCountry}
+\title{List valid countries}
 \usage{
 dictCountry()
 }
 \description{
-fetch list of countries
+Fetch list of countries.
 }
 \examples{
 \dontrun{

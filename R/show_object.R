@@ -1,4 +1,4 @@
-#' showObject
+#' Show any object settings
 #' 
 #' @description Retrieve settings of an object, see details.
 #' 
@@ -12,6 +12,9 @@
 #' \item \code{adset} see \code{\link{showAdset}} for details.
 #' \item \code{ad} see \code{\link{showAd}} for details.
 #' }
+#' 
+#' \code{showObject} can essentially replace any other \code{show} 
+#' family functions. See examples.
 #' 
 #' @examples 
 #' \dontrun{
@@ -36,6 +39,10 @@
 #' 
 #' identical(campaign, campaign2)
 #' }
+#' 
+#' @seealso \code{\link{orionOAuth}}, \code{\link{showAudience}}, 
+#' \code{\link{showCampaign}}, \code{\link{showAdset}} and 
+#' \code{\link{showAd}}
 #' 
 #' @author John Coene \email{john.coene@@cmcm.com}
 #' 
