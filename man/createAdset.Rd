@@ -101,7 +101,7 @@ audiences <- listAudiences()
                                                 
 # create adset using random template, in random campaign
 createAdset(body = list(
-   name = paste0("testAdset", i),
+   name = "testAdset",
    bid_type = 1,
    unit_price = 1000,
    budget_lifetime = 10000,
