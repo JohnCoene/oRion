@@ -81,8 +81,8 @@ parseJSON <- function(data){
 
 reportInput <- function(body){
   
-  col <- c("impression", "click", "ctr", "revenue", "cpm", "conversion", 
-           "videoview")
+  col <- c("impression", "click", "revenue", "conversion", 
+           "videoview", "cpc", "ctr", "cpm")
   groups = c("datetime", "age", "gender", "location","brand", "ad", "adset", 
              "campaign", "videotype")
   
