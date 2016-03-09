@@ -26,6 +26,10 @@
 #' @export
 dictState <- function(country.code){
   
+  if(missing(country.code)){
+    stop("must pass country.code see dictCountry")
+  }
+  
   cred <- orionToken()
   
   # GET
@@ -33,8 +37,7 @@ dictState <- function(country.code){
                                      "?location_code=", country.code),
                          httr::add_headers(Accept = getOption("accept"),
                                           Authorization = paste0("Bearer ",
-                                                                 cred$token)),
-                        httr::verbose())
+                                                                 cred$token)))
   
   content <- httr::content(response)
   
