@@ -46,7 +46,7 @@ orionOAuth(client.id = 0000,
 adsets <- listAdsets()
 
 # list images
-images <- listimages()
+images <- listImages()
 
 # define adset
 body <- list(
