@@ -89,7 +89,7 @@ getReport <- function(column = c("impression", "click"),
   
   content <- httr::content(response)
   
-  dat <- do.call("rbind.data.frame", lapply(content$data$data, parseJSON))
+  dat <- do.call(plyr::"rbind.fill", lapply(content$data$data, parseJSON))
   
   return(dat)
 }

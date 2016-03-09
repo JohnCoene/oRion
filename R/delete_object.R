@@ -74,7 +74,7 @@ deleteObject <- function(object, id) {
     
   } else if (content$status == 422) {
     
-    error <- do.call("rbind.data.frame", content$errors)
+    error <- do.call(plyr::"rbind.fill", content$errors)
     
     stop(as.character(error[1,]), call. = FALSE)
     

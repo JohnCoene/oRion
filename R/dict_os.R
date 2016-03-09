@@ -27,7 +27,7 @@ dictOS <- function(){
   
   content <- httr::content(response)
   
-  dat <- do.call("rbind.data.frame", lapply(content$data, parseJSON))
+  dat <- do.call(plyr::"rbind.fill", lapply(content$data, parseJSON))
   
   # return
   return(dat)

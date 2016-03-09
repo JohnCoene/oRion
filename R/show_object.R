@@ -77,7 +77,7 @@ showObject <- function(object, id){
     
   } else if (httr::status_code(response) == 422) {
     
-    error <- do.call("rbind.data.frame", content$errors)
+    error <- do.call(plyr::"rbind.fill", content$errors)
     
     stop(as.character(error[1,]), call. = FALSE)
     

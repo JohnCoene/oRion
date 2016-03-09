@@ -81,9 +81,9 @@ createObject <- function(object, body){
     
   } else if (content$status == 422) {
     
-    error <- do.call("rbind.data.frame", content$errors)
+    error <- unlist(content$errors)
     
-    stop(as.character(error[1,]), call. = FALSE)
+    stop(as.character(error), call. = FALSE)
     
   } else {
     

@@ -16,7 +16,8 @@ Depends:
     R (>= 3.0.0)
 Imports:
     jsonlite,
-    httr
+    httr,
+    plyr
 URL: https://bitbucket.org/JohnCheetah/oRion
 BugReports: https://bitbucket.org/JohnCheetah/oRion/issues
 Suggests: testthat
