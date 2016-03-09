@@ -22,20 +22,22 @@ Valid audience target template settings (\code{body}):
 template. 
 \item \code{country} Audience country code. Narrow your potential audience 
 to the people in those countries. Using '|' separated if more than one country. 
-i.e.: \code{US|ID|CN}
-\item \code{language} Audience language code, i.e.: \code{en}
+i.e.: \code{US|ID|CN}, typically returned by \code{\link{dictCountry}}
+\item \code{language} Audience language code, i.e.: \code{en}, 
+typically returned by \code{\link{dictLanguage}}
 \item \code{gender} \code{0}: All, \code{1}: Male, \code{2} Female
 \item \code{age} Audience age. \code{1}: 18-24, \code{2}: 25-30, 
 \code{3}: 32-40, \code{4}: 41+.
 \item \code{interest} Audience interest. Reach users based on their specific 
-interests.
+interests, typically returned by \code{\link{dictInterest}}
 \item \code{behavior} Audience behavior. Reach users based on app usage and 
-other behaviors.
-\item \code{device_brand} Audience device brand.
+other behaviors, typically returned by \code{\link{dictBehaviour}}
+\item \code{device_brand} Audience device brand, typically returned by 
+\code{\link{dictDevice}}
 \item \code{min_device_os} Min OS version of audience used, blank for 
-unrestricted.
+unrestricted, typically returned by \code{\link{dictOS}}
 \item \code{max_device_os} Max OS version of audience used, blank for 
-unrestricted.
+unrestricted, typically returned by \code{\link{dictOS}}
 \item \code{net_type} \code{0}: All, \code{1}: Wifi, \code{2}: 2G/3G/4G
 \item \code{dsp_url} Bid request url of DSP when this pre-targeting 
 condition meets.
