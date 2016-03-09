@@ -14,8 +14,9 @@ LazyData: TRUE
 RoxygenNote: 5.0.1
 Depends:
     R (>= 3.0.0)
-Imports: 
+Imports:
     jsonlite,
     httr
 URL: https://bitbucket.org/JohnCheetah/oRion
 BugReports: https://bitbucket.org/JohnCheetah/oRion/issues
+Suggests: testthat
