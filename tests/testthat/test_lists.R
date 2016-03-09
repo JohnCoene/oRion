@@ -14,7 +14,7 @@ test_that("all", {
   
   expect_equal(nrow(listCampaigns(n = 50)), 50)
   
-  expect_equal(nrow(listAudiences()), 3)
+  expect_less_than(nrow(listAudiences()), 10)
   
   expect_equal(nrow(listImages()), 1)
 })
