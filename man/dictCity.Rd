@@ -4,7 +4,11 @@
 \alias{dictCity}
 \title{List valid cities}
 \usage{
-dictCity()
+dictCity(state.code)
+}
+\arguments{
+\item{state.code}{Code of country as returned by \code{\link{dictState}}, 
+see examples.}
 }
 \description{
 Fetch list of cities.
@@ -14,9 +18,12 @@ Fetch list of cities.
 # authenticate
 orionOAuth(client.id = 0000,
            client.secret = "0x00000000x00x0x000xxx0000x0xx0")
-           
+
+# dict states of random country
+states <- dictState(country.code = "US")
+
 # dict cities
-(cities <- dictCity())
+cities <- dictCity(state.code = sample(states$code, 1))
 }
 
 }
