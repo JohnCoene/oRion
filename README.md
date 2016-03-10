@@ -80,6 +80,22 @@ See [download section](https://bitbucket.org/JohnCheetah/orion/downloads/oRion.p
 * `updateAdset`
 * `updateCampaign`
 
+##### Helpers #####
+
+* `budgetType`
+* `objective`
+* `appType`
+* `webType`
+* `deliveryType`
+* `landingPage`
+* `bidType`
+* `appShowType`
+* `gender`
+* `age`
+* `netType`
+* `buttonText`
+* `switch`
+
 ### Contributors ###
 
 * John Coene <john.coene@cmcm.com>
