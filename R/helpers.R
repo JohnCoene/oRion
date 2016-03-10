@@ -35,10 +35,10 @@
 #' 
 #' @author John Coene \email{john.coene@cmcm.com}
 #' 
-#' @name helper
+#' @name helpers
 NULL
 
-#' @rdname helper
+#' @rdname helpers
 #' @export
 budgetType <- function(x){
   
@@ -54,7 +54,7 @@ budgetType <- function(x){
   
 }
 
-#' @rdname helper
+#' @rdname helpers
 #' @export
 objective <- function(x){
   
@@ -68,7 +68,7 @@ objective <- function(x){
   return(x)
 }
 
-#' @rdname helper
+#' @rdname helpers
 #' @export
 appType <- function(x){
   
@@ -81,7 +81,7 @@ appType <- function(x){
   return(x)
 }
 
-#' @rdname helper
+#' @rdname helpers
 #' @export
 webType <- function(x){
   
@@ -94,7 +94,7 @@ webType <- function(x){
   return(x)
 }
 
-#' @rdname helper
+#' @rdname helpers
 #' @export
 landingPage <- function(x){
   
@@ -107,7 +107,7 @@ landingPage <- function(x){
   return(x)
 }
 
-#' @rdname helper
+#' @rdname helpers
 #' @export
 bidType <- function(x){
   
@@ -121,7 +121,7 @@ bidType <- function(x){
   
 }
 
-#' @rdname helper
+#' @rdname helpers
 #' @export
 appShowType <- function(x){
   
@@ -135,6 +135,8 @@ appShowType <- function(x){
   return(x)
 }
 
+#' @rdname helpers
+#' @export
 deliveryType <- function(x){
   
   x <- tolower(x)
@@ -146,7 +148,7 @@ deliveryType <- function(x){
   return(x)
 }
 
-#' @rdname helper
+#' @rdname helpers
 #' @export
 gender <- function(x){
   
@@ -159,7 +161,7 @@ gender <- function(x){
   return(x)
 }
 
-#' @rdname helper
+#' @rdname helpers
 #' @export
 age <- function(x){
   
@@ -172,7 +174,7 @@ age <- function(x){
   return(x)
 }
 
-#' @rdname helper
+#' @rdname helpers
 #' @export
 netType <- function(x){
   
@@ -186,7 +188,7 @@ netType <- function(x){
   return(x)
 }
 
-#' @rdname helper
+#' @rdname helpers
 #' @export
 buttonText <- function(x){
   
@@ -200,7 +202,7 @@ buttonText <- function(x){
   return(x)
 }
 
-#' @rdname helper
+#' @rdname helpers
 #' @export
 switch <- function(x){
   
