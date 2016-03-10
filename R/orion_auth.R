@@ -22,7 +22,7 @@
 #'            client.secret = "0x00000000x00x0x000xxx0000x0xx0")
 #'            
 #' # test
-#' campaigns <- listCampaigns()
+#' camp_oauth <- listCampaigns()
 #'            
 #' # authenticate and save
 #' orionOAuth(client.id = 0000,
@@ -34,7 +34,9 @@
 #' 
 #' # no oauth
 #' library(oRion)
-#' campaigns <- listCampaigns()
+#' camp_noauth <- listCampaigns()
+#' 
+#' identical(camp_oauth, camp_noauth)
 #' }
 #' 
 #' @author John Coene \email{john.coene@@cmcm.com}
