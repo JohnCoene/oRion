@@ -6,7 +6,7 @@ test_that("all", {
   
   cred <- get(load("cred.RData"))
   
-  oauth <- orionOAuth(client.id = cred$id, client.secret = cred$secret)
+  orionOAuth(client.id = cred$id, client.secret = cred$secret)
   
   expect_equal(nrow(listAds(n = 100)), 100)
   

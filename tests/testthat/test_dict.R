@@ -6,7 +6,7 @@ test_that("locations", {
   
   cred <- get(load("cred.RData"))
   
-  oauth <- orionOAuth(client.id = cred$id, client.secret = cred$secret)
+  orionOAuth(client.id = cred$id, client.secret = cred$secret)
   
   country <- dictCountry()
   
@@ -33,7 +33,7 @@ test_that("other", {
   
   cred <- get(load("cred.RData"))
   
-  oauth <- orionOAuth(client.id = cred$id, client.secret = cred$secret)
+  orionOAuth(client.id = cred$id, client.secret = cred$secret)
   
   expect_equal(nrow(dictBehaviour()), 11)
   
