@@ -81,7 +81,5 @@ orionOAuth <- function (client.id, client.secret,
     save(credentials, file = ".orionToken")
     
   }
-    
-  # return(get("credentials", envir=cred_env))
 
 }
