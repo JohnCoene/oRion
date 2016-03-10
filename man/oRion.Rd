@@ -8,8 +8,10 @@
 \description{
 Interact with Cheetah Mobile's Orion Platform from your R console.
 }
-\details{
-Functions are split in different families.
+\section{Functions}{
+ 
+
+Families.
 
 OAuth
 \itemize{
@@ -82,39 +84,44 @@ camp <- list(name = "test",
              budget_type = "daily",
              budget_daily = "1000", 
              pkg_name = "test",
-             objective = "1", 
+             objective = objective("installs"), 
              app_type = "2",
              web_type = "1", 
-             landing_page = "2")
+             landing_page = landingPage("googlePlay"))
              
 # create campaign
 createCampaign(camp)
 
 # list campaigns
 campaigns <- listCampaigns(n = 100)
+
+# pick two random countries                       
+locations <- paste0(sample(dictCountry()$code, 1), "|", 
+                    sample(dictCountry()$code, 1))
                       
 # create audience template to use in adset                        
 createAudience(body = list(
    audience_template_name = "test",
-   audience_template_desc = "test",
-   country = "CN|BE|IN", 
-   language = "fr",
-   net_type = 1))
+   audience_template_desc = "test template",
+   country = locations, 
+   language = sample(dictLanguage()$code, 1),
+   net_type = netType("wifi")),
+   interest = dictInterst()$pid[1])
 
 # list audience template
 audiences <- listAudiences(n = 50)
 
 # create adset
 createAdset(body = list(
-   name = paste0("testAdset", i),
-   bid_type = 1,
+   name = "testAdset",
+   bid_type = appShowType("CPI"),
    unit_price = 1000,
    budget_lifetime = 10000,
-   campaign_id = sample(campaigns$id, 1),
+   campaign_id = sample(camps$id, 1),
    audience_create_way = 2,
-   app_show_type = 50000,
+   app_show_type = appShowType("newsfeed"),
    audience_template_id = sample(audiences$id, 1),
-   click_url = "http://app.adjust.io"))
+   click_url = "http://app.myApp.io"))
 
 # list adsets
 adsets <- listAdsets()
@@ -125,14 +132,14 @@ createImage(file = "path_to_R_version/library/pn/img/Rlogo.png")
 # list images
 images <- listImages()
 
-# define adset
+# define ad settings
 body <- list(
    adset_id = adsets$id[1],
    name = "testAd",
    icon_url = images$thumb[1],
    title = "Download oRion",
    desc = "Download oRion and interact with Orion from your R console",
-   button_text = 1,
+   button_text = buttonText("install"),
    image_url = images$local_url[1])
    
 # post ad
@@ -146,12 +153,6 @@ update <- updateAd(ad.id = ad$id[1], body = list(name = "New Ad Name"))
                
 # show updated ad
 showAd(ad.id = ads$id[1])
-
-# dict countries
-countries <- dictCountry()
-
-# dict us states
-states <- dictStates(location.code = "US")
 
 # get data
 # get daily campaign impressions and conversions for the past 7 days
