@@ -22,13 +22,12 @@
 #'              landing_page = "2")
 #' 
 #' # create campaign             
-#' createObject(body = camp, object = "campaign")
+#' new_camp <- createObject(body = camp, object = "campaign")
 #' 
 #' # equivalent to
-#' # createCampaign(body = camp)
+#' # new_camp <- createCampaign(body = camp)
 #' 
-#' # list campaigns
-#' listCampaigns()
+#' showCampaign(campaign.id = new_camp$id)
 #' }
 #' 
 #' @details Valid values for \code{object}: 
@@ -70,25 +69,12 @@ createObject <- function(object, body){
                                                                   cred$token)))
   
   content <- httr::content(response)
+    
+  result <- as.data.frame(t(do.call("rbind", content$data)))
   
-  if(content$status == 200){
+  message("object successfully created")
+  
+  return(result)
     
-    result <- as.data.frame(t(do.call("rbind", content$data)))
-    
-    message("object successfully created")
-    
-    return(result)
-    
-  } else if (content$status == 422) {
-    
-    error <- unlist(content$errors)
-    
-    stop(as.character(error), call. = FALSE)
-    
-  } else {
-    
-    stop(paste0("Unsuccessful query. ", content$message), call. = FALSE)
-    
-  }
   
 }

@@ -43,13 +43,12 @@ camp <- list(name = "test",
              landing_page = "2")
 
 # create campaign             
-createObject(body = camp, object = "campaign")
+new_camp <- createObject(body = camp, object = "campaign")
 
 # equivalent to
-# createCampaign(body = camp)
+# new_camp <- createCampaign(body = camp)
 
-# list campaigns
-listCampaigns()
+showCampaign(campaign.id = new_camp$id)
 }
 
 }
