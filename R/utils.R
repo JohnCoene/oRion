@@ -34,17 +34,32 @@ testReturn <- function(response) {
 
 orionToken <- function() {
   
-  cred <- tryCatch(get("credentials", envir=cred_env),
-                   error = function(e){
-                     stop("No credentials see ?orionOAuth", call. = FALSE)})
+  credentials <- tryCatch(get("credentials", envir=cred_env),
+                          error = function(e) e)
   
-  if(cred$expires_in_date <= Sys.time()) {
+  if(is(credentials, "error") && file.exists(".orionToken")){
+      
+    credentials <- get(load(".orionToken"))
     
-    cred <- orionOAuth(cred$client.id, cred$client.secret)
+    credentials$client.id <- rawToChar(credentials$client.id)
+    credentials$client.secret <- rawToChar(credentials$client.secret)
+    
+    assign("credentials", credentials, envir = cred_env)
+
+  } else if (is(credentials, "error")){
+    
+    stop("No credentials see ?orionOAuth", call. = FALSE)
     
   }
   
-  return(cred)
+  if(credentials$expires_in_date <= Sys.time()) {
+    
+    credentials <- orionOAuth(credentials$client.id, 
+                              credentials$client.secret)
+    
+  }
+  
+  return(credentials)
   
 }
 

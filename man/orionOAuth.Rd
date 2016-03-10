@@ -4,7 +4,8 @@
 \alias{orionOAuth}
 \title{orionAuthenticate}
 \usage{
-orionOAuth(client.id, client.secret, grant.type = "client_credentials")
+orionOAuth(client.id, client.secret, grant.type = "client_credentials",
+  save = FALSE)
 }
 \arguments{
 \item{client.id}{Your \code{client_id}}
@@ -12,7 +13,10 @@ orionOAuth(client.id, client.secret, grant.type = "client_credentials")
 \item{client.secret}{Your \code{client_secret}}
 
 \item{grant.type}{Currently only supports \code{client_credentials} 
-(default).}
+(default)}
+
+\item{save}{If \code{TRUE} will save the token for future sessions, 
+default to \code{FALSE}}
 }
 \description{
 Authenticate the Orion API
@@ -20,13 +24,32 @@ Authenticate the Orion API
 \details{
 Please see the official documentation to apply for the API and 
 get your \code{client_id} and \code{client_secret}: 
-\url{api.ori.cmcm.com/doc/#api-Auth-access_token}.
+\url{api.ori.cmcm.com/doc/#api-Auth-access_token}. If the token is stored 
+(\code{save = TRUE}) then \code{orionOAuth} does not need to be run in 
+future sessions, see example.
 }
 \examples{
 \dontrun{
 # authenticate
 orionOAuth(client.id = 0000,
            client.secret = "0x00000000x00x0x000xxx0000x0xx0")
+           
+# test
+campaigns <- listCampaigns()
+           
+# authenticate and save
+orionOAuth(client.id = 0000,
+           client.secret = "0x00000000x00x0x000xxx0000x0xx0", 
+           save = TRUE)
+           
+# detach and unload package
+detach("package:oRion", unload = TRUE)
+
+# re-load
+library(oRion)
+
+# test
+campaigns <- listCampaigns()
 }
 
 }
