@@ -11,13 +11,18 @@
 #' orionOAuth(client.id = 0000,
 #'            client.secret = "0x00000000x00x0x000xxx0000x0xx0")
 #' 
+#' # pick two random countries                       
+#' locations <- paste0(sample(dictCountry()$code, 1), "|", 
+#'                     sample(dictCountry()$code, 1))
+#' 
 #' # create audience                         
 #' createAudience(body = list(
 #'    audience_template_name = "test",
-#'    audience_template_desc = "test",
-#'    country = "CN|BE|IN", 
-#'    language = "fr",
-#'    net_type = 1))
+#'    audience_template_desc = "test template",
+#'    country = locations, 
+#'    language = sample(dictLanguage()$code, 1),
+#'    net_type = netType("wifi")),
+#'    interest = dictInterst()$pid[1])
 #'    
 #' # retrieve audience
 #' aud <- listAudiences(n = 100)
@@ -35,8 +40,8 @@
 #' \item \code{language} Audience language code, i.e.: \code{en}, 
 #' typically returned by \code{\link{dictLanguage}}
 #' \item \code{gender} \code{0}: All, \code{1}: Male, \code{2} Female
-#' \item \code{age} Audience age. \code{1}: 18-24, \code{2}: 25-30, 
-#' \code{3}: 32-40, \code{4}: 41+.
+#' \item \code{age} Audience age. Use \code{\link{age}} to generate otherwise, 
+#' \code{1}: 18-24, \code{2}: 25-30, \code{3}: 32-40, \code{4}: 41+.
 #' \item \code{interest} Audience interest. Reach users based on their specific 
 #' interests, typically returned by \code{\link{dictInterest}}
 #' \item \code{behavior} Audience behavior. Reach users based on app usage and 

@@ -15,8 +15,9 @@
 #' \item \code{title} Ad headline
 #' \item \code{desc} Description tells people a bit more about your Application. 
 #' Make sure to clearly explain what you are promoting.
-#' \item \code{button_text} Button display text \code{1}: Download, 
-#' \code{2}: Install, \code{3}: Check, \code{4}: Free, \code{5}: Play, 
+#' \item \code{button_text} Button display text, use \code{\link{buttonText}} to generate otherwise, 
+#' \code{1}: Download, \code{2}: Install, \code{3}: Check, \code{4}: Free, 
+#' \code{5}: Play, 
 #' \code{6}: Buy, \code{7}: More.
 #' \item \code{image_url} Image url. Must be larger than 600*314 px and have an 
 #' aspect ratio of 1.9:1. Best is 1200*628 px, JPG or PNG format. File size 
@@ -40,14 +41,14 @@
 #' # list images
 #' images <- listImages()
 #' 
-#' # define adset
+#' # define ad settings
 #' body <- list(
 #'    adset_id = adsets$id[1],
 #'    name = "testAd",
 #'    icon_url = images$thumb[1],
 #'    title = "Download oRion",
 #'    desc = "Download oRion and interact with Orion from your R console",
-#'    button_text = 1,
+#'    button_text = buttonText("install"),
 #'    image_url = images$local_url[1])
 #'    
 #' # post ad

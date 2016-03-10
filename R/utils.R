@@ -130,3 +130,18 @@ reportInput <- function(body){
   }
   
 }
+
+setthat <- function(x, valid){
+  
+  if(length(x) > 1){
+    stop("setting must be of length 1", call. = FALSE)
+  }
+  
+  if(!x %in% valid){
+    stop("x must be one of ", paste0(valid, collapse = ", "), call. = FALSE)
+  }else{
+    x <- names(valid[valid %in% x])
+  }
+  
+  return(x)
+}

@@ -58,21 +58,24 @@ frequency capping of the ad set per user.
 frequency capping of the ad set per user.
 \item \code{country} Audience country code. Narrow your potential audience 
 to the people in those countries. Using '|' separated if more than one country. 
-i.e.: \code{US|ID|CN}
-\item \code{language} Audience language code, i.e.: \code{en}
-\item \code{gender} \code{0}: All, \code{1}: Male, \code{2} Female
+i.e.: \code{US|ID|CN}. See \code{\link{dictCountry}}
+\item \code{language} Audience language code, i.e.: \code{en} see 
+\code{\link{dictLanguage}}
+\item \code{gender} Use \code{\link{gender}} to generate otherwise, 
+\code{0}: All, \code{1}: Male, \code{2} Female
 \item \code{age} Audience age. \code{1}: 18-24, \code{2}: 25-30, 
 \code{3}: 32-40, \code{4}: 41+.
 \item \code{interest} Audience interest. Reach users based on their specific 
-interests.
+interests. See \code{\link{dictInterest}}
 \item \code{behavior} Audience behavior. Reach users based on app usage and 
-other behaviors.
-\item \code{device_brand} Audience device brand.
+other behaviors. See \code{\link{dictBehaviour}}
+\item \code{device_brand} Audience device brand. See \code{\link{dictDevice}}
 \item \code{min_device_os} Min OS version of audience used, blank for 
-unrestricted.
+unrestricted. See \code{\link{dictOS}}
 \item \code{max_device_os} Max OS version of audience used, blank for 
-unrestricted.
-\item \code{net_type} \code{0}: All, \code{1}: Wifi, \code{2}: 2G/3G/4G
+unrestricted. See \code{\link{dictOS}}
+\item \code{net_type} Use \code{\link{netType}} to generate otherwise, 
+\code{0}: All, \code{1}: Wifi, \code{2}: 2G/3G/4G
 \item \code{dsp_url} Bid request url of DSP when this pre-targeting 
 condition meets.
 }
@@ -88,8 +91,8 @@ adsets <- listAdsets()
 
 # update adset name
 update <- updateCampaign(adset.id = adsets$id[1], body = list(
-               switch = 0, 
-               name = "New adset Name"))
+               switch = switch("on"), 
+               name = "New adset Name - Running"))
                
 # show updated campaign
 showAdset(adset.id = adsets$id[1])

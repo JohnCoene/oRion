@@ -16,9 +16,9 @@
 #'              budget_type = "daily",
 #'              budget_daily = "1000", 
 #'              pkg_name = "test",
-#'              objective = "1", 
-#'              app_type = "2",
-#'              web_type = "1", 
+#'              objective = objective("traffic"), 
+#'              app_type = appType("game"),
+#'              web_type = webType("game"), 
 #'              landing_page = "2")
 #' 
 #' # create campaign             

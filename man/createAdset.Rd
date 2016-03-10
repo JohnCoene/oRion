@@ -24,9 +24,11 @@ Note: Once audience created, any changes made on the template will not
 affect this audience.
 \item \code{audience_template_id} Required when \code{audience_create_way}: 
 \code{1} or \code{2}
-\item \code{bid_type} \code{1}: Install (CPI) [Only for KA user], 
+\item \code{bid_type} Use \code{\link{bidType}} to generate otherwise, 
+\code{1}: Install (CPI) [Only for KA user], 
 \code{3}: Click (CPC), \code{4} Impressions (CPM)
-\item \code{app_show_type} \code{50000}: Native News Feed, 
+\item \code{app_show_type} Use \code{\link{appShowType}} to generate otherwise, 
+\code{50000}: Native News Feed, 
 \code{50001}: Mini Native News Feed, \code{50003}: Video Ad, 
 \code{50008}: App Locker Ad
 \item \code{name} Ad set name (unique)
@@ -68,21 +70,24 @@ frequency capping of the ad set per user.
 frequency capping of the ad set per user.
 \item \code{country} Audience country code. Narrow your potential audience 
 to the people in those countries. Using '|' separated if more than one country. 
-i.e.: \code{US|ID|CN}
-\item \code{language} Audience language code, i.e.: \code{en}
-\item \code{gender} \code{0}: All, \code{1}: Male, \code{2} Female
+i.e.: \code{US|ID|CN}. See \code{\link{dictCountry}}
+\item \code{language} Audience language code, i.e.: \code{en} see 
+\code{\link{dictLanguage}}
+\item \code{gender} Use \code{\link{gender}} to generate otherwise, 
+\code{0}: All, \code{1}: Male, \code{2} Female
 \item \code{age} Audience age. \code{1}: 18-24, \code{2}: 25-30, 
 \code{3}: 32-40, \code{4}: 41+.
 \item \code{interest} Audience interest. Reach users based on their specific 
-interests.
+interests. See \code{\link{dictInterest}}
 \item \code{behavior} Audience behavior. Reach users based on app usage and 
-other behaviors.
-\item \code{device_brand} Audience device brand.
+other behaviors. See \code{\link{dictBehaviour}}
+\item \code{device_brand} Audience device brand. See \code{\link{dictDevice}}
 \item \code{min_device_os} Min OS version of audience used, blank for 
-unrestricted.
+unrestricted. See \code{\link{dictOS}}
 \item \code{max_device_os} Max OS version of audience used, blank for 
-unrestricted.
-\item \code{net_type} \code{0}: All, \code{1}: Wifi, \code{2}: 2G/3G/4G
+unrestricted. See \code{\link{dictOS}}
+\item \code{net_type} Use \code{\link{netType}} to generate otherwise, 
+\code{0}: All, \code{1}: Wifi, \code{2}: 2G/3G/4G
 \item \code{dsp_url} Bid request url of DSP when this pre-targeting 
 condition meets.
 }
@@ -102,14 +107,14 @@ audiences <- listAudiences()
 # create adset using random template, in random campaign
 createAdset(body = list(
    name = "testAdset",
-   bid_type = 1,
+   bid_type = appShowType("CPI"),
    unit_price = 1000,
    budget_lifetime = 10000,
    campaign_id = sample(camps$id, 1),
    audience_create_way = 2,
-   app_show_type = 50000,
+   app_show_type = appShowType("newsfeed"),
    audience_template_id = sample(audiences$id, 1),
-   click_url = "http://app.adjust.io"))
+   click_url = "http://app.myApp.io"))
 }
 
 }

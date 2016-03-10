@@ -17,8 +17,8 @@
 #' 
 #' # update ad name
 #' update <- updateAd(ad.id = ad$id[1], body = list(
-#'                switch = 0, 
-#'                name = "New Ad Name"))
+#'                switch = switch("off"), 
+#'                name = "New Ad Name - Paused"))
 #'                
 #' # show updated campaign
 #' showAd(ad.id = ads$id[1])
@@ -33,8 +33,9 @@
 #' \item \code{title} Ad headline
 #' \item \code{desc} Description tells people a bit more about your Application. 
 #' Make sure to clearly explain what you are promoting.
-#' \item \code{button_text} Button display text \code{1}: Download, 
-#' \code{2}: Install, \code{3}: Check, \code{4}: Free, \code{5}: Play, 
+#' \item \code{button_text} Button display text, use \code{\link{buttonText}} to generate otherwise, 
+#' \code{1}: Download, \code{2}: Install, \code{3}: Check, \code{4}: Free, 
+#' \code{5}: Play, 
 #' \code{6}: Buy, \code{7}: More.
 #' \item \code{image_url} Image url. Must be larger than 600*314 px and have an 
 #' aspect ratio of 1.9:1. Best is 1200*628 px, JPG or PNG format. File size 
