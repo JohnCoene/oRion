@@ -47,8 +47,9 @@ switch(x)
 Returns correct value to pass to API.
 }
 \description{
-These functions somewhat facilitate building setting up campaigns, adsets, 
-ads and audience targeting templates.
+These functions attempt to facilitate setting up campaigns, adsets, 
+ads and audience targeting templates by allowing to pass more readable 
+settings
 }
 \examples{
 \dontrun{

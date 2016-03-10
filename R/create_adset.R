@@ -1,4 +1,4 @@
-#' Create and adset
+#' Create an adset
 #' 
 #' @description Create an adset.
 #' 

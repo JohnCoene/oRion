@@ -1,7 +1,8 @@
 #' Get the settings right
 #' 
-#' These functions somewhat facilitate building setting up campaigns, adsets, 
-#' ads and audience targeting templates.
+#' These functions attempt to facilitate setting up campaigns, adsets, 
+#' ads and audience targeting templates by allowing to pass more readable 
+#' settings
 #' 
 #' @param x Setting to convert
 #' 

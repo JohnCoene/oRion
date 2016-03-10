@@ -2,7 +2,7 @@
 % Please edit documentation in R/create_adset.R
 \name{createAdset}
 \alias{createAdset}
-\title{Create and adset}
+\title{Create an adset}
 \usage{
 createAdset(body)
 }
