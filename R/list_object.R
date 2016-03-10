@@ -81,7 +81,7 @@ listObjects <- function(object, n = 50){
       page_dat <- do.call(plyr::"rbind.fill", 
                           lapply(content$data$data, parseJSON))
       
-      dat <- rbind.data.frame(dat, page_dat)
+      dat <- plyr::rbind.fill(dat, page_dat)
       
     }
     

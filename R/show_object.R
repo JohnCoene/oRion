@@ -71,7 +71,7 @@ showObject <- function(object, id){
   
   testReturn(content)
     
-  result <- as.data.frame(t(do.call("rbind", content$data)))
+  result <- as.data.frame(t(unlist(content$data)))
   
   return(result)
   
