@@ -2,7 +2,7 @@
 
 # oRion #
 
-Interact with [Cheetah Mobile](https://www.cmcm.com/en-us/) [Orion](http://manager.ori.cmcm.com/) platform from your R console.
+Interact with [Cheetah Mobile](https://www.cmcm.com/en-us/) Orion [platform](http://manager.ori.cmcm.com/) from your R console.
 
 ### Get Started ###
 

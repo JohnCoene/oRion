@@ -40,7 +40,7 @@ orionToken <- function() {
                           error = function(e) e)
   
   if(is(credentials, "error") && file.exists(".orionToken")){
-      
+    
     credentials <- get(load(".orionToken"))
     
     credentials$client.id <- rawToChar(credentials$client.id)
