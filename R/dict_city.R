@@ -38,6 +38,8 @@ dictCity <- function(state.code){
   
   content <- httr::content(response)
   
+  testReturn(content)
+  
   dat <- do.call(plyr::"rbind.fill", lapply(content$data, parseJSON))
   
   # return

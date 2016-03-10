@@ -16,19 +16,21 @@ constructCred <- function(json, pars) {
   
 }
 
-testReturn <- function(response) {
-  
-  json <- jsonlite::fromJSON(rawToChar(response$content))
+testReturn <- function(content) {
   
   # check if success
-  if(json$status != 200){
+  if(content$status != 200 && content$status == 422){
     
-    msg <- paste0("API returned status ", json$status, 
-                  ": ", json$message)
+    stop(as.character(unlist(content$errors)), call. = FALSE)
+    
+  }  else if (content$status != 200 && content$status != 422) {
+    
+    msg <- paste0("API returned status ", content$status, 
+                  ": ", content$message)
     
     stop(msg, call. = FALSE)
     
-  } 
+  }
   
 }
 

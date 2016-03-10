@@ -32,10 +32,8 @@
 #' # detach and unload package
 #' detach("package:oRion", unload = TRUE)
 #' 
-#' # re-load
+#' # no oauth
 #' library(oRion)
-#' 
-#' # test
 #' campaigns <- listCampaigns()
 #' }
 #' 
@@ -61,10 +59,10 @@ orionOAuth <- function (client.id, client.secret,
                                      client_id = client.id,
                                      client_secret = client.secret))
   
-  testReturn(response)
-  
   # parse
   return <- jsonlite::fromJSON(rawToChar(response$content))
+  
+  testReturn(return)
   
   constructCred(return, pars = list(client.id = client.id, 
                                     client.secret = client.secret))

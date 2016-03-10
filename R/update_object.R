@@ -69,24 +69,12 @@ updateObject <- function(object, body, id){
   
   content <- httr::content(response)
   
-  if(content$status == 200){
+  testReturn(content)
     
-    result <- as.data.frame(t(do.call("rbind", content$data)))
-    
-    message("update successful")
-    
-    return(result)
-    
-  } else if (content$status == 422) {
-    
-    error <- do.call(plyr::"rbind.fill", content$errors)
-    
-    stop(as.character(error[1,]), call. = FALSE)
-    
-  } else {
-    
-    stop(paste0("Unsuccessful query. ", content$message), call. = FALSE)
-    
-  }
+  result <- as.data.frame(t(do.call("rbind", content$data)))
+  
+  message("update successful")
+  
+  return(result)
   
 }

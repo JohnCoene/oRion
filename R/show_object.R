@@ -69,21 +69,10 @@ showObject <- function(object, id){
   
   content <- httr::content(response)
   
-  if(httr::status_code(response) == 200){
+  testReturn(content)
     
-    result <- as.data.frame(t(do.call("rbind", content$data)))
-    
-    return(result)
-    
-  } else if (httr::status_code(response) == 422) {
-    
-    error <- do.call(plyr::"rbind.fill", content$errors)
-    
-    stop(as.character(error[1,]), call. = FALSE)
-    
-  } else {
-    
-    stop(paste0("Unsuccessful query. ", content$message), call. = FALSE)
-    
-  }
+  result <- as.data.frame(t(do.call("rbind", content$data)))
+  
+  return(result)
+  
 }

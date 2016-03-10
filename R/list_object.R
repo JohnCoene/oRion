@@ -63,6 +63,8 @@ listObjects <- function(object, n = 50){
   
   content <- httr::content(response)
   
+  testReturn(content)
+  
   if(length(content$data)) {
     
     dat <- do.call(plyr::"rbind.fill", lapply(content$data$data, parseJSON))

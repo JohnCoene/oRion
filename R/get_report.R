@@ -85,9 +85,9 @@ getReport <- function(column = c("impression", "click"),
                                            Authorization = paste0("Bearer ",
                                                                   cred$token)))
   
-  testReturn(response)
-  
   content <- httr::content(response)
+  
+  testReturn(content)
   
   dat <- do.call(plyr::"rbind.fill", lapply(content$data$data, parseJSON))
   
