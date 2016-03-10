@@ -45,10 +45,8 @@ orionOAuth(client.id = 0000,
 # detach and unload package
 detach("package:oRion", unload = TRUE)
 
-# re-load
+# no oauth
 library(oRion)
-
-# test
 campaigns <- listCampaigns()
 }
 
