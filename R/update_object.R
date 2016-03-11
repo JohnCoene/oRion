@@ -16,7 +16,7 @@
 #' adsets <- listAdsets()
 #' 
 #' # new settings                       
-#' settings <- list(switch = 0, name = "New Adset Name")
+#' settings <- list(switch = switchIt("on"), name = "New Adset Name")
 #' 
 #' # update adset
 #' update <- updateObject(object = "adset", adset.id = adsets$id[1], 

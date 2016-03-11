@@ -94,7 +94,7 @@ See [download section](https://bitbucket.org/JohnCheetah/orion/downloads/oRion.p
 * `age`
 * `netType`
 * `buttonText`
-* `switch`
+* `switchIt`
 
 ### Contributors ###
 

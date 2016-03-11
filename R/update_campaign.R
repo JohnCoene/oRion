@@ -26,7 +26,8 @@
 #' 
 #' @details Valid values for \code{body}: 
 #' \itemize{
-#' \item \code{switch} Ad switch \code{1}: On, \code{0}: Off.
+#' \item \code{switch} Ad switch, use \code{\link{switchIt}} otherwise, 
+#' \code{1}: On, \code{0}: Off.
 #' \item \code{name} Campaign name should be unique under the same user account.
 #' \item \code{budget_type} can take either \code{daily} or \code{lifetime}, 
 #' see \code{\link{budgetType}}.

@@ -26,7 +26,8 @@
 #' 
 #' @details Valid values for \code{body}: 
 #' \itemize{
-#' \item \code{switch} Ad switch \code{1}: On, \code{0}: Off.
+#' \item \code{switch}  Ad switch, use \code{\link{switchIt}} otherwise, 
+#' \code{1}: On, \code{0}: Off.
 #' \item \code{name} Ad name, unique.
 #' \item \code{icon_url} Logo image url. Must be larger than 84*84 px and have 
 #' an aspect ratio of 1:1, in JPG or PNG format. File must not exceed 100KB.

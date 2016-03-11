@@ -18,7 +18,8 @@ Update adset settings, see details and example.
 \details{
 Valid values for \code{body}: 
 \itemize{
-\item \code{switch} Ad switch \code{1}: On, \code{0}: Off.
+\item \code{switch} Ad switch, use \code{\link{switchIt}} otherwise, 
+\code{1}: On, \code{0}: Off.
 \item \code{name} Ad set name (unique)
 \item \code{unit_price} Unit Price. Amount you want to spend to pay per click 
 (CPC) or per 1,000 impressions (CPM)
@@ -91,7 +92,7 @@ adsets <- listAdsets()
 
 # update adset name
 update <- updateCampaign(adset.id = adsets$id[1], body = list(
-               switch = switch("on"), 
+               switch = switchIt("on"), 
                name = "New adset Name - Running"))
                
 # show updated campaign
