@@ -43,6 +43,6 @@ test_that("other", {
   
   expect_equal(nrow(dictOS()), 13)
   
-  expect_equal(nrow(dictInterest()), 164)
+  expect_equal(nrow(dictInterest()), 180)
   
 })
