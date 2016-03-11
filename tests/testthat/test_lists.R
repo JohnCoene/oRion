@@ -8,13 +8,13 @@ test_that("all", {
   
   orionOAuth(client.id = cred$id, client.secret = cred$secret)
   
-  expect_equal(nrow(listAds(n = 100)), 100)
+  expect_less_than(nrow(listAds(n = 100)), 101)
   
-  expect_equal(nrow(listAdsets(n = 50)), 50)
+  expect_less_than(nrow(listAdsets(n = 50)), 51)
   
-  expect_equal(nrow(listCampaigns(n = 50)), 50)
+  expect_less_than(nrow(listCampaigns(n = 50)), 51)
   
-  expect_less_than(nrow(listAudiences()), 10)
+  expect_less_than(nrow(listAudiences()), 1000)
   
-  expect_equal(nrow(listImages()), 1)
+  expect_less_than(nrow(listImages(n = 100)), 101)
 })
