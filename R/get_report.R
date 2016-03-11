@@ -11,6 +11,8 @@
 #' Required.
 #' @param start Start date (YYYY-MM-DD). Required.
 #' @param end End date (YYYY-MM-DD), defaults to \code{Sys.Date()}. Required.
+#' @param action target node, currently only supports \code{"advertiser"} 
+#' (default).
 #' @param filter Defaults to \code{NULL}. Optional.
 #' 
 #' @details Valid values for \code{column}:
@@ -63,8 +65,8 @@
 #' 
 #' @export
 getReport <- function(column = c("impression", "click"), 
-                      group.by = c("datetime", "campaign"), filter = NULL, 
-                      start, end = Sys.Date()){
+                      group.by = c("datetime", "campaign"), action = "advertiser", 
+                      filter = NULL, start, end = Sys.Date()){
   
   cred <- orionToken()
   
@@ -79,7 +81,7 @@ getReport <- function(column = c("impression", "click"),
   reportInput(body)
   
   # POST
-  response <- httr::POST(url = paste0(getOption("base_url"), "/report/advertiser"),
+  response <- httr::POST(url = paste0(getOption("base_url"), "/report/", action),
                          encode = "json", body = body,
                          httr::add_headers(Accept = getOption("accept"),
                                            Authorization = paste0("Bearer ",

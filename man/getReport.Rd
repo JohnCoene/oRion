@@ -5,7 +5,8 @@
 \title{GET data}
 \usage{
 getReport(column = c("impression", "click"), group.by = c("datetime",
-  "campaign"), filter = NULL, start, end = Sys.Date())
+  "campaign"), action = "advertiser", filter = NULL, start,
+  end = Sys.Date())
 }
 \arguments{
 \item{column}{Variables to retrieve, see details for valid values. Defaults 
@@ -16,6 +17,9 @@ to \code{c("impression", "click")}. Must pass  at least 2 values
 Defaults to \code{c("datetime", "campaign")}. Must pass at least 2 values 
 (vector of length >= 2). 
 Required.}
+
+\item{action}{target node, currently only supports \code{"advertiser"} 
+(default).}
 
 \item{filter}{Defaults to \code{NULL}. Optional.}
 
