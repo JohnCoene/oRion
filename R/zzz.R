@@ -10,10 +10,10 @@ cred_env <- new.env(hash=TRUE)
 }
 
 
-# .onUnload <- function(libname = find.package("oRion"), pkgname = "oRion") {
-#   options(base_url = NULL, accept = NULL)
-# }
-# 
-# .onDetach <- function(libname = find.package("oRion"), pkgname = "oRion") {
-#   options(base_url = NULL, accept = NULL)
-# }
+.onUnload <- function(libpath = find.package("oRion")) {
+  options(base_url = NULL, accept = NULL)
+}
+
+.onDetach <- function(libpath = find.package("oRion")) {
+  options(base_url = NULL, accept = NULL)
+}
