@@ -13,7 +13,7 @@
 \alias{landingPage}
 \alias{netType}
 \alias{objective}
-\alias{switch}
+\alias{switchIt}
 \alias{webType}
 \title{Get the settings right}
 \usage{
@@ -41,7 +41,7 @@ netType(x)
 
 buttonText(x)
 
-switch(x)
+switchIt(x)
 }
 \arguments{
 \item{x}{Setting to convert}

@@ -204,7 +204,7 @@ buttonText <- function(x){
 
 #' @rdname helpers
 #' @export
-switch <- function(x){
+switchIt <- function(x){
   
   x <- tolower(x)
   
