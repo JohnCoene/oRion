@@ -69,6 +69,8 @@ createObject <- function(object, body){
                                                                   cred$token)))
   
   content <- httr::content(response)
+  
+  testReturn(content)
     
   result <- as.data.frame(t(do.call("rbind", content$data)))
   
