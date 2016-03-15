@@ -21,7 +21,7 @@ testReturn <- function(content) {
   # check if success
   if(content$status != 200 && content$status == 422){
     
-    stop(as.character(unlist(content$errors)), call. = FALSE)
+    stop(paste(unlist(content$errors), collapse = "\n"), call. = FALSE)
     
   }  else if (content$status != 200 && content$status != 422) {
     
