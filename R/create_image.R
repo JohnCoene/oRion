@@ -11,7 +11,7 @@
 #'            client.secret = "0x00000000x00x0x000xxx0000x0xx0")
 #' 
 #' # upload image            
-#' createImage(file = "path_to_R_version/library/pn/img/Rlogo.png")
+#' createImage(file = paste0(.libPaths(), "/png/img/Rlogo.png"))
 #' }
 #' 
 #' @details The list of valid values for the body can be found 
