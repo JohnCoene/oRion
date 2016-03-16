@@ -13,7 +13,7 @@ Visit the [documentation](http://api.ori.cmcm.com/doc/#api-Auth-access_token) to
 devtools::install_bitbucket("JohnCheetah/orion", auth_user = "your_login", password = "your_password")
 
 # Examples
-package?oRion
+help("oRion")
 ```
 
 ### Documentation ###
