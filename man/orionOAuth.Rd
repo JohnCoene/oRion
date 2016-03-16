@@ -22,7 +22,9 @@ default to \code{FALSE}}
 Authenticate the Orion API
 }
 \details{
-Please see the official documentation to apply for the API and 
+Please see the 
+\href{http://api.ori.cmcm.com/doc/#api-Auth-access_token}{official documentation} 
+to apply for the API and 
 get your \code{client_id} and \code{client_secret}: 
 \url{api.ori.cmcm.com/doc/#api-Auth-access_token}. If the token is stored 
 (\code{save = TRUE}) then \code{orionOAuth} does not need to be run in 

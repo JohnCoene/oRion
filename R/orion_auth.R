@@ -9,7 +9,9 @@
 #' @param save If \code{TRUE} will save the token for future sessions, 
 #' default to \code{FALSE}
 #' 
-#' @details Please see the official documentation to apply for the API and 
+#' @details Please see the 
+#' \href{http://api.ori.cmcm.com/doc/#api-Auth-access_token}{official documentation} 
+#' to apply for the API and 
 #' get your \code{client_id} and \code{client_secret}: 
 #' \url{api.ori.cmcm.com/doc/#api-Auth-access_token}. If the token is stored 
 #' (\code{save = TRUE}) then \code{orionOAuth} does not need to be run in 
