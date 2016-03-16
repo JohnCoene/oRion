@@ -72,6 +72,24 @@ List items
 \item \code{\link{listImages}}
 \item \code{\link{listObjects}}
 }
+
+\code{helpers}
+List items
+\itemize{
+\item \code{\link{budgetType}}
+\item \code{\link{objective}}
+\item \code{\link{appType}}
+\item \code{\link{webType}}
+\item \code{\link{landingPage}}
+\item \code{\link{bidType}}
+\item \code{\link{appShowType}}
+\item \code{\link{deliveryType}}
+\item \code{\link{gender}}
+\item \code{\link{age}}
+\item \code{\link{netType}}
+\item \code{\link{buttonText}}
+\item \code{\link{switchIt}}
+}
 }
 \examples{
 \dontrun{
