@@ -15,7 +15,10 @@
 #' (default).
 #' @param filter Defaults to \code{NULL}. Optional.
 #' 
-#' @details Valid values for \code{column}:
+#' @details The official documentation can be found 
+#' \href{{http://api.ori.cmcm.com/doc/#api-Report-Report_API}here}
+#' 
+#' Valid values for \code{column}:
 #' \itemize{
 #' \item \code{impression}
 #' \item \code{click}

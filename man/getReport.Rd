@@ -31,6 +31,9 @@ Required.}
 Fetch data.
 }
 \details{
+The official documentation can be found 
+\href{here}{http://api.ori.cmcm.com/doc/#api-Report-Report_API}
+
 Valid values for \code{column}:
 \itemize{
 \item \code{impression}
