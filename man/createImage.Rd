@@ -12,10 +12,6 @@ createImage(file)
 \description{
 Upload an image
 }
-\details{
-The list of valid values for the body can be found 
-\href{here}{http://api.ori.cmcm.com/doc/#api-Campaign-create_campaign}
-}
 \examples{
 \dontrun{
 # authenticate

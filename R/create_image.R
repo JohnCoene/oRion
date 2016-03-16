@@ -14,9 +14,6 @@
 #' createImage(file = paste0(.libPaths(), "/png/img/Rlogo.png"))
 #' }
 #' 
-#' @details The list of valid values for the body can be found 
-#' \href{here}{http://api.ori.cmcm.com/doc/#api-Campaign-create_campaign}
-#' 
 #' @seealso \code{\link{orionOAuth}}
 #' 
 #' @author John Coene \email{john.coene@@cmcm.com}
