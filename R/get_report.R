@@ -16,7 +16,7 @@
 #' @param filter Defaults to \code{NULL}. Optional.
 #' 
 #' @details The official documentation can be found 
-#' \href{{http://api.ori.cmcm.com/doc/#api-Report-Report_API}here}
+#' \href{http://api.ori.cmcm.com/doc/#api-Report-Report_API}{here}.
 #' 
 #' Valid values for \code{column}:
 #' \itemize{
