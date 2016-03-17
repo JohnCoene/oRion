@@ -10,7 +10,15 @@
 #'            
 #' # dict behaviours
 #' (behaviours <- dictBehaviour())
+#' 
+#' # create target audience template 
+#' createAudience(body = list(
+#'                audience_template_name = "target game addicts",
+#'                behavior = behaviours$code[1]
+#'                ))
 #' }
+#' 
+#' @seealso \code{\link{orionOAuth}}, \code{\link{createAudience}}
 #' 
 #' @author John Coene \email{john.coene@@cmcm.com}
 #' 

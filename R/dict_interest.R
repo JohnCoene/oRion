@@ -9,7 +9,16 @@
 #'            client.secret = "0x00000000x00x0x000xxx0000x0xx0")
 #'            
 #' # dict interests
-#' head(dictInterest())
+#' head(int <- dictInterest())
+#' 
+#' # filter transportation-related interests
+#' trans <- int[grep("Transportation", int$value),]
+#' 
+#' # create target audience template 
+#' createAudience(body = list(
+#'                audience_template_name = "target specific interests",
+#'                interest = trans$pid[1]
+#'                ))
 #' }
 #' 
 #' @author John Coene \email{john.coene@@cmcm.com}

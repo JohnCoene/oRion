@@ -27,6 +27,16 @@ states <- dictState(country.code = sample(country$code, 1))
 
 # dict US states
 us <- dictState(country.code = "US")
+
+# filter states starting with A (because why not?)
+a_states <- us[grep("^A", us$value),]
+
+# create audience
+createAudience(body = list(
+               audience_template_name = "A-states",
+               country = "US",
+               region = paste0(a_states$code, collapse="|")
+))
 }
 
 }
