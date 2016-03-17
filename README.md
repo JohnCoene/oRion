@@ -35,8 +35,8 @@ See [download section](https://bitbucket.org/JohnCheetah/orion/downloads/oRion.p
 * `showObject`
 * `showAd`
 * `showAdset`
-* `showAdsetAudience`
 * `showCampaign`
+* `showAdsetAudience`
 
 ##### Dict family #####
 
