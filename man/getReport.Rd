@@ -2,7 +2,7 @@
 % Please edit documentation in R/get_report.R
 \name{getReport}
 \alias{getReport}
-\title{GET data}
+\title{Get data}
 \usage{
 getReport(column = c("impression", "click"), group.by = c("datetime",
   "campaign"), action = "advertiser", filter = NULL, start,
