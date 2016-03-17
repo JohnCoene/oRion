@@ -71,7 +71,8 @@ updateObject <- function(object, body, id){
   
   testReturn(content)
     
-  result <- as.data.frame(t(do.call("rbind", content$data)))
+  result <- as.data.frame(t(do.call("rbind", content$data)), 
+                          stringsAsFactors = FALSE)
   
   message("update successful")
   

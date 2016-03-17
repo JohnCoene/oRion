@@ -71,7 +71,7 @@ showObject <- function(object, id){
   
   testReturn(content)
     
-  result <- as.data.frame(t(unlist(content$data)))
+  result <- as.data.frame(t(unlist(content$data)), stringsAsFactors = FALSE)
   
   return(result)
   
