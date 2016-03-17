@@ -60,7 +60,7 @@ settings
 orionOAuth(client.id = 0000,
            client.secret = "0x00000000x00x0x000xxx0000x0xx0")
            
-# set campaign
+# settings with helpers
 settings  <- list(name = "test",
                   budget_type = budgetType("daily"),
                   budget_daily = "1000", 
@@ -70,9 +70,20 @@ settings  <- list(name = "test",
                   web_type = webType("ecommerce"), 
                   landing_page = landingPage("googlePlay"))
                   
-# create campaing
-createCampaign(body = settings)
+# settings WITHOUT helpers
+nohelpers  <- list(name = "test",
+                   budget_type = "daily",
+                   budget_daily = "1000", 
+                   pkg_name = "test",
+                   objective = 1, 
+                   app_type = 1,
+                   web_type = 2, 
+                   landing_page = 1)
 
+identical(settings, nohelpers)  
+                 
+# create campaign
+createCampaign(body = settings)
 }
 
 }
