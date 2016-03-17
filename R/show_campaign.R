@@ -1,6 +1,6 @@
 #' Show a campaign settings
 #' 
-#' @description Retrieve settings of a specfic campaign
+#' @description Retrieve settings of a specfic campaign. 
 #' 
 #' @param campaign.id id of campaign to retrieve
 #' 

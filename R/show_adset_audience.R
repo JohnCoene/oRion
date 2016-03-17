@@ -1,4 +1,4 @@
-#' Show adset audience targeting template
+#' Show an adset audience targeting template
 #' 
 #' @description Retrieve the audience templates under a specific adset.
 #' 

@@ -41,8 +41,8 @@
 #' family functions. See examples.
 #' 
 #' @seealso \code{\link{orionOAuth}}, \code{\link{updateAudience}}, 
-#' \code{\link{updateCampaign}}, \code{\link{updateAdset}} and 
-#' \code{\link{updateAd}}
+#' \code{\link{updateCampaign}}, \code{\link{updateAdset}}, 
+#' \code{\link{updateAd}} and \code{\link{helpers}}
 #' 
 #' @author John Coene \email{john.coene@@cmcm.com}
 #' 

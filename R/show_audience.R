@@ -1,6 +1,6 @@
 #' Show an audience targeting template
 #' 
-#' @description Retrieve settings of a specfic audience targeting template
+#' @description Retrieve settings of a specfic audience targeting template. 
 #' 
 #' @param audience.id id of audience template to retrieve
 #' 

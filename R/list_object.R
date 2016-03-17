@@ -8,11 +8,11 @@
 #' 
 #' @details Valid values for \code{objects}:
 #' \itemize{
-#' \item \code{image}, see \code{\link{listImages}}
-#' \item \code{audience}, see \code{\link{listAudiences}}
-#' \item \code{campaign}, see \code{\link{listCampaigns}}
-#' \item \code{adset}, see \code{\link{listAdsets}}
-#' \item \code{ad}, see \code{\link{listAds}}
+#' \item \code{image}, see \code{\link{listImages}} for details.
+#' \item \code{audience}, see \code{\link{listAudiences}} for details.
+#' \item \code{campaign}, see \code{\link{listCampaigns}} for details.
+#' \item \code{adset}, see \code{\link{listAdsets}} for details.
+#' \item \code{ad}, see \code{\link{listAds}} for details.
 #' }
 #' 
 #' @details \code{listObject} can essentially replace any other \code{list} 

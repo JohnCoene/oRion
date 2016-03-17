@@ -39,7 +39,8 @@
 #' i.e.: \code{US|ID|CN}, typically returned by \code{\link{dictCountry}}
 #' \item \code{language} Audience language code, i.e.: \code{en}, 
 #' typically returned by \code{\link{dictLanguage}}
-#' \item \code{gender} \code{0}: All, \code{1}: Male, \code{2} Female
+#' \item \code{gender} Use \code{\link{gender}} to generate otherwise, 
+#' \code{0}: All, \code{1}: Male, \code{2} Female
 #' \item \code{age} Audience age. Use \code{\link{age}} to generate otherwise, 
 #' \code{1}: 18-24, \code{2}: 25-30, \code{3}: 32-40, \code{4}: 41+.
 #' \item \code{interest} Audience interest. Reach users based on their specific 
@@ -57,7 +58,10 @@
 #' condition meets.
 #' }
 #' 
-#' @seealso \code{\link{orionOAuth}}
+#' @seealso \code{\link{orionOAuth}}, \code{\link{helpers}}, 
+#' \code{\link{dictCountry}}, \code{\link{dictLanguage}}, 
+#' \code{\link{dictInterest}}, \code{\link{dictBehaviour}}, 
+#' \code{\link{dictDevice}}, \code{\link{dictOS}}
 #' 
 #' @author John Coene \email{john.coene@@cmcm.com}
 #' 

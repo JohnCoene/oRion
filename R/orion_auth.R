@@ -1,6 +1,6 @@
 #' orionAuthenticate
 #' 
-#' @description Authenticate the Orion API
+#' @description Authenticate the Orion API.
 #' 
 #' @param client.id Your \code{client_id}
 #' @param client.secret Your \code{client_secret}

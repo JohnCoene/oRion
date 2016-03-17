@@ -34,7 +34,7 @@
 #' deleteObject(object = "ad", id = sample(ads$id, 1))
 #' 
 #' # the above is equivalent to
-#' # deleteCampaign(campaign.id = sample(ads$id, 1))
+#' # deleteAd(ad.id = sample(ads$id, 1))
 #' }
 #' 
 #' @seealso \code{\link{orionOAuth}}, \code{\link{deleteAudience}}, 

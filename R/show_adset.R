@@ -1,6 +1,6 @@
 #' Show an adset settings
 #' 
-#' @description Retrieve settings of a specfic adset
+#' @description Retrieve settings of a specfic adset. 
 #' 
 #' @param adset.id id of adset to retrieve
 #' 

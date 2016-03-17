@@ -46,7 +46,7 @@
 #' \code{2}: Website
 #' }
 #' 
-#' @seealso \code{\link{orionOAuth}}
+#' @seealso \code{\link{orionOAuth}}, \code{\link{helpers}}
 #' 
 #' @author John Coene \email{john.coene@@cmcm.com}
 #' 

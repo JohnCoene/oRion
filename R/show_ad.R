@@ -1,6 +1,6 @@
 #' Show an ad settings
 #' 
-#' @description Retrieve settings of a specfic ad
+#' @description Retrieve settings of a specfic ad. 
 #' 
 #' @param ad.id id of ad to retrieve
 #' 

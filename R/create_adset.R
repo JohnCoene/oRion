@@ -108,7 +108,8 @@
 #' condition meets.
 #' }
 #' 
-#' @seealso \code{\link{orionOAuth}}, \code{\link{createCampaign}}
+#' @seealso \code{\link{orionOAuth}}, \code{\link{createCampaign}}, 
+#' \code{\link{helpers}}
 #' 
 #' @author John Coene \email{john.coene@@cmcm.com}
 #'
