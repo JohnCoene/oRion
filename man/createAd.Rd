@@ -30,7 +30,8 @@ Make sure to clearly explain what you are promoting.
 \item \code{image_url} Image url. Must be larger than 600*314 px and have an 
 aspect ratio of 1.9:1. Best is 1200*628 px, JPG or PNG format. File size 
 must not exceed 500KB. Image should come from Orion CDN server, please 
-upload image using \code{\link{createImage}}.
+upload image using \code{\link{createImage}}, see uploaded images with 
+\code{\link{listImages}}.
 \item \code{video_url} URL to video
 \item \code{video_img_before_url} Image which will be show before video 
 starts.
