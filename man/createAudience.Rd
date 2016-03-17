@@ -39,7 +39,8 @@ other behaviors, typically returned by \code{\link{dictBehaviour}}
 unrestricted, typically returned by \code{\link{dictOS}}
 \item \code{max_device_os} Max OS version of audience used, blank for 
 unrestricted, typically returned by \code{\link{dictOS}}
-\item \code{net_type} \code{0}: All, \code{1}: Wifi, \code{2}: 2G/3G/4G
+\item \code{net_type} Use \code{\link{netType}} to generate otherwise, 
+\code{0}: All, \code{1}: Wifi, \code{2}: 2G/3G/4G
 \item \code{dsp_url} Bid request url of DSP when this pre-targeting 
 condition meets.
 }
