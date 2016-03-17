@@ -41,7 +41,7 @@ test_that("other", {
   
   expect_equal(nrow(dictLanguage()), 178)
   
-  expect_equal(nrow(dictOS()), 14)
+  expect_more_than(nrow(dictOS()), 13)
   
   expect_equal(nrow(dictInterest()), 180)
   
