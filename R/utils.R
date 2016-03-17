@@ -81,13 +81,6 @@ checkObjects <- function(objects){
   
 }
 
-encodeBody <- function(body){
-  
-  body <- jsonlite::toJSON(auto_unbox = TRUE, x = body)
-  
-  return(body)
-}
-
 parseJSON <- function(data){
   
   data <- as.data.frame(t(unlist(data)), stringsAsFactors = FALSE)
