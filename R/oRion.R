@@ -21,6 +21,7 @@
 #' \itemize{
 #' \item \code{\link{showAd}}
 #' \item \code{\link{showAdset}}
+#' \item \code{\link{showAdsetAudience}}
 #' \item \code{\link{showCampaign}}
 #' \item \code{\link{showObject}}
 #' }
