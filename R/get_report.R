@@ -1,4 +1,4 @@
-#' GET data
+#' Get data
 #' 
 #' @description Fetch data.
 #' 
