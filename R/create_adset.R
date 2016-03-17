@@ -74,7 +74,8 @@
 #' \item \code{ad_scheduling} Your ad set will either run continuously within 
 #' some days or within some hours range you select. (\code{JSON}) 
 #' i.e.: \code{{1:[1,2],7:[1,2,23]}}
-#' \item \code{delivery_type} \code{0}: Standard delivery, 
+#' \item \code{delivery_type} Use \code{\link{deliveryType}} to generate otherwise, 
+#' \code{0}: Standard delivery, 
 #' \code{1}: Accelerated delivery. 
 #' Standard delivery is recommended and the preferred option for most 
 #' advertisers. Accelerated delivery can be useful for promoting time-sensitive 
@@ -91,7 +92,8 @@
 #' \code{\link{dictLanguage}}
 #' \item \code{gender} Use \code{\link{gender}} to generate otherwise, 
 #' \code{0}: All, \code{1}: Male, \code{2} Female
-#' \item \code{age} Audience age. \code{1}: 18-24, \code{2}: 25-30, 
+#' \item \code{age} Audience age. Use \code{\link{age}} to generate otherwise, 
+#' \code{1}: 18-24, \code{2}: 25-30, 
 #' \code{3}: 32-40, \code{4}: 41+.
 #' \item \code{interest} Audience interest. Reach users based on their specific 
 #' interests. See \code{\link{dictInterest}}
