@@ -64,7 +64,8 @@ i.e.: \code{US|ID|CN}. See \code{\link{dictCountry}}
 \code{\link{dictLanguage}}
 \item \code{gender} Use \code{\link{gender}} to generate otherwise, 
 \code{0}: All, \code{1}: Male, \code{2} Female
-\item \code{age} Audience age. \code{1}: 18-24, \code{2}: 25-30, 
+\item \code{age} Use \code{\link{age}} to generate otherwise, 
+Audience age. \code{1}: 18-24, \code{2}: 25-30, 
 \code{3}: 32-40, \code{4}: 41+.
 \item \code{interest} Audience interest. Reach users based on their specific 
 interests. See \code{\link{dictInterest}}
@@ -105,6 +106,8 @@ John Coene \email{john.coene@cmcm.com}
 }
 \seealso{
 \code{\link{orionOAuth}}, \code{\link{listAdsets}}, 
-\code{\link{createAdset}}
+\code{\link{createAdset}}, \code{\link{helpers}}, \code{\link{dictCountry}}, 
+\code{\link{dictLanguage}}, \code{\link{dictInterest}}, 
+\code{\link{dictBehaviour}}, \code{\link{dictDevice}}, \code{\link{dictOS}}
 }
 

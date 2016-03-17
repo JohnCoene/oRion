@@ -10,7 +10,7 @@ showAdset(adset.id)
 \item{adset.id}{id of adset to retrieve}
 }
 \description{
-Retrieve settings of a specfic adset
+Retrieve settings of a specfic adset.
 }
 \examples{
 \dontrun{

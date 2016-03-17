@@ -2,7 +2,7 @@
 % Please edit documentation in R/show_adset_audience.R
 \name{showAdsetAudience}
 \alias{showAdsetAudience}
-\title{Show adset audience targeting template}
+\title{Show an adset audience targeting template}
 \usage{
 showAdsetAudience(adset.id)
 }

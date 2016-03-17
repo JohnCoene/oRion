@@ -10,7 +10,7 @@ showCampaign(campaign.id)
 \item{campaign.id}{id of campaign to retrieve}
 }
 \description{
-Retrieve settings of a specfic campaign
+Retrieve settings of a specfic campaign.
 }
 \examples{
 \dontrun{

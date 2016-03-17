@@ -64,6 +64,6 @@ John Coene \email{john.coene@cmcm.com}
 }
 \seealso{
 \code{\link{orionOAuth}}, \code{\link{listAds}}, 
-\code{\link{createAd}}
+\code{\link{createAd}}, \code{\link{helpers}}
 }
 

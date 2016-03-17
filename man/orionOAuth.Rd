@@ -19,7 +19,7 @@ orionOAuth(client.id, client.secret, grant.type = "client_credentials",
 default to \code{FALSE}}
 }
 \description{
-Authenticate the Orion API
+Authenticate the Orion API.
 }
 \details{
 Please see the 

@@ -28,7 +28,8 @@ to the people in those countries. Using '|' separated if more than one country.
 i.e.: \code{US|ID|CN}, typically returned by \code{\link{dictCountry}}
 \item \code{language} Audience language code, i.e.: \code{en}, 
 typically returned by \code{\link{dictLanguage}}
-\item \code{gender} \code{0}: All, \code{1}: Male, \code{2} Female
+\item \code{gender} Use \code{\link{gender}} to generate otherwise, 
+\code{0}: All, \code{1}: Male, \code{2} Female
 \item \code{age} Audience age. Use \code{\link{age}} to generate otherwise, 
 \code{1}: 18-24, \code{2}: 25-30, \code{3}: 32-40, \code{4}: 41+.
 \item \code{interest} Audience interest. Reach users based on their specific 
@@ -41,7 +42,8 @@ other behaviors, typically returned by \code{\link{dictBehaviour}}
 unrestricted, typically returned by \code{\link{dictOS}}
 \item \code{max_device_os} Max OS version of audience used, blank for 
 unrestricted, typically returned by \code{\link{dictOS}}
-\item \code{net_type} \code{0}: All, \code{1}: Wifi, \code{2}: 2G/3G/4G
+\item \code{net_type} Use \code{\link{netType}} to generate otherwise, 
+\code{0}: All, \code{1}: Wifi, \code{2}: 2G/3G/4G
 \item \code{dsp_url} Bid request url of DSP when this pre-targeting 
 condition meets.
 }
@@ -70,6 +72,6 @@ John Coene \email{john.coene@cmcm.com}
 }
 \seealso{
 \code{\link{orionOAuth}}, \code{\link{listAudiences}}, 
-\code{\link{createAudience}}
+\code{\link{createAudience}}, \code{\link{helpers}}
 }
 

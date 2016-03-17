@@ -24,7 +24,8 @@ Valid values for \code{object}:
 }
 
 \code{showObject} can essentially replace any other \code{show} 
-family functions. See examples.
+family functions a the execption of \code{\link{showAdsetAudience}}. 
+See examples.
 }
 \examples{
 \dontrun{

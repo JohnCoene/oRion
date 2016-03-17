@@ -52,6 +52,6 @@ John Coene \email{john.coene@cmcm.com}
 }
 \seealso{
 \code{\link{orionOAuth}}, \code{\link{listCampaigns}}, 
-\code{\link{createCampaign}}
+\code{\link{createCampaign}}, \code{\link{helpers}}
 }
 

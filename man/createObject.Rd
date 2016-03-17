@@ -57,7 +57,7 @@ John Coene \email{john.coene@cmcm.com}
 }
 \seealso{
 \code{\link{orionOAuth}}, \code{\link{createAudience}}, 
-\code{\link{createCampaign}}, \code{\link{createAdset}} and 
-\code{\link{createAd}}
+\code{\link{createCampaign}}, \code{\link{createAdset}}, 
+\code{\link{createAd}} and \code{\link{helpers}}
 }
 

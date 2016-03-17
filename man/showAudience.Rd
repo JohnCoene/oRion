@@ -10,7 +10,7 @@ showAudience(audience.id)
 \item{audience.id}{id of audience template to retrieve}
 }
 \description{
-Retrieve settings of a specfic audience targeting template
+Retrieve settings of a specfic audience targeting template.
 }
 \examples{
 \dontrun{

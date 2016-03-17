@@ -10,7 +10,7 @@ showAd(ad.id)
 \item{ad.id}{id of ad to retrieve}
 }
 \description{
-Retrieve settings of a specfic ad
+Retrieve settings of a specfic ad.
 }
 \examples{
 \dontrun{
