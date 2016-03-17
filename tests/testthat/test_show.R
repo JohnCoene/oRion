@@ -34,6 +34,10 @@ test_that("tests", {
   
   expect_equal(nrow(adset), 1)
   
+  aud <- showAdsetAudience(adset.id = sample(adsets$id, 1))
+  
+  expect_equal(nrow(aud), 1)
+  
   # campaign
   campaigns <- listCampaigns(n = 50)
   
