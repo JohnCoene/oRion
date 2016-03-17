@@ -19,7 +19,7 @@ orionOAuth(client.id = 0000,
            client.secret = "0x00000000x00x0x000xxx0000x0xx0")
            
 # list ads
-adudiences <- listAudiences(n = 100)
+audiences <- listAudiences(n = 100)
 
 # fetch random adset settings
 (audience <- showAudiences(audience.id = sample(audiences$id, 1)))
