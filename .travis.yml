@@ -1,9 +1,0 @@
-language: r
-
-r_packages:
-  - jsonlite
-  - httr
-  - plyr
-
-after_success:
-  - Rscript -e 'covr::codecov()'
