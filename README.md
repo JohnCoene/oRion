@@ -11,9 +11,9 @@ Visit the [documentation](http://api.ori.cmcm.com/doc/#api-Auth-access_token) to
 
 ```
 # Install
-devtools::install_bitbucket("JohnCheetah/orion", auth_user = "your_login", password = "your_password")
+devtools::install_bitbucket("JohnCheetah/orion")
 
-# Examples
+# Examples and documentation
 help("oRion")
 ```
 
@@ -100,4 +100,4 @@ See [download section](https://bitbucket.org/JohnCheetah/orion/downloads/oRion.p
 
 ### Contributors ###
 
-* John Coene <john.coene@cmcm.com>
+* Author and maintainer: John Coene <john.coene@cmcm.com>
