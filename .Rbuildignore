@@ -2,3 +2,4 @@
 ^\.Rproj\.user$
 appveyor.yml
 tests/testthat/.orionToken
+.orionToken
