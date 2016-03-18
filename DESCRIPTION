@@ -18,7 +18,8 @@ Depends:
 Imports:
     jsonlite,
     httr,
-    plyr
+    plyr,
+    methods
 URL: https://bitbucket.org/JohnCheetah/oRion
 BugReports: https://bitbucket.org/JohnCheetah/oRion/issues
 Suggests: testthat
