@@ -1,4 +1,4 @@
-
+#' @importFrom methods is
 # construct credentials
 constructCred <- function(json, pars) {
   
