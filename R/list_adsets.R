@@ -1,6 +1,6 @@
 #' List adsets
 #' 
-#' @description Fetch the list of adsets under the authenticated account.
+#' @description List of adsets under the authenticated account.
 #' 
 #' @param n Number of adsets to retrieve, defaults to \code{50}
 #' 

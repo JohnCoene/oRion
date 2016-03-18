@@ -1,6 +1,6 @@
 #' List audience targeting templates
 #' 
-#' @description Fetch the list of audience templates under the authenticated 
+#' @description List of audience templates under the authenticated 
 #' account.
 #' 
 #' @param n Number of audience templates to retrieve, defaults to \code{50}

@@ -1,6 +1,6 @@
 #' List ads
 #' 
-#' @description Fetch the list of ads under the authenticated account.
+#' @description List ads under the authenticated account.
 #' 
 #' @param n Number of ads to retrieve, defaults to \code{50}
 #' 

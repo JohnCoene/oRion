@@ -10,7 +10,7 @@ listAds(n = 50)
 \item{n}{Number of ads to retrieve, defaults to \code{50}}
 }
 \description{
-Fetch the list of ads under the authenticated account.
+List ads under the authenticated account.
 }
 \examples{
 \dontrun{

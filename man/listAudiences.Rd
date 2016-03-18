@@ -10,7 +10,7 @@ listAudiences(n = 50)
 \item{n}{Number of audience templates to retrieve, defaults to \code{50}}
 }
 \description{
-Fetch the list of audience templates under the authenticated 
+List of audience templates under the authenticated 
 account.
 }
 \examples{

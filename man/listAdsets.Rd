@@ -10,7 +10,7 @@ listAdsets(n = 50)
 \item{n}{Number of adsets to retrieve, defaults to \code{50}}
 }
 \description{
-Fetch the list of adsets under the authenticated account.
+List of adsets under the authenticated account.
 }
 \examples{
 \dontrun{
