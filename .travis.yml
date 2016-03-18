@@ -7,7 +7,7 @@ r_packages:
   
 addons:
   hosts:
-    - 10.60.81.188  alpha.api.ori.cmcm.com
+    - 10.60.81.188
 
 after_success:
   - Rscript -e 'covr::codecov()'
