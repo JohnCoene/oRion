@@ -11,23 +11,23 @@
 #' orionOAuth(client.id = 0000,
 #'            client.secret = "0x00000000x00x0x000xxx0000x0xx0")
 #'  
-#' # get list of campaigns
+#' # list of campaigns
 #' camps <- listCampaigns()
 #' 
-#' # get list of audience templates
+#' # list of audience templates
 #' audiences <- listAudiences()
 #'                                                 
 #' # create adset using random template, in random campaign
 #' createAdset(body = list(
 #'    name = "testAdset",
-#'    bid_type = appShowType("CPI"),
+#'    bid_type = bidType("cpi"),
 #'    unit_price = 1000,
 #'    budget_lifetime = 10000,
 #'    campaign_id = sample(camps$id, 1),
 #'    audience_create_way = 2,
 #'    app_show_type = appShowType("newsfeed"),
 #'    audience_template_id = sample(audiences$id, 1),
-#'    click_url = "http://app.myApp.io"))
+#'    click_url = "http://app.adjust.io"))
 #' }
 #' 
 #' @details Valid adset settings (\code{body}):

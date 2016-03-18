@@ -15,7 +15,7 @@
 #' camp <- list(name = "test",
 #'              budget_type = "daily",
 #'              budget_daily = "1000", 
-#'              pkg_name = "test",
+#'              pkg_name = "someting.test.com",
 #'              objective = objective("installs"), 
 #'              app_type = "2",
 #'              web_type = "1", 
