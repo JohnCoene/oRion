@@ -13,6 +13,9 @@ build_script:
   
 hosts:
   alpha.api.ori.cmcm.com: 10.60.81.188
+
+test_script:
+  - travis-tool.sh run_tests
   
 after_test:
   - Rscript -e 'library(covr);codecov()'
