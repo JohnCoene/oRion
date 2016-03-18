@@ -1,4 +1,3 @@
-#' @export
 print.orionToken <- function(x, ...) {
   hidden <- attr(x, "hidden")
   
