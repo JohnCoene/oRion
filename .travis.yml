@@ -1,0 +1,13 @@
+language: r
+
+r_packages:
+  - reshape2
+  - dplyr
+  - covr
+  
+addons:
+  hosts:
+    - 10.60.81.188  alpha.api.ori.cmcm.com
+
+after_success:
+  - Rscript -e 'covr::codecov()'
