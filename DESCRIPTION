@@ -8,7 +8,8 @@ Authors@R: c(
     person("Cheetah Mobile", role = "cph")
     )
 Maintainer: John Coene <john.coene@cmcm.com>
-Description: Integrate R and Cheetah Mobile Orion platform. All API calls are implemented as individual functions.
+Description: Integrate R and Cheetah Mobile Orion platform.
+  All API calls are implemented as individual functions.
 License: MIT + file LICENSE
 LazyData: TRUE
 RoxygenNote: 5.0.1
