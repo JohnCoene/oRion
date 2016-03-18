@@ -9,11 +9,13 @@ install:
   
 build_script:
   - Rscript -e "source('https://bioconductor.org/biocLite.R')"
-  - Rscript -e 'library(covr);codecov()'
   - travis-tool.sh install_deps
   
 hosts:
   alpha.api.ori.cmcm.com: 10.60.81.188
+  
+after_test:
+  - Rscript -e 'library(covr);codecov()'
 
 on_failure:
   - 7z a failure.zip *.Rcheck\*
