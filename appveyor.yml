@@ -11,8 +11,8 @@ build_script:
   - Rscript -e "source('https://bioconductor.org/biocLite.R')"
   - travis-tool.sh install_deps
 
-test_script:
-  - travis-tool.sh run_tests
+# test_script:
+#   - travis-tool.sh run_tests
   
 after_test:
   - Rscript -e 'library(covr);codecov()'
