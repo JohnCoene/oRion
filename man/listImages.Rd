@@ -10,7 +10,7 @@ listImages(n = 50)
 \item{n}{Number of images to retrieve, defaults to \code{50}}
 }
 \description{
-Fetch the list of images under the authenticated account.
+List of images under the authenticated account.
 }
 \examples{
 \dontrun{

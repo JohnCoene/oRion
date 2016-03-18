@@ -1,6 +1,6 @@
 #' List images
 #' 
-#' @description Fetch the list of images under the authenticated account.
+#' @description List of images under the authenticated account.
 #' 
 #' @param n Number of images to retrieve, defaults to \code{50}
 #' 

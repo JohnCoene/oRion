@@ -1,6 +1,6 @@
 #' List campaigns
 #' 
-#' @description Fetch the list of campaigns under the authenticated account.
+#' @description List of campaigns under the authenticated account.
 #' 
 #' @param n Number of campaigns to retrieve, defaults to \code{50}
 #' 
@@ -10,7 +10,7 @@
 #' orionOAuth(client.id = 0000,
 #'            client.secret = "0x00000000x00x0x000xxx0000x0xx0")
 #'            
-#' (camps <- listCampaigns(n = 100))
+#' head(camps <- listCampaigns(n = 100))
 #' }
 #' 
 #' @seealso \code{\link{orionOAuth}}

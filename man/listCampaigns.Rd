@@ -10,7 +10,7 @@ listCampaigns(n = 50)
 \item{n}{Number of campaigns to retrieve, defaults to \code{50}}
 }
 \description{
-Fetch the list of campaigns under the authenticated account.
+List of campaigns under the authenticated account.
 }
 \examples{
 \dontrun{
@@ -18,7 +18,7 @@ Fetch the list of campaigns under the authenticated account.
 orionOAuth(client.id = 0000,
            client.secret = "0x00000000x00x0x000xxx0000x0xx0")
            
-(camps <- listCampaigns(n = 100))
+head(camps <- listCampaigns(n = 100))
 }
 
 }
