@@ -1,3 +1,5 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
 .orionToken
+.travis.yml
+appveyor.yml
