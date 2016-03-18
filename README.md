@@ -3,7 +3,7 @@
 # oRion #
 
 Interact with [Cheetah Mobile](https://www.cmcm.com/en-us/) Orion [platform](http://manager.ori.cmcm.com/) from your R console via its API: 
-[Rigel](api.ori.cmcm.com/doc/)
+[Rigel](api.ori.cmcm.com/doc/).
 
 ### Get Started ###
 
@@ -13,7 +13,7 @@ Visit the [documentation](http://api.ori.cmcm.com/doc/#api-Auth-access_token) to
 # Install
 devtools::install_bitbucket("JohnCheetah/orion")
 
-# Examples and documentation
+# Examples and functions
 help("oRion")
 ```
 
