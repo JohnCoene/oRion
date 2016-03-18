@@ -1,5 +1,7 @@
 ![Developped by Cheetah Mobile](https://upload.wikimedia.org/wikipedia/en/f/f9/Cheetah_Mobile_Logo.png)
 
+[![Build status](https://ci.appveyor.com/api/projects/status/wap3t6wx2n80ccwp?svg=true)](https://ci.appveyor.com/project/JohnCoene/orion)
+
 # oRion #
 
 Interact with [Cheetah Mobile](https://www.cmcm.com/en-us/) Orion [platform](http://manager.ori.cmcm.com/) from your R console via its API: 
