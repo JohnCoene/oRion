@@ -4,10 +4,6 @@ context("getReport")
 
 test_that("error", {
   
-  cred <- get(load("cred.RData"))
-  
-  orionOAuth(client.id = cred$id, client.secret = cred$secret)
-  
   expect_error(getReport())
   
   expect_error(getReport(column = c("impression"), 
@@ -24,10 +20,6 @@ test_that("error", {
 })
 
 test_that("documentation examples", {
-  
-  cred <- get(load("cred.RData"))
-  
-  orionOAuth(client.id = cred$id, client.secret = cred$secret)
   
   # get daily campaign impressions and conversions for the past 7 days
   dat <- getReport(column = c("impression", "conversion"), 

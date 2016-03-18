@@ -4,10 +4,6 @@ context("dict family")
 
 test_that("locations", {
   
-  cred <- get(load("cred.RData"))
-  
-  orionOAuth(client.id = cred$id, client.secret = cred$secret)
-  
   country <- dictCountry()
   
   expect_equal(nrow(country), 249)
@@ -30,10 +26,6 @@ test_that("locations", {
 })
 
 test_that("other", {
-  
-  cred <- get(load("cred.RData"))
-  
-  orionOAuth(client.id = cred$id, client.secret = cred$secret)
   
   expect_equal(nrow(dictBehaviour()), 11)
   

@@ -16,10 +16,6 @@ test_that("error", {
 
 test_that("tests", {
   
-  cred <- get(load("cred.RData"))
-  
-  orionOAuth(client.id = cred$id, client.secret = cred$secret)
-  
   # ads
   ads <- listAds(n = 50)
   
