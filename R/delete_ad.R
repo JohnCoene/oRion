@@ -10,11 +10,28 @@
 #' orionOAuth(client.id = 0000,
 #'            client.secret = "0x00000000x00x0x000xxx0000x0xx0")
 #'            
-#' # list ads
-#' ads <- listAds()
+#' # list adsets
+#' adsets <- listAdsets()
 #' 
-#' # delete random ad
-#' deleteAd(ad.id = sample(ads$id, 1))
+#' # list images
+#' images <- listImages()
+#' 
+#' # create an ad
+#' # define ad settings
+#' body <- list(
+#'    adset_id = adsets$id[1],
+#'    name = "My Ad",
+#'    icon_url = images$thumb[1],
+#'    title = "Ad Title",
+#'    desc = "Ad description",
+#'    button_text = buttonText("install"),
+#'    image_url = images$local_url[1])
+#'    
+#' # post ad
+#' ad <- createAd(body = body)
+#' 
+#' # delete the ad
+#' deleteAd(ad.id = ad$id)
 #' }
 #' 
 #' @seealso \code{\link{orionOAuth}}, \code{\link{createAd}}
