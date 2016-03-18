@@ -146,7 +146,7 @@ createAdset(body = list(
 adsets <- listAdsets()
 
 # upload image to use in ad
-createImage(file = "path_to_R_version/library/pn/img/Rlogo.png")
+createImage(file = paste0(.libPaths(), "/png/img/Rlogo.png"))
 
 # list images
 images <- listImages()
