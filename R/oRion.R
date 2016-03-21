@@ -166,6 +166,11 @@
 #' # show updated ad
 #' showAd(ad.id = ads$id[1])
 #' 
+#' # map ads
+#' map <- map(campaigns, adsets, ads, audiences)
+#' g <- igraph::graph.data.frame(network[,3:4], directed = TRUE)
+#' plot(g)
+#' 
 #' # get data
 #' # get daily campaign impressions and conversions for the past 7 days
 #' dat <- getReport(column = c("impression", "conversion"), 

@@ -32,6 +32,10 @@ See the downlaod section:
 
 * `orionOAuth`
 
+##### Map #####
+
+* `map`
+
 ##### GET family #####
 
 * `getReport`
