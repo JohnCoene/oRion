@@ -1,6 +1,7 @@
 #' Visualise your account
 #' 
-#' @description Return edge list of objects in your account
+#' @description Return edge list of objects in the authenticated user's account, 
+#' to help one visualise activities under the account.
 #' 
 #' @param campaigns Data frame of campaigns as returned by 
 #' \code{\link{listCampaigns}}

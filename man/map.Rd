@@ -20,7 +20,8 @@ map(campaigns, adsets, ads, audiences)
 \code{\link{listAudiences}}}
 }
 \description{
-Return edge list of objects in your account
+Return edge list of objects in the authenticated user's account, 
+to help one visualise activities under the account.
 }
 \details{
 Maps the network of object under the authenticated user, follows 
