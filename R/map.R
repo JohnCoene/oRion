@@ -86,16 +86,22 @@ map <- function(campaigns, adsets, ads, audiences){
   names(body) <- names(head)
   names(tail) <- names(head)
   
-  net <- rbind.data.frame(head, body, tail)
+  user <- data.frame(source = rep(unique(campaigns$user_id), 
+                                  length(unique(campaigns$id))),
+                     target = campaigns$id)
+  
+  net <- rbind.data.frame(head, body, tail, user)
   
   db <- data.frame(names = c(ads$name, adsets$name, campaigns$name, 
-                             audiences$audience_template_name),
+                             audiences$audience_template_name, 
+                             "user"),
                    id = c(ads$id, adsets$id, campaigns$id, 
-                          audiences$id), 
+                          audiences$id, unique(campaigns$user_id)), 
                    object = c(rep("ad", length(ads$id)),
                               rep("adsets", length(adsets$id)),
                               rep("campaigns", length(campaigns$id)),
-                              rep("audience", length(audiences$id))))
+                              rep("audience", length(audiences$id)),
+                              "user"))
   
   net <- merge(net, db, by.x = "target", by.y = "id")
   
