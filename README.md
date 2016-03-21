@@ -22,7 +22,10 @@ help("oRion")
 
 ### Documentation ###
 
-See [download section](https://bitbucket.org/JohnCheetah/orion/downloads/oRion.pdf) for the manual.
+See the downlaod section: 
+
+* [Manual](https://bitbucket.org/JohnCheetah/orion/downloads/oRion.pdf)
+* [Vignette](https://bitbucket.org/JohnCheetah/orion/downloads/vignette.html)
 
 ### functions ###
 
