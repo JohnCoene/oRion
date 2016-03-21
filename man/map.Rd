@@ -31,6 +31,7 @@ typical structure.
 \item{1}{Campaigns}
 \item{2}{Adsets}
 \item{3}{Ads}
+\item{3}{Audiences}
 }
 }
 \examples{
