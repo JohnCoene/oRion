@@ -1,7 +1,6 @@
 ![Developped by Cheetah Mobile](https://upload.wikimedia.org/wikipedia/en/f/f9/Cheetah_Mobile_Logo.png)
 
 [![Build status](https://ci.appveyor.com/api/projects/status/wap3t6wx2n80ccwp/branch/master?svg=true)](https://ci.appveyor.com/project/JohnCoene/orion/branch/master)
-[![codecov.io](https://codecov.io/bitbucket/JohnCheetah/orion/coverage.svg?branch=master)](https://codecov.io/bitbucket/JohnCheetah/orion?branch=master)
 
 # oRion #
 
