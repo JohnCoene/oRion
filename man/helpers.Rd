@@ -64,7 +64,7 @@ orionOAuth(client.id = 0000,
 settings  <- list(name = "test",
                   budget_type = budgetType("daily"),
                   budget_daily = "1000", 
-                  pkg_name = "test",
+                  pkg_name = "test.com",
                   objective = objective("installs"), 
                   app_type = appType("game"),
                   web_type = webType("ecommerce"), 
@@ -74,11 +74,11 @@ settings  <- list(name = "test",
 nohelpers  <- list(name = "test",
                    budget_type = "daily",
                    budget_daily = "1000", 
-                   pkg_name = "test",
-                   objective = 1, 
-                   app_type = 1,
-                   web_type = 2, 
-                   landing_page = 1)
+                   pkg_name = "test.com",
+                   objective = "1", 
+                   app_type = "1",
+                   web_type = "2", 
+                   landing_page = "1")
 
 identical(settings, nohelpers)  
                  
