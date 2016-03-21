@@ -2,3 +2,4 @@
 ^\.Rproj\.user$
 ^\.orionToken$
 ^appveyor\.yml$
+^\.travis\.yml$
