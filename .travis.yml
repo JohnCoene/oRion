@@ -1,18 +1,9 @@
 # Sample .travis.yml for R projects
 
 language: r
-
-warnings_are_errors: 1
-
+warnings_are_errors: true
 sudo: required
-
 r_packages:
   - covr
-  - jsonlite
-  - httr
-  - plyr
-  - methods
-
 after_success:
   - Rscript -e 'covr::codecov()'
-  - Rscript -e 'covr::coveralls()'
