@@ -183,16 +183,6 @@ plot(g)
 dat <- getReport(column = c("impression", "conversion"), 
                  group.by = c("datetime", "campaign"), 
                  start = Sys.Date() - 7)
-                  
-# get daily adset ratios for the past 30 days by age and gender
-dat <- getReport(column = c("ctr", "cpm", "cpc"), 
-                 group.by = c("datetime", "adset", "age", "gender"),
-                 start = Sys.Date() - 30)
-                 
-# get impressions and clicks for January 2016's ads
-dat <- getReport(column = c("impression", "click"), 
-                 group.by = c("datetime", "ad"), start = "2016-01-01",
-                 end = "2016-02-01")
 }
 
 }
