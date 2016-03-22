@@ -81,19 +81,14 @@ map <- function(campaigns, adsets, ads, audiences){
   }
   
   head <- ads[, c("id", "adset_id")]
-  
   body <- adsets[, c("audience_id", "id")]
-  
   tail <- ads[, c("adset_id", "campaign_id")]
-  
   names(head) <- c("source", "target")
   names(body) <- names(head)
   names(tail) <- names(head)
-  
   user <- data.frame(source = rep(unique(campaigns$user_id), 
                                   length(unique(campaigns$id))),
                      target = campaigns$id)
-  
   net <- rbind.data.frame(head, body, tail, user)
   
   db <- data.frame(names = c(ads$name, adsets$name, campaigns$name, 
