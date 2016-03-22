@@ -3,10 +3,10 @@ library(oRion)
 context("map")
 
 test_that("init", {
-  adsets <- listAdsets(n = 500)
-  ads <- listAds(n = 500)
-  campaigns <- listCampaigns(n = 500)
-  audiences <- listAudiences(n = 500)
+  adsets <- listAdsets(n = 100)
+  ads <- listAds(n = 100)
+  campaigns <- listCampaigns(n = 100)
+  audiences <- listAudiences(n = 100)
   
   map <- map(campaigns, adsets, ads, audiences)
   
