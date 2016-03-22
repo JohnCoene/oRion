@@ -5,7 +5,7 @@ cred_env <- new.env(hash=TRUE)
 }
 
 .onLoad <- function(libname = find.package("oRion"), pkgname = "oRion") {
-  options(base_url = "http://alpha.api.ori.cmcm.com",
+  options(base_url = "http://api.ori.cmcm.com",
           accept = "application/json,application/x.orion.v1+json")
 }
 
