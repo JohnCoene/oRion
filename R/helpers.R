@@ -228,7 +228,7 @@ switchIt <- function(x){
 
 #' @rdname helpers
 #' @export
-createAudience <- function(x){
+audienceCreation <- function(x){
   
   x <- tolower(x)
   

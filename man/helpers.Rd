@@ -4,10 +4,10 @@
 \alias{age}
 \alias{appShowType}
 \alias{appType}
+\alias{audienceCreation}
 \alias{bidType}
 \alias{budgetType}
 \alias{buttonText}
-\alias{createAudience}
 \alias{deliveryType}
 \alias{gender}
 \alias{helpers}
@@ -44,7 +44,7 @@ buttonText(x)
 
 switchIt(x)
 
-createAudience(x)
+audienceCreation(x)
 }
 \arguments{
 \item{x}{Setting to convert}

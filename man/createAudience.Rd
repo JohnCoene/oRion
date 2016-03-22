@@ -4,7 +4,7 @@
 \alias{createAudience}
 \title{Create an audience targeting template}
 \usage{
-createAudience(x)
+createAudience(body)
 }
 \arguments{
 \item{body}{body of request that includes audience targeting template 
