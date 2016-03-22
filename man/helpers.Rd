@@ -7,6 +7,7 @@
 \alias{bidType}
 \alias{budgetType}
 \alias{buttonText}
+\alias{createAudience}
 \alias{deliveryType}
 \alias{gender}
 \alias{helpers}
@@ -42,6 +43,8 @@ netType(x)
 buttonText(x)
 
 switchIt(x)
+
+createAudience(x)
 }
 \arguments{
 \item{x}{Setting to convert}

@@ -225,3 +225,17 @@ switchIt <- function(x){
   
   return(x)
 }
+
+#' @rdname helpers
+#' @export
+createAudience <- function(x){
+  
+  x <- tolower(x)
+  
+  valid <- structure(c("createnow", "usetemplate"), 
+                     names = c(0, 0, 2, 2))
+  
+  x <- setthat(x, valid)
+  
+  return(x)
+}
