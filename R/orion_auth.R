@@ -77,8 +77,8 @@ orionOAuth <- function (client.id, client.secret,
     
     credentials <- get("credentials", envir=cred_env)
     
-    credentials$client.id <- charToRaw(credentials$client.id)
-    credentials$client.secret <- charToRaw(credentials$client.secret)
+    credentials$client.id <- charToRaw(as.character(credentials$client.id))
+    credentials$client.secret <- charToRaw(as.character(credentials$client.secret))
     
     save(credentials, file = ".orionToken")
     
