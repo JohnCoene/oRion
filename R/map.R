@@ -1,7 +1,7 @@
 #' Visualise your account
 #' 
 #' @description Return edge list of objects in the authenticated user's account, 
-#' to help one visualise activities under the account.
+#' to help one visualise campaigns, adsets, ads and audience templates.
 #' 
 #' @param campaigns Data frame of campaigns as returned by 
 #' \code{\link{listCampaigns}}
@@ -13,14 +13,18 @@
 #' \code{\link{listAudiences}}
 #' 
 #' @details Maps the network of object under the authenticated user, follows 
-#' typical structure.
+#' the typical advertising structure.
 #' 
 #' \itemize{
-#' \item{1}{Campaigns}
-#' \item{2}{Adsets}
-#' \item{3}{Ads}
-#' \item{3}{Audiences}
+#' \item{1}{User}
+#' \item{2}{Campaigns}
+#' \item{3}{Adsets}
+#' \item{4}{Ads}
+#' \item{4}{Audiences}
 #' }
+#' 
+#' Under the uaudthenticated user are campaigns, under campaigns lie adsets to 
+#' which audience targeting templates and ads belong.
 #' 
 #' @examples 
 #' \dontrun{
