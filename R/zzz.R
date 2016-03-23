@@ -15,8 +15,6 @@ cred_env <- new.env(hash=TRUE)
     credentials$client.id <- rawToChar(credentials$client.id)
     credentials$client.secret <- rawToChar(credentials$client.secret)
     
-    message("loading credentials")
-    
     assign("credentials", credentials, envir = cred_env)
   }
 }
