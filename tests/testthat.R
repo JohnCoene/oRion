@@ -1,4 +1,6 @@
 library(testthat)
 library(oRion)
 
-test_check("oRion")
+if (!identical(get("credentials", envir=cred_env), "")) {
+  test_check("oRion")
+}
