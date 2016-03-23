@@ -4,6 +4,10 @@ context("show family")
 
 test_that("error", {
   
+  cred <- readRDS("cred.RDS")
+  
+  orionOAuth(client.id = cred$client.id, client.secret = cred$clien.secret)
+  
   expect_error(showAdset())
   
   expect_error(showCampaign())
@@ -15,6 +19,10 @@ test_that("error", {
 })
 
 test_that("tests", {
+  
+  cred <- readRDS("cred.RDS")
+  
+  orionOAuth(client.id = cred$client.id, client.secret = cred$clien.secret)
   
   # ads
   ads <- listAds(n = 50)
