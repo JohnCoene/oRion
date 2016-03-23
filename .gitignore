@@ -3,3 +3,4 @@
 .RData
 oRion.Rproj
 tests/testthat/cred.RDS
+.orionToken
