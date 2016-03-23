@@ -6,8 +6,8 @@ warnings_are_errors: true
 
 sudo: required
 
-before_install: openssl aes-256-cbc -K $encrypted_bc07143af10a_key -iv $encrypted_bc07143af10a_iv -in .orionToken.enc -out tests/testthat/.orionToken -d
-
+before_install: 
+  - openssl aes-256-cbc -K $encrypted_bc07143af10a_key -iv $encrypted_bc07143af10a_iv -in .orionToken.enc -out tests/testthat/.orionToken -d
 
 r_packages:
   - covr
