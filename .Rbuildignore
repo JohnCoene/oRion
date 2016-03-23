@@ -4,3 +4,4 @@
 ^appveyor\.yml$
 ^\.travis\.yml$
 ^cred\.RDS\.enc$
+^tests/testthat/cred\.RDS\.enc$
