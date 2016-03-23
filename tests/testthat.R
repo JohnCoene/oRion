@@ -1,6 +1,6 @@
 library(testthat)
 library(oRion)
 
-if (!identical(get("credentials", envir=cred_env), "")) {
+if (!file.exists(".orionToken")) {
   test_check("oRion")
 }
