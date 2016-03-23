@@ -71,7 +71,7 @@ orionOAuth <- function (client.id, client.secret,
   constructCred(return, pars = list(client.id = client.id, 
                                     client.secret = client.secret))
   
-  cat("authentication successful")
+  message("authentication successful")
   
   if(save == TRUE){
     
