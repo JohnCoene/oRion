@@ -86,5 +86,16 @@ getReport <- function(column = c("impression", "click"),
   
   dat <- do.call(plyr::"rbind.fill", lapply(content$data$data, parseJSON))
   
+  names(dat) <- content$data$title
+  
+  if(length(grep("^datetime$", names(dat)))){
+    
+    year <- substring(dat$datetime, 1, 4)
+    month <- substring(dat$datetime, 5, 6)
+    day <- substring(dat$datetime, 7, 9)
+    
+    dat$datetime <- as.Date(paste0(year, "-", month, "-", day))
+  }
+  
   return(dat)
 }
