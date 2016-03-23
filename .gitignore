@@ -2,3 +2,4 @@
 .Rhistory
 .RData
 oRion.Rproj
+tests/testthat/cred.RDS

@@ -3,5 +3,4 @@
 ^\.orionToken$
 ^appveyor\.yml$
 ^\.travis\.yml$
-^tests/testthat/\.orionToken$
-^\.orionToken\.enc$
+^cred\.RDS\.enc$
