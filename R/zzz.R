@@ -7,6 +7,18 @@ cred_env <- new.env(hash=TRUE)
 .onLoad <- function(libname = find.package("oRion"), pkgname = "oRion") {
   options(base_url = "http://api.ori.cmcm.com",
           accept = "application/json,application/x.orion.v1+json")
+  
+  if(file.exists(".orionToken")){
+    
+    credentials <- get(load(".orionToken"))
+    
+    credentials$client.id <- rawToChar(credentials$client.id)
+    credentials$client.secret <- rawToChar(credentials$client.secret)
+    
+    message("loading credentials")
+    
+    assign("credentials", credentials, envir = cred_env)
+  }
 }
 
 
