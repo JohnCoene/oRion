@@ -16,7 +16,7 @@ Visit the [documentation](http://api.ori.cmcm.com/doc/#api-Auth-access_token) to
 
 ```
 # Install
-devtools::install_bitbucket("JohnCheetah/orion")
+install.packages("oRion")
 
 # Examples and functions
 help("oRion")
