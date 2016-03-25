@@ -42,7 +42,7 @@ dictState <- function(country.code){
   uri <- paste0(getOption("base_url"), "/",
                 file.path("dict", "state", fsep = "/"),
                 "?location_code=", country.code)
-  response <- httr::GET(url = "?location_code=", country.code,
+  response <- httr::GET(url = uri,
                          httr::add_headers(Accept = getOption("accept"),
                                           Authorization = paste0("Bearer ",
                                                                  cred$token)))
