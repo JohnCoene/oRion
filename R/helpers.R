@@ -52,190 +52,132 @@ NULL
 #' @rdname helpers
 #' @export
 budgetType <- function(x){
-  
   x <- tolower(x)
-  
   valid <- structure(c("daily", "lifetime"), names = 1:2)
-  
   if(!x %in% valid){
     stop("x must be one of ", paste0(valid, collapse = ", "), call. = FALSE)
   }
-  
   return(x)
-  
 }
 
 #' @rdname helpers
 #' @export
 objective <- function(x){
-  
   x <- tolower(x)
-  
-  valid <- structure(c("installs", "traffic", "awareness", "reengagement", 
+  valid <- structure(c("installs", "traffic", "awareness", "reengagement",
                        "videoviews"), names = 1:5)
-  
   x <- setthat(x, valid)
-  
   return(x)
 }
 
 #' @rdname helpers
 #' @export
 appType <- function(x){
-  
   x <- tolower(x)
-  
   valid <- structure(c("game", "app"), names = 1:2)
-  
   x <- setthat(x, valid)
-  
   return(x)
 }
 
 #' @rdname helpers
 #' @export
 webType <- function(x){
-  
   x <- tolower(x)
-  
   valid <- structure(c("none", "ordinary", "ecommerce", "game"), names = 0:3)
-  
   x <- setthat(x, valid)
-  
   return(x)
 }
 
 #' @rdname helpers
 #' @export
 landingPage <- function(x){
-  
   x <- tolower(x)
-  
   valid <- structure(c("googleplay", "website"), names = 1:2)
-  
   x <- setthat(x, valid)
-  
   return(x)
 }
 
 #' @rdname helpers
 #' @export
 bidType <- function(x){
-  
   x <- tolower(x)
-  
   valid <- structure(c("cpi", "cpc", "cpm"), names = c(1, 3, 4))
-  
   x <- setthat(x, valid)
-  
   return(x)
-  
 }
 
 #' @rdname helpers
 #' @export
 appShowType <- function(x){
-  
   x <- tolower(x)
-  
-  valid <- structure(c("newsfeed", "mininewsfeed","videoad", "applockerad"), 
+  valid <- structure(c("newsfeed", "mininewsfeed","videoad", "applockerad"),
                      names = c(50000, 50001, 50003, 50008))
-  
   x <- setthat(x, valid)
-  
   return(x)
 }
 
 #' @rdname helpers
 #' @export
 deliveryType <- function(x){
-  
   x <- tolower(x)
-  
   valid <- structure(c("standard", "accelerated"), names = 0:1)
-  
   x <- setthat(x, valid)
-  
   return(x)
 }
 
 #' @rdname helpers
 #' @export
 gender <- function(x){
-  
   x <- tolower(x)
-  
   valid <- structure(c("all", "male", "female"), names = 0:2)
-  
   x <- setthat(x, valid)
-  
   return(x)
 }
 
 #' @rdname helpers
 #' @export
 age <- function(x){
-  
   x <- tolower(x)
-  
   valid <- structure(c("18-24", "25-30", "31-40", "40+"), names = 1:4)
-  
   x <- setthat(x, valid)
-  
   return(x)
 }
 
 #' @rdname helpers
 #' @export
 netType <- function(x){
-  
   x <- tolower(x)
-  
-  valid <- structure(c("all", "wifi", "2G", "3G", "4G", "2G/3G/4G"), 
+  valid <- structure(c("all", "wifi", "2G", "3G", "4G", "2G/3G/4G"),
                      names = c(0, 1, rep(2, 4)))
-  
   x <- setthat(x, valid)
-  
   return(x)
 }
 
 #' @rdname helpers
 #' @export
 buttonText <- function(x){
-  
   x <- tolower(x)
-  
-  valid <- structure(c("download", "install", "check", "free", "play", 
+  valid <- structure(c("download", "install", "check", "free", "play",
                        "buy", "more"), names = 1:7)
-  
   x <- setthat(x, valid)
-  
   return(x)
 }
 
 #' @rdname helpers
 #' @export
 switchIt <- function(x){
-  
   x <- tolower(x)
-  
   valid <- structure(c("on", "off"), names = c(1, 0))
-  
   x <- setthat(x, valid)
-  
   return(x)
 }
 
 #' @rdname helpers
 #' @export
 audienceCreation <- function(x){
-  
   x <- tolower(x)
-  
-  valid <- structure(c("createnow", "usetemplate"), 
+  valid <- structure(c("createnow", "usetemplate"),
                      names = c(0, 0, 2, 2))
-  
   x <- setthat(x, valid)
-  
   return(x)
 }

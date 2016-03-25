@@ -24,20 +24,14 @@
 #' 
 #' @export
 dictBehaviour <- function(){
-  
   cred <- orionToken()
-  
-  # GET
-  response <- httr::GET(url = paste0(getOption("base_url"), "/dict/behavior"),
+  uri <- paste0(getOption("base_url"), "/",
+                file.path("dict", "behavior", fsep="/"))
+  response <- httr::GET(url = uri,
                         httr::add_headers(Accept = getOption("accept"),
                                           Authorization = paste0("Bearer ",
                                                                  cred$token)))
-  
   content <- httr::content(response)
-
   dat <- do.call(plyr::"rbind.fill", lapply(content$data, parseJSON))
-  
-  # return
   return(dat)
-  
 }

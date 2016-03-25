@@ -49,35 +49,23 @@
 #' 
 #' @export
 createObject <- function(object, body){
-  
   if(missing(body)){
     stop("must pass body")
   }
-  
   if(class(body) != "list"){
     stop("body must be a list. see examples", call. = FALSE)
   }
-
   cred <- orionToken()
-  
   object <- checkObjects(object)
-  
   response <- httr::POST(paste0(getOption("base_url"), "/", object),
-                         encode = "multipart", body = body, 
+                         encode = "multipart", body = body,
                          httr::add_headers(Accept = getOption("accept"),
                                            Authorization = paste0("Bearer ",
                                                                   cred$token)))
-  
   content <- httr::content(response)
-  
   testReturn(content)
-    
-  result <- as.data.frame(t(do.call("rbind", content$data)), 
+  result <- as.data.frame(t(do.call("rbind", content$data)),
                           stringsAsFactors = FALSE)
-  
   message("object successfully created")
-  
   return(result)
-    
-  
 }

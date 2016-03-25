@@ -100,9 +100,6 @@
 #' 
 #' @export
 updateAdset <- function(adset.id, body){
-  
   res <- updateObject(object = "adset", body = body, id = adset.id)
-  
   return(res)
-  
 }

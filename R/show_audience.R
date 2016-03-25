@@ -23,9 +23,6 @@
 #' 
 #' @export
 showAudience <- function(audience.id){
-  
   res <- showObject(object = "audience", id = audience.id)
-  
   return(res)
-  
 }

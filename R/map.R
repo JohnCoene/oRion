@@ -63,54 +63,42 @@
 #' @export
 #' 
 map <- function(campaigns, adsets, ads, audiences){
-  
   if(missing(campaigns)){
     stop("missing campaigns data.frame")
   }
-  
   if(missing(adsets)){
     stop("missing adsets data.frame")
   }
-  
   if(missing(ads)){
     stop("missing ads data.frame")
   }
-  
   if(missing(audiences)){
     stop("missing audience data.frame")
   }
-  
   head <- ads[, c("id", "adset_id")]
   body <- adsets[, c("audience_id", "id")]
   tail <- ads[, c("adset_id", "campaign_id")]
   names(head) <- c("source", "target")
   names(body) <- names(head)
   names(tail) <- names(head)
-  user <- data.frame(source = rep(unique(campaigns$user_id), 
+  user <- data.frame(source = rep(unique(campaigns$user_id),
                                   length(unique(campaigns$id))),
                      target = campaigns$id)
   net <- rbind.data.frame(head, body, tail, user)
-  
-  db <- data.frame(names = c(ads$name, adsets$name, campaigns$name, 
-                             audiences$audience_template_name, 
+  db <- data.frame(names = c(ads$name, adsets$name, campaigns$name,
+                             audiences$audience_template_name,
                              "user"),
-                   id = c(ads$id, adsets$id, campaigns$id, 
-                          audiences$id, unique(campaigns$user_id)), 
+                   id = c(ads$id, adsets$id, campaigns$id,
+                          audiences$id, unique(campaigns$user_id)),
                    object = c(rep("ad", length(ads$id)),
                               rep("adsets", length(adsets$id)),
                               rep("campaigns", length(campaigns$id)),
                               rep("audience", length(audiences$id)),
                               "user"))
-  
   net <- merge(net, db, by.x = "target", by.y = "id")
-  
   net <- merge(net, db, by.x = "source", by.y = "id")
-  
   net <- net[, c(1, 2, 3, 5, 4, 6)]
-  
   names(net) <- c("source.id", "target.id", "source.name", "target.name",
                   "source.object", "target.object")
-  
   return(net)
-  
 }

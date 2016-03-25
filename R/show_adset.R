@@ -23,9 +23,6 @@
 #' 
 #' @export
 showAdset <- function(adset.id){
-  
   res <- showObject(object = "adset", id = adset.id)
-  
   return(res)
-  
 }

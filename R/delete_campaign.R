@@ -32,8 +32,6 @@
 #' 
 #' @export
 deleteCampaign <- function(campaign.id) {
-  
-  cred <- orionToken()
-  
   result <- deleteObject(object = "campaign", id = campaign.id)
+  return(result)
 }

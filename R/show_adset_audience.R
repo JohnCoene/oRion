@@ -25,28 +25,19 @@
 #' 
 #' @export
 showAdsetAudience <- function(adset.id){
-  
   if(missing(adset.id)){
     stop("must specify adset.id", call. = FALSE)
   }
-  
   cred <- orionToken()
-  
-  uri <- paste0(getOption("base_url"), "/adset/", adset.id, "/audience")
-  
+  uri <- paste0(getOption("base_url"), "/",
+                file.path("adset", adset.id, "audience", fsep = "/"))
   # GET
   response <- httr::GET(url = uri,
                         httr::add_headers(Accept = getOption("accept"),
                                           Authorization = paste0("Bearer ",
                                                                  cred$token)))
-  
   content <- httr::content(response)
-  
   testReturn(content)
-  
-  result <- as.data.frame(t(unlist(content$data)), 
-                          stringsAsFactors = FALSE)
-  
+  result <- as.data.frame(t(unlist(content$data)), stringsAsFactors = FALSE)
   return(result)
-  
 }

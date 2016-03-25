@@ -44,9 +44,6 @@
 #' 
 #' @export
 updateCampaign <- function(campaign.id, body){
-  
   res <- updateObject(object = "campaign", body = body, id = campaign.id)
-  
   return(res)
-  
 }

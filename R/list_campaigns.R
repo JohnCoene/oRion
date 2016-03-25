@@ -19,9 +19,6 @@
 #' 
 #' @export
 listCampaigns <- function(n = 50){
-  
   res <- listObjects(object = "campaign", n = n)
-  
-  # return
   return(res)
 }

@@ -17,7 +17,6 @@ test_that("errors", {
   expect_error(netType())
   expect_error(buttonText())
   expect_error(switchIt())
-  
   # wrong input
   expect_error(budgetType("error"))
   expect_error(objective("error"))

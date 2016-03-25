@@ -55,9 +55,6 @@
 #' 
 #' @export
 updateAd <- function(ad.id, body){
-  
   res <- updateObject(object = "ad", body = body, id = ad.id)
-  
   return(res)
-  
 }

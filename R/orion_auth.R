@@ -44,9 +44,8 @@
 #' @author John Coene \email{john.coene@@cmcm.com}
 #' 
 #' @export
-orionOAuth <- function (client.id, client.secret, 
+orionOAuth <- function (client.id, client.secret,
                         grant.type = "client_credentials", save = FALSE) {
-  
   # check required inputs
   if(missing(client.id)){
     stop("must specify client.id", call. = FALSE)
@@ -55,33 +54,22 @@ orionOAuth <- function (client.id, client.secret,
   } else if (grant.type != "client_credentials"){
     stop("currently grant.type only supports 'client_credentials'")
   }
-  
   # POST
-  response <- httr::POST(paste0(getOption("base_url"), "/oauth/access_token"),
-                         encode = "multipart",
+  uri <- paste0(getOption("base_url"), "/", file.path("oauth", "access_token"))
+  response <- httr::POST(uri, encode = "multipart",
                          body = list(grant_type = grant.type,
                                      client_id = client.id,
                                      client_secret = client.secret))
-  
   # parse
   return <- jsonlite::fromJSON(rawToChar(response$content))
-  
   testReturn(return)
-  
-  constructCred(return, pars = list(client.id = client.id, 
+  constructCred(return, pars = list(client.id = client.id,
                                     client.secret = client.secret))
-  
   message("authentication successful")
-  
   if(save == TRUE){
-    
     credentials <- get("credentials", envir=cred_env)
-    
     credentials$client.id <- charToRaw(as.character(credentials$client.id))
     credentials$client.secret <- charToRaw(as.character(credentials$client.secret))
-    
     save(credentials, file = ".orionToken")
-    
   }
-
 }

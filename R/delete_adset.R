@@ -38,8 +38,6 @@
 #' 
 #' @export
 deleteAdset <- function(adset.id) {
-  
-  cred <- orionToken()
-  
   result <- deleteObject(object = "adset", id = adset.id)
+  return(result)
 }

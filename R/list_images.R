@@ -19,9 +19,6 @@
 #' 
 #' @export
 listImages <- function(n = 50){
-  
   res <- listObjects(object = "image", n = n)
-  
-  # return
   return(res)
 }

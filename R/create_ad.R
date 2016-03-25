@@ -63,15 +63,9 @@
 #' 
 #' @export
 createAd <- function(body){
-  
   if(class(body) != "list"){
     stop("body must be a list. see examples", call. = FALSE)
   }
-  
-  cred <- orionToken()
-  
   result <- createObject(body = body, object = "ad")
-  
   return(result)
-  
 }

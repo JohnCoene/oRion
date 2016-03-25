@@ -20,15 +20,9 @@
 #' 
 #' @export
 createImage <- function(file){
-  
   body <- list(
     file = httr::upload_file(file)
   )
-  
-  cred <- orionToken()
-  
   result <- createObject(body = body, object = "image")
-  
   return(result)
-  
 }

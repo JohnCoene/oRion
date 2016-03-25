@@ -63,9 +63,6 @@
 #' 
 #' @export
 updateAudience <- function(audience.id, body){
-  
   res <- updateObject(object = "audience", body = body, id = audience.id)
-  
   return(res)
-  
 }

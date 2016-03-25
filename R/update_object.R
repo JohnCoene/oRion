@@ -48,34 +48,25 @@
 #' 
 #' @export
 updateObject <- function(object, body, id){
-  
   if(missing(body)){
     stop("must pass body")
   }
-  
   if(class(body) != "list"){
     stop("body must be a list. see examples", call. = FALSE)
   }
-  
   cred <- orionToken()
-  
   object <- checkObjects(object)
-  
-  response <- httr::POST(paste0(getOption("base_url"), "/", object, "/", id),
-                         encode = "multipart", body = body, 
+  # GET
+  uri <- paste0(getOption("base_url"), "/", file.path(object, id, fsep = "/"))
+  response <- httr::POST(uri,
+                         encode = "multipart", body = body,
                          httr::add_headers(Accept = getOption("accept"),
                                            Authorization = paste0("Bearer ",
                                                                   cred$token)))
-  
   content <- httr::content(response)
-  
   testReturn(content)
-    
-  result <- as.data.frame(t(do.call("rbind", content$data)), 
+  result <- as.data.frame(t(do.call("rbind", content$data)),
                           stringsAsFactors = FALSE)
-  
   message("update successful")
-  
   return(result)
-  
 }

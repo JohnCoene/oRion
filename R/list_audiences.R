@@ -20,9 +20,6 @@
 #' 
 #' @export
 listAudiences <- function(n = 50){
-  
   res <- listObjects(object = "audience", n = n)
-  
-  # return
   return(res)
 }

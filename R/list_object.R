@@ -42,56 +42,34 @@
 #' 
 #' @export
 listObjects <- function(object, n = 50){
-  
   obj_print <- object
-  
   if(missing(object)) {
     stop("missing object", call. = FALSE)
   } else if(length(object) > 1){
     stop("can only pass one object", call. = FALSE)
   }
-  
   cred <- orionToken()
-  
   object <- checkObjects(object)
-  
-  # GET
   response <- httr::GET(url = paste0(getOption("base_url"), "/", object),
                         httr::add_headers(Accept = getOption("accept"),
                                           Authorization = paste0("Bearer ",
                                                                  cred$token)))
-  
   content <- httr::content(response)
-  
   testReturn(content)
-  
   if(length(content$data)) {
-    
     dat <- do.call(plyr::"rbind.fill", lapply(content$data$data, parseJSON))
-    
     while(nrow(dat) < n && length(content$data$next_page_url)) {
-      
-      response <- httr::GET(url = content$data$next_page_url, 
+      bearer <- paste0("Bearer ", cred$token)
+      response <- httr::GET(url = content$data$next_page_url,
                             httr::add_headers(Accept = getOption("accept"),
-                                              Authorization = paste0("Bearer ",
-                                                                     cred$token)))
-      
+                                              Authorization = bearer))
       content <- httr::content(response)
-      
-      page_dat <- do.call(plyr::"rbind.fill", 
+      page_dat <- do.call(plyr::"rbind.fill",
                           lapply(content$data$data, parseJSON))
-      
       dat <- plyr::rbind.fill(dat, page_dat)
-      
     }
-    
-    # return
     return(dat)
-    
   } else {
-    
     warning("No ", obj_print, " found", call. = FALSE)
-    
   }
-  
 }

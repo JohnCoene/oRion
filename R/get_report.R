@@ -57,45 +57,33 @@
 #' @author John Coene \email{john.coene@@cmcm.com}
 #' 
 #' @export
-getReport <- function(column = c("impression", "click"), 
-                      group.by = c("datetime", "campaign"), action = "advertiser", 
-                      filter = NULL, start, end = Sys.Date()){
-  
+getReport <- function(column = c("impression", "click"),
+                      group.by = c("datetime", "campaign"),
+                      action = "advertiser", filter = NULL, start,
+                      end = Sys.Date()){
   cred <- orionToken()
-  
   body <- list(
     column = column,
     groupby = group.by,
     filter = filter,
     start = start,
-    end = end
-  )
-  
+    end = end)
   reportInput(body)
-  
-  # POST
-  response <- httr::POST(url = paste0(getOption("base_url"), "/report/", action),
+  uri <- paste0(getOption("base_url"), "/", "report", "/", action)
+  response <- httr::POST(url = uri,
                          encode = "json", body = body,
                          httr::add_headers(Accept = getOption("accept"),
                                            Authorization = paste0("Bearer ",
                                                                   cred$token)))
-  
   content <- httr::content(response)
-  
   testReturn(content)
-  
   dat <- do.call(plyr::"rbind.fill", lapply(content$data$data, parseJSON))
-  
   names(dat) <- content$data$title
-  
   if(length(grep("^datetime$", names(dat)))){
-    
     year <- substring(dat$datetime, 1, 4)
     month <- substring(dat$datetime, 5, 6)
     day <- substring(dat$datetime, 7, 9)
-    
     dat$datetime <- as.Date(paste0(year, "-", month, "-", day))
   }
-  
   return(dat)
 }

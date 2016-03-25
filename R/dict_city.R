@@ -22,27 +22,19 @@
 #' 
 #' @export
 dictCity <- function(state.code){
-  
   if(missing(state.code)){
     stop("must pass state.code see dictState")
   }
-  
   cred <- orionToken()
-  
-  # GET
-  response <- httr::GET(url = paste0(getOption("base_url"), "/dict/city",
-                                     "?state_code=", state.code),
+  uri <- paste0(getOption("base_url"), "/",
+                file.path("dict", "city", fsep = "/"),
+                "?state_code=", state.code)
+  response <- httr::GET(url = uri,
                         httr::add_headers(Accept = getOption("accept"),
                                           Authorization = paste0("Bearer ",
                                                                  cred$token)))
-  
   content <- httr::content(response)
-  
   testReturn(content)
-  
   dat <- do.call(plyr::"rbind.fill", lapply(content$data, parseJSON))
-  
-  # return
   return(dat)
-  
 }

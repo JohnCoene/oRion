@@ -45,32 +45,22 @@
 #' 
 #' @export
 deleteObject <- function(object, id) {
-  
   if(missing(id)){
     stop("must specify id", call. = FALSE)
   }
-  
   if(missing(object)){
     stop("must specify object see details", call. = FALSE)
   }
-  
   cred <- orionToken()
-  
   object <- checkObjects(object)
-  
   response <- httr::DELETE(paste0(getOption("base_url"), "/", object, "/", id),
-                         encode = "multipart", 
+                         encode = "multipart",
                          httr::add_headers(Accept = getOption("accept"),
                                            Authorization = paste0("Bearer ",
                                                                   cred$token)))
-  
   content <- httr::content(response)
-  
   testReturn(content)
-    
-  result <- as.data.frame(t(do.call("rbind", content$data)), 
+  result <- as.data.frame(t(do.call("rbind", content$data)),
                           stringsAsFactors = FALSE)
-  
   return(result)
-
 }
