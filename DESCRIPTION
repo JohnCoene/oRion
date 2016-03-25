@@ -22,4 +22,6 @@ Imports:
     methods
 URL: https://bitbucket.org/JohnCheetah/oRion
 BugReports: https://bitbucket.org/JohnCheetah/oRion/issues
-Suggests: testthat
+Suggests: 
+    testthat,
+    lintr
