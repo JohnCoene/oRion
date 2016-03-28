@@ -1,7 +1,15 @@
 cred_env <- new.env(hash=TRUE)
 
 .onAttach <- function(libname = find.package("oRion"), pkgname = "oRion") {
-  packageStartupMessage("help('oRion') for examples")
+  if(file.exists(".orionToken")){
+    credentials <- get(load(".orionToken"))
+    credentials$client.id <- rawToChar(credentials$client.id)
+    credentials$client.secret <- rawToChar(credentials$client.secret)
+    assign("credentials", credentials, envir = cred_env)
+    packageStartupMessage("credentials loaded")
+  } else {
+    packageStartupMessage("help('oRion') for examples")
+  }
 }
 
 .onLoad <- function(libname = find.package("oRion"), pkgname = "oRion") {
