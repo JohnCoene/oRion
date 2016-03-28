@@ -35,4 +35,6 @@ test_that("tests", {
   expect_equal(nrow(audience), 1)
   object <- showObject("audience", id)
   expect_identical(object, audience)
+  # object
+  expect_error(showObject(object = "error", id = sample(adsets$id, 1)))
 })
