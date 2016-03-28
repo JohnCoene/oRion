@@ -37,4 +37,5 @@ test_that("tests", {
   expect_identical(object, audience)
   # object
   expect_error(showObject(object = "error", id = sample(adsets$id, 1)))
+  expect_error(showObject(id = sample(adsets$id, 1)))
 })
