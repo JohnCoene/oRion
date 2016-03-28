@@ -2,6 +2,11 @@ library(oRion)
 
 context("dict family")
 
+test_that("errors", {
+  expect_error(dictCity())
+  expect_error(dictState())
+})
+
 test_that("locations", {
   cred <- readRDS("cred.RDS")
   orionOAuth(client.id = cred$client.id, client.secret = cred$clien.secret)
