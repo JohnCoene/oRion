@@ -68,6 +68,7 @@ listObjects <- function(object, n = 50){
                           lapply(content$data$data, parseJSON))
       dat <- plyr::rbind.fill(dat, page_dat)
     }
+    dat <- dat[!grepl("^ad_scheduling", names(dat))]
     return(dat)
   } else {
     warning("No ", obj_print, " found", call. = FALSE)
