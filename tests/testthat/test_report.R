@@ -15,6 +15,14 @@ test_that("error", {
   expect_error(getReport(column = c("impression"),
                          group.by = c("datetime"),
                          start = Sys.Date() - 7))
+  # wrong column
+  expect_error(getReport(column = c("error", "conversion"),
+                         group.by = c("datetime", "campaign"),
+                         start = Sys.Date() - 7))
+  # wrong group
+  expect_error(getReport(column = c("impression", "conversion"),
+                         group.by = c("error", "campaign"),
+                         start = Sys.Date() - 7))
 })
 
 test_that("documentation examples", {
