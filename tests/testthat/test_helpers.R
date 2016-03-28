@@ -33,6 +33,8 @@ test_that("errors", {
   expect_error(buttonText("error"))
   expect_error(switchIt("error"))
   expect_error(audienceCreation("error"))
+  # too many arguements
+  expect_error(buttonText(c("error1", "error2")))
 })
 
 test_that("outputs", {
