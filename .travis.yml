@@ -6,7 +6,8 @@ before_install:
   -in tests/testthat/cred.RDS.enc -out tests/testthat/cred.RDS -d
 r_packages:
 - covr
-- lintr
+r_github_packages:
+  - jimhester/lintr
 after_success:
 - Rscript -e 'covr::codecov()'
 - Rscript -e 'covr::coveralls()'
