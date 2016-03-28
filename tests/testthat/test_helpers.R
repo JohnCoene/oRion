@@ -17,6 +17,7 @@ test_that("errors", {
   expect_error(netType())
   expect_error(buttonText())
   expect_error(switchIt())
+  expect_error(audienceCreation())
   # wrong input
   expect_error(budgetType("error"))
   expect_error(objective("error"))
@@ -31,6 +32,7 @@ test_that("errors", {
   expect_error(netType("error"))
   expect_error(buttonText("error"))
   expect_error(switchIt("error"))
+  expect_error(audienceCreation("error"))
 })
 
 test_that("outputs", {
@@ -47,4 +49,5 @@ test_that("outputs", {
   expect_equal(netType("wifi"), "1")
   expect_equal(buttonText("install"), "2")
   expect_equal(switchIt("off"), "0")
+  expect_equal(audienceCreation("createnow"), "0")
 })
