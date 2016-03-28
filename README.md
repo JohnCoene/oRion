@@ -12,7 +12,7 @@ Interact with [Cheetah Mobile](https://www.cmcm.com/en-us/) Orion [platform](htt
 
 ### Get Started ###
 
-Visit the [documentation](http://api.ori.cmcm.com/doc/#api-Auth-access_token) to get access to the API.
+Visit the official [documentation](http://api.ori.cmcm.com/doc/#api-Auth-access_token) to get access to the API.
 
 ```
 # Install
@@ -23,8 +23,6 @@ help("oRion")
 ```
 
 ### Documentation ###
-
-See the downlaod section: 
 
 * [Manual](https://bitbucket.org/JohnCheetah/orion/downloads/oRion.pdf)
 * [Vignette](https://bitbucket.org/JohnCheetah/orion/downloads/vignette.html)
