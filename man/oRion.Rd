@@ -43,6 +43,16 @@ Create items
 \item \code{\link{createObject}}
 }
 
+\code{delete} family
+Create items
+\itemize{
+\item \code{\link{deleteAd}}
+\item \code{\link{deleteAdset}}
+\item \code{\link{deleteCampaign}}
+\item \code{\link{deleteAudience}}
+\item \code{\link{deleteObject}}
+}
+
 \code{dict} family
 Fetch dictionaries
 \itemize{

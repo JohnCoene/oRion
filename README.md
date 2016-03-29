@@ -82,7 +82,7 @@ help("oRion")
 * `deleteObject`
 * `deleteAd`
 * `deleteAdset`
-* `deleteAd`
+* `deleteAudience`
 * `deleteCampaign`
 
 ##### Update family #####
