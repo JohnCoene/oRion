@@ -24,8 +24,8 @@ help("oRion")
 
 ### Documentation ###
 
-* [Manual](https://bitbucket.org/JohnCheetah/orion/downloads/oRion.pdf)
-* [Vignette](https://bitbucket.org/JohnCheetah/orion/downloads/vignette.html)
+* [Manual](http://johncoene.github.io/projects/docs/oRion.pdf)
+* [Vignette](http://johncoene.github.io/projects/html/vignette.html)
 
 ### functions ###
 
