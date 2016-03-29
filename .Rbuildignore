@@ -5,3 +5,4 @@
 ^\.travis\.yml$
 ^cred\.RDS\.enc$
 ^tests/testthat/cred\.RDS\.enc$
+^cran-comments\.md$
