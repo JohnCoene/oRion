@@ -1,12 +1,11 @@
 Package: oRion
 Type: Package
-Title: Integration of R and Cheetah Mobile's Orion platform 
-Version: 0.1
-Date: 2016-03-02
+Title: Integrate R & Cheetah Mobile Orion
+Version: 0.0.1
+Date: 2016-03-29
 Authors@R: c(
     person("John", "Coene", , "john.coene@cmcm.com", role = c("aut", "cre")),
-    person("Cheetah Mobile", role = "cph")
-    )
+    person("Cheetah Mobile", role = "cph"))
 Maintainer: John Coene <john.coene@cmcm.com>
 Description: Integrate R and Cheetah Mobile Orion platform.
   All API calls are implemented as individual functions.
@@ -20,8 +19,8 @@ Imports:
     httr,
     plyr,
     methods
-URL: https://bitbucket.org/JohnCheetah/oRion
-BugReports: https://bitbucket.org/JohnCheetah/oRion/issues
+URL: https://github.com/JohnCoene/oRion
+BugReports: https://github.com/JohnCoene/oRion/issues
 Suggests: 
     testthat,
     lintr
