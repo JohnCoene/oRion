@@ -21,6 +21,6 @@ Imports:
     methods
 URL: https://github.com/JohnCoene/oRion
 BugReports: https://github.com/JohnCoene/oRion/issues
-Suggests: 
+Suggests:
     testthat,
     lintr
