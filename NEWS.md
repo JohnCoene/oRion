@@ -37,18 +37,18 @@
 * Update an ad; `updateAd`
 * Update an adset; `updateAdset`
 * Update an campaign; `updateCampaign`
-* `budgetType` (`helpers`)
-* `objective` (`helpers`)
-* `appType` (`helpers`)
-* `webType` (`helpers`)
-* `deliveryType` (`helpers`)
-* `landingPage` (`helpers`)
-* `bidType` (`helpers`)
-* `appShowType` (`helpers`)
-* `gender` (`helpers`)
-* `age` (`helpers`)
-* `netType` (`helpers`)
-* `buttonText` (`helpers`)
-* `switchIt` (`helpers`)
+* `budgetType` to set `budget_type` (use is optional see `?helpers`)
+* `objective` to set `objective` (use is optional see `?helpers`)
+* `appType` to set `app_type` (use is optional see `?helpers`)
+* `webType` to set `web_type` (use is optional see `?helpers`)
+* `deliveryType` to set `delivery_type` (use is optional see `?helpers`)
+* `landingPage` to set `landing_page` (use is optional see `?helpers`)
+* `bidType` to set `bid_type` (use is optional see `?helpers`)
+* `appShowType` to set `app_show_type` (use is optional see `?helpers`)
+* `gender` to define `gender` setting (use is optional see `?helpers`)
+* `age` to define `ge` setting (use is optional see `?helpers`)
+* `netType` to set `net_type` (use is optional see `?helpers`)
+* `buttonText` to set `button_text` (use is optional see `?helpers`)
+* `switchIt` to `switch` on or off (use is optional see `?helpers`)
 
 
