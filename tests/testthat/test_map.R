@@ -3,6 +3,7 @@ library(oRion)
 context("map")
 
 test_that("init", {
+  skip_on_cran()
   cred <- readRDS("cred.RDS")
   orionOAuth(client.id = cred$client.id, client.secret = cred$clien.secret)
   adsets <- listAdsets()

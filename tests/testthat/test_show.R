@@ -3,6 +3,7 @@ library(oRion)
 context("show family")
 
 test_that("error", {
+  skip_on_cran()
   cred <- readRDS("cred.RDS")
   orionOAuth(client.id = cred$client.id, client.secret = cred$clien.secret)
   expect_error(showAdset())
@@ -12,6 +13,7 @@ test_that("error", {
 })
 
 test_that("tests", {
+  skip_on_cran()
   cred <- readRDS("cred.RDS")
   orionOAuth(client.id = cred$client.id, client.secret = cred$clien.secret)
   # ads

@@ -3,11 +3,13 @@ library(oRion)
 context("dict family")
 
 test_that("errors", {
+  skip_on_cran()
   expect_error(dictCity())
   expect_error(dictState())
 })
 
 test_that("locations", {
+  skip_on_cran()
   cred <- readRDS("cred.RDS")
   orionOAuth(client.id = cred$client.id, client.secret = cred$clien.secret)
   country <- dictCountry()
@@ -23,6 +25,7 @@ test_that("locations", {
 })
 
 test_that("other", {
+  skip_on_cran()
   cred <- readRDS("cred.RDS")
   orionOAuth(client.id = cred$client.id, client.secret = cred$clien.secret)
   expect_equal(nrow(dictBehaviour()), 11)

@@ -3,6 +3,7 @@ library(oRion)
 context("getReport")
 
 test_that("error", {
+  skip_on_cran()
   expect_error(getReport())
   cred <- readRDS("cred.RDS")
   orionOAuth(client.id = cred$client.id, client.secret = cred$clien.secret)
@@ -26,6 +27,7 @@ test_that("error", {
 })
 
 test_that("documentation examples", {
+  skip_on_cran()
   cred <- readRDS("cred.RDS")
   orionOAuth(client.id = cred$client.id, client.secret = cred$clien.secret)
   # get daily campaign impressions and conversions for the past 7 days

@@ -3,6 +3,7 @@ library(oRion)
 context("lists")
 
 test_that("all", {
+  skip_on_cran()
   cred <- readRDS("cred.RDS")
   orionOAuth(client.id = cred$client.id, client.secret = cred$clien.secret)
   expect_less_than(nrow(listAds(n = 100)), 101)
