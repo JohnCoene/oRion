@@ -7,10 +7,9 @@
 
 0 errors | 0 warnings | 1 note
 
-* checking CRAN incoming feasibility ... NOTE
-  Raised by R-devel
-
 * This is a new release.
+* checking CRAN incoming feasibility ... NOTE
+  Possibly mis-spelled words in DESCRIPTION: API (11:7). Raised by R-devel (`devtools::build_win()`)
 
 ## Reverse dependencies
 
