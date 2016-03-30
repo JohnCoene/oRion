@@ -14,7 +14,7 @@ test_that("init", {
                              "target.name", "source.object", "target.object"))
   expect_error(map(adsets = adsets, ads = ads, audiences = audiences))
   expect_error(map(campaigns = campaigns, ads = ads, audiences = audiences))
-  expect_error(map(campaigns = campaigns, adsets = adsets, 
+  expect_error(map(campaigns = campaigns, adsets = adsets,
                    audiences = audiences))
   expect_error(map(campaigns = campaigns, adsets = adsets, ads = ads))
 })

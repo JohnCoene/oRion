@@ -9,7 +9,7 @@ test_that("error", {
   expect_error(getReport(column = c("impression"),
                          group.by = c("datetime", "campaign"),
                          start = Sys.Date() - 7))
-  expect_error(getReport(column = c("impression", "conversion"), 
+  expect_error(getReport(column = c("impression", "conversion"),
                          group.by = c("datetime"),
                          start = Sys.Date() - 7))
   expect_error(getReport(column = c("impression"),

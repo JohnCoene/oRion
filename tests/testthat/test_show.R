@@ -27,7 +27,7 @@ test_that("tests", {
   # campaign
   campaigns <- listCampaigns(n = 50)
   campaign <- showCampaign(campaign.id = sample(campaigns$id, 1))
-  expect_equal(nrow(campaign), 1)  
+  expect_equal(nrow(campaign), 1) 
   # audience
   audiences <- listAudiences()
   id <- sample(audiences$id, 1)
