@@ -26,7 +26,7 @@
 dictBehaviour <- function(){
   cred <- orionToken()
   uri <- paste0(getOption("base_url"), "/",
-                file.path("dict", "behavior", fsep="/"))
+                file.path("dict", "behavior", fsep = "/"))
   response <- httr::GET(url = uri,
                         httr::add_headers(Accept = getOption("accept"),
                                           Authorization = paste0("Bearer ",

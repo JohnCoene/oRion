@@ -16,7 +16,7 @@ constructCred <- function(json, pars) {
 
 testReturn <- function(content) {
   # check if success
-  if(content$status != 200 && content$status == 422){
+  if (content$status != 200 && content$status == 422){
     stop(paste(unlist(content$errors), collapse = "\n"), call. = FALSE)
   }  else if (content$status != 200 && content$status != 422) {
     msg <- paste0("API returned status ", content$status,
@@ -26,9 +26,9 @@ testReturn <- function(content) {
 }
 
 orionToken <- function() {
-  credentials <- tryCatch(get("credentials", envir=cred_env),
+  credentials <- tryCatch(get("credentials", envir = cred_env),
                           error = function(e) e)
-  if(is(credentials, "error") && file.exists(".orionToken")){
+  if (is(credentials, "error") && file.exists(".orionToken")){
     credentials <- get(load(".orionToken"))
     credentials$client.id <- rawToChar(credentials$client.id)
     credentials$client.secret <- rawToChar(credentials$client.secret)
@@ -36,7 +36,7 @@ orionToken <- function() {
   } else if (is(credentials, "error")){
     stop("No credentials see ?orionOAuth", call. = FALSE)
   }
-  if(credentials$expires_in_date <= Sys.time()) {
+  if (credentials$expires_in_date <= Sys.time()) {
     credentials <- orionOAuth(credentials$client.id,
                               credentials$client.secret)
   }
@@ -46,7 +46,7 @@ orionToken <- function() {
 checkObjects <- function(objects){
   valid <- c("campaign", "ad", "adset", "audience", "image")
   sapply(objects, function(x) {
-    if(x %in% valid == FALSE){
+    if (x %in% valid == FALSE){
       stop("invalid object", call. = FALSE)
     }
   })
@@ -63,33 +63,33 @@ parseJSON <- function(data){
 reportInput <- function(body){
   col <- c("impression", "click", "revenue", "conversion",
            "videoview", "cpc", "ctr", "cpm")
-  groups <- c("datetime", "age", "gender", "location","brand", "ad", "adset",
+  groups <- c("datetime", "age", "gender", "location", "brand", "ad", "adset",
              "campaign", "videotype")
   sapply(body$column, function(x){
-    if(!x %in% col) {
+    if (!x %in% col) {
       stop(paste0("invalid column. valid values are ",
                   paste0(col, collapse = ", ")), call. = FALSE)
     }
   })
   sapply(body$group.by, function(x){
-    if(!x %in% groups) {
+    if (!x %in% groups) {
       stop(paste0("invalid column. valid values are ",
                   paste0(groups, collapse = ", ")), call. = FALSE)
     }
   })
-  if(length(body$groupby) == 1) {
+  if (length(body$groupby) == 1) {
     stop("must specify at least 2 arguments for group.by", call. = FALSE)
   }
-  if(length(body$column) == 1) {
+  if (length(body$column) == 1) {
     stop("must specify at least 2 arguments for column", call. = FALSE)
   }
 }
 
 setthat <- function(x, valid){
-  if(length(x) > 1){
+  if (length(x) > 1){
     stop("setting must be of length 1", call. = FALSE)
   }
-  if(!x %in% valid){
+  if (!x %in% valid){
     stop("x must be one of ", paste0(valid, collapse = ", "), call. = FALSE)
   }else{
     x <- names(valid[valid %in% x])

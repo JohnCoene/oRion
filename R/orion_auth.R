@@ -47,7 +47,7 @@
 orionOAuth <- function (client.id, client.secret,
                         grant.type = "client_credentials", save = FALSE) {
   # check required inputs
-  if(missing(client.id)){
+  if (missing(client.id)){
     stop("must specify client.id", call. = FALSE)
   } else if (missing(client.secret)){
     stop("must specify client.secret", call. = FALSE)
@@ -66,8 +66,8 @@ orionOAuth <- function (client.id, client.secret,
   constructCred(return, pars = list(client.id = client.id,
                                     client.secret = client.secret))
   message("authentication successful")
-  if(save == TRUE){
-    credentials <- get("credentials", envir=cred_env)
+  if (save == TRUE){
+    credentials <- get("credentials", envir = cred_env)
     credentials$client.id <- charToRaw(as.character(credentials$client.id))
     credentials$client.secret <- charToRaw(as.character(credentials$client.secret))
     save(credentials, file = ".orionToken")

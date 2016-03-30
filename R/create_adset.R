@@ -117,7 +117,7 @@
 #'
 #' @export
 createAdset <- function(body){
-  if(class(body) != "list"){
+  if (class(body) != "list"){
     stop("body must be a list. see examples", call. = FALSE)
   }
   result <- createObject(body = body, object = "adset")

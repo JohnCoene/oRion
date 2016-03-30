@@ -63,16 +63,16 @@
 #' @export
 #' 
 map <- function(campaigns, adsets, ads, audiences){
-  if(missing(campaigns)){
+  if (missing(campaigns)){
     stop("missing campaigns data.frame")
   }
-  if(missing(adsets)){
+  if (missing(adsets)){
     stop("missing adsets data.frame")
   }
-  if(missing(ads)){
+  if (missing(ads)){
     stop("missing ads data.frame")
   }
-  if(missing(audiences)){
+  if (missing(audiences)){
     stop("missing audience data.frame")
   }
   head <- ads[, c("id", "adset_id")]

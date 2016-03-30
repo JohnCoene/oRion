@@ -35,7 +35,7 @@
 #' 
 #' @export
 dictState <- function(country.code){
-  if(missing(country.code)){
+  if (missing(country.code)){
     stop("must pass country.code see dictCountry")
   }
   cred <- orionToken()

@@ -49,10 +49,10 @@
 #' 
 #' @export
 createObject <- function(object, body){
-  if(missing(body)){
+  if (missing(body)){
     stop("must pass body")
   }
-  if(class(body) != "list"){
+  if (class(body) != "list"){
     stop("body must be a list. see examples", call. = FALSE)
   }
   cred <- orionToken()

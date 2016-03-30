@@ -25,7 +25,7 @@
 #' 
 #' @export
 showAdsetAudience <- function(adset.id){
-  if(missing(adset.id)){
+  if (missing(adset.id)){
     stop("must specify adset.id", call. = FALSE)
   }
   cred <- orionToken()

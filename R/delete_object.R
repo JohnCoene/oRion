@@ -45,10 +45,10 @@
 #' 
 #' @export
 deleteObject <- function(object, id) {
-  if(missing(id)){
+  if (missing(id)){
     stop("must specify id", call. = FALSE)
   }
-  if(missing(object)){
+  if (missing(object)){
     stop("must specify object see details", call. = FALSE)
   }
   cred <- orionToken()

@@ -22,7 +22,7 @@
 #' 
 #' @export
 dictCity <- function(state.code){
-  if(missing(state.code)){
+  if (missing(state.code)){
     stop("must pass state.code see dictState")
   }
   cred <- orionToken()

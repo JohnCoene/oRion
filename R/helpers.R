@@ -54,7 +54,7 @@ NULL
 budgetType <- function(x){
   x <- tolower(x)
   valid <- structure(c("daily", "lifetime"), names = 1:2)
-  if(!x %in% valid){
+  if (!x %in% valid){
     stop("x must be one of ", paste0(valid, collapse = ", "), call. = FALSE)
   }
   return(x)
@@ -110,7 +110,7 @@ bidType <- function(x){
 #' @export
 appShowType <- function(x){
   x <- tolower(x)
-  valid <- structure(c("newsfeed", "mininewsfeed","videoad", "applockerad"),
+  valid <- structure(c("newsfeed", "mininewsfeed", "videoad", "applockerad"),
                      names = c(50000, 50001, 50003, 50008))
   x <- setthat(x, valid)
   return(x)

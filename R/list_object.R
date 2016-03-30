@@ -43,9 +43,9 @@
 #' @export
 listObjects <- function(object, n = 50){
   obj_print <- object
-  if(missing(object)) {
+  if (missing(object)) {
     stop("missing object", call. = FALSE)
-  } else if(length(object) > 1){
+  } else if (length(object) > 1){
     stop("can only pass one object", call. = FALSE)
   }
   cred <- orionToken()
@@ -56,9 +56,9 @@ listObjects <- function(object, n = 50){
                                                                  cred$token)))
   content <- httr::content(response)
   testReturn(content)
-  if(length(content$data)) {
+  if (length(content$data)) {
     dat <- do.call(plyr::"rbind.fill", lapply(content$data$data, parseJSON))
-    while(nrow(dat) < n && length(content$data$next_page_url)) {
+    while (nrow(dat) < n && length(content$data$next_page_url)) {
       bearer <- paste0("Bearer ", cred$token)
       response <- httr::GET(url = content$data$next_page_url,
                             httr::add_headers(Accept = getOption("accept"),
