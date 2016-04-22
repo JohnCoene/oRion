@@ -59,7 +59,7 @@
 #' @seealso \code{\link{orionOAuth}}, \code{\link{listAudiences}}, 
 #' \code{\link{createAudience}}, \code{\link{helpers}}
 #' 
-#' @author John Coene \email{john.coene@@cmcm.com}
+#' @author John Coene \email{jcoenep@@gmail.com}
 #' 
 #' @export
 updateAudience <- function(audience.id, body){

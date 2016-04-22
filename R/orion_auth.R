@@ -41,7 +41,7 @@
 #' identical(camp_oauth, camp_noauth)
 #' }
 #' 
-#' @author John Coene \email{john.coene@@cmcm.com}
+#' @author John Coene \email{jcoenep@@gmail.com}
 #' 
 #' @export
 orionOAuth <- function (client.id, client.secret,

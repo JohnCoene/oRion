@@ -18,10 +18,10 @@ test_that("locations", {
   expect_equal(nrow(states), 54)
   set.seed(19880525)
   cities <- dictCity(state.code = sample(states$code, 1))
-  expect_equal(nrow(cities), 539)
+  expect_equal(nrow(cities), 541)
   set.seed(25051988)
   cities <- dictCity(state.code = sample(states$code, 1))
-  expect_equal(nrow(cities), 399)
+  expect_equal(nrow(cities), 405)
 })
 
 test_that("other", {

@@ -30,7 +30,7 @@ createAudience(body= list(
 
 }
 \author{
-John Coene \email{john.coene@cmcm.com}
+John Coene \email{jcoenep@gmail.com}
 }
 \seealso{
 \code{\link{orionOAuth}}, \code{\link{createAudience}}

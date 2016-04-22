@@ -24,7 +24,7 @@ orionOAuth(client.id = 0000,
 
 }
 \author{
-John Coene \email{john.coene@cmcm.com}
+John Coene \email{jcoenep@gmail.com}
 }
 \seealso{
 \code{\link{orionOAuth}}
