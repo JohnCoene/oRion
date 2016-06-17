@@ -110,4 +110,4 @@ help("oRion")
 
 ### Contributors ###
 
-* Author and maintainer: John Coene <jcoenep@gmail.com>
+* Author and maintainer: John Coene <jcoenep@cmcm.com>
