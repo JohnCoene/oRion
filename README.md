@@ -1,4 +1,4 @@
-![Developped by Cheetah Mobile](https://upload.wikimedia.org/wikipedia/en/thumb/f/f9/Cheetah_Mobile_Logo.png/250px-Cheetah_Mobile_Logo.png)
+![Developped by Cheetah Mobile](http://www.mobyaffiliates.com/wp-content/uploads/2015/10/12.png)
 
 [![Build status](https://ci.appveyor.com/api/projects/status/duk4v6xyx3sntq5w/branch/master?svg=true)](https://ci.appveyor.com/project/JohnCoene/orion-j5f71/branch/master)
 [![Travis-CI Build Status](https://travis-ci.org/JohnCoene/oRion.svg?branch=master)](https://travis-ci.org/JohnCoene/oRion)
