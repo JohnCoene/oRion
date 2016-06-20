@@ -41,7 +41,7 @@
 #' \code{\link{deleteCampaign}}, \code{\link{deleteAdset}} and 
 #' \code{\link{deleteAd}}
 #' 
-#' @author John Coene \email{jcoenep@@gmail.com}
+#' @author John Coene \email{john.coene@@cmcm.com}
 #' 
 #' @export
 deleteObject <- function(object, id) {

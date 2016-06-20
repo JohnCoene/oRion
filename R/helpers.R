@@ -44,7 +44,7 @@
 #' \code{\link{createAdset}}, \code{\link{createAd}} and 
 #' \code{\link{createAudience}}
 #' 
-#' @author John Coene \email{jcoenep@@gmail.com}
+#' @author John Coene \email{john.coene@@cmcm.com}
 #' 
 #' @name helpers
 NULL

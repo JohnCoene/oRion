@@ -45,7 +45,7 @@
 #' \code{\link{createCampaign}}, \code{\link{createAdset}}, 
 #' \code{\link{createAd}} and \code{\link{helpers}}
 #' 
-#' @author John Coene \email{jcoenep@@gmail.com}
+#' @author John Coene \email{john.coene@@cmcm.com}
 #' 
 #' @export
 createObject <- function(object, body){

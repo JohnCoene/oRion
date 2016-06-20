@@ -196,4 +196,8 @@ dat <- getReport(column = c("impression", "conversion"),
 }
 
 }
+\author{
+John Coene \email{john.coene@cmcm.com}
+}
+\keyword{internal}
 

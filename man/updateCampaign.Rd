@@ -48,7 +48,7 @@ showCampaign(campaign.id = camps$id[1])
 
 }
 \author{
-John Coene \email{jcoenep@gmail.com}
+John Coene \email{john.coene@cmcm.com}
 }
 \seealso{
 \code{\link{orionOAuth}}, \code{\link{listCampaigns}}, 

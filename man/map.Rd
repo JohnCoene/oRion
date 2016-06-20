@@ -68,7 +68,7 @@ networkD3::simpleNetwork(Data = network, Source = "source.name",
 
 }
 \author{
-John Coene \email{jcoenep@gmail.com}
+John Coene \email{john.coene@cmcm.com}
 }
 \seealso{
 \code{\link{orionOAuth}}, \code{\link{listAudiences}}, 

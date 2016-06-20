@@ -57,7 +57,7 @@ createCampaign(body = camp)
 
 }
 \author{
-John Coene \email{jcoenep@gmail.com}
+John Coene \email{john.coene@cmcm.com}
 }
 \seealso{
 \code{\link{orionOAuth}}, \code{\link{helpers}}

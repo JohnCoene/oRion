@@ -44,7 +44,7 @@
 #' \code{\link{updateCampaign}}, \code{\link{updateAdset}}, 
 #' \code{\link{updateAd}} and \code{\link{helpers}}
 #' 
-#' @author John Coene \email{jcoenep@@gmail.com}
+#' @author John Coene \email{john.coene@@cmcm.com}
 #' 
 #' @export
 updateObject <- function(object, body, id){

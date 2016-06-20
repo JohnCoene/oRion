@@ -18,7 +18,7 @@
 #' cities <- dictCity(state.code = sample(states$code, 1))
 #' }
 #' 
-#' @author John Coene \email{jcoenep@@gmail.com}
+#' @author John Coene \email{john.coene@@cmcm.com}
 #' 
 #' @export
 dictCity <- function(state.code){

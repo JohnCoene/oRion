@@ -16,7 +16,7 @@
 #' 
 #' @seealso \code{\link{orionOAuth}}
 #' 
-#' @author John Coene \email{jcoenep@@gmail.com}
+#' @author John Coene \email{john.coene@@cmcm.com}
 #' 
 #' @export
 listAudiences <- function(n = 50){

@@ -45,7 +45,7 @@
 #' \code{\link{showCampaign}}, \code{\link{showAdset}} and 
 #' \code{\link{showAd}}
 #' 
-#' @author John Coene \email{jcoenep@@gmail.com}
+#' @author John Coene \email{john.coene@@cmcm.com}
 #' 
 #' @export
 showObject <- function(object, id){

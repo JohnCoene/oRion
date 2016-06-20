@@ -188,6 +188,9 @@
 #'                  start = Sys.Date() - 7)
 #' }
 #' 
+#' @keywords internal
 #' @name oRion
 #' @docType package
+#' 
+#' @author John Coene \email{john.coene@@cmcm.com}
 NULL

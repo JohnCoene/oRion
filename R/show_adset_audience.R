@@ -21,7 +21,7 @@
 #' \code{\link{showAudience}}, \code{\link{listAdsets}}, 
 #' \code{\link{listAudiences}}
 #' 
-#' @author John Coene \email{jcoenep@@gmail.com}
+#' @author John Coene \email{john.coene@@cmcm.com}
 #' 
 #' @export
 showAdsetAudience <- function(adset.id){

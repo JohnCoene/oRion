@@ -36,7 +36,7 @@
 #' 
 #' @seealso \code{\link{orionOAuth}}, \code{\link{createAd}}
 #' 
-#' @author John Coene \email{jcoenep@@gmail.com}
+#' @author John Coene \email{john.coene@@cmcm.com}
 #' 
 #' @export
 deleteAd <- function(ad.id) {
