@@ -225,5 +225,4 @@ help("oRion")
 
 ### Contributors ###
 
-* Author and maintainer: John Coene <jcoenep@cmcm.com>
->>>>>>> 552e46c7104af4d37c3ce3fe69ec2c965afedbac
+* Author and maintainer: John Coene <john.coene@cmcm.com>
