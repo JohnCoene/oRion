@@ -1,9 +1,9 @@
-![Developped by Cheetah Mobile](https://upload.wikimedia.org/wikipedia/en/thumb/f/f9/Cheetah_Mobile_Logo.png/250px-Cheetah_Mobile_Logo.png)
-
 [![Build status](https://ci.appveyor.com/api/projects/status/duk4v6xyx3sntq5w/branch/master?svg=true)](https://ci.appveyor.com/project/JohnCoene/orion-j5f71/branch/master)
 [![Travis-CI Build Status](https://travis-ci.org/JohnCoene/oRion.svg?branch=master)](https://travis-ci.org/JohnCoene/oRion)
 [![Coverage Status](https://img.shields.io/codecov/c/github/JohnCoene/oRion/master.svg)](https://codecov.io/github/JohnCoene/oRion?branch=master)
 [![Coverage Status](https://img.shields.io/coveralls/JohnCoene/oRion.svg)](https://coveralls.io/r/JohnCoene/oRion?branch=master)
+
+![Developped by Cheetah Mobile](https://upload.wikimedia.org/wikipedia/en/thumb/f/f9/Cheetah_Mobile_Logo.png/250px-Cheetah_Mobile_Logo.png)
 
 # oRion #
 
