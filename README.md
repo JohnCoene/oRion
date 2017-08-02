@@ -24,8 +24,8 @@ help("oRion")
 
 ### Documentation ###
 
-* [Manual](http://johncoene.github.io/projects/docs/oRion.pdf)
-* [Vignette](http://johncoene.github.io/projects/html/vignette.html)
+* [Manual](http://john-coene.com/docs/orion.pdf)
+* [Vignette](http://john-coene.com/docs/oRion_vignette.html)
 
 ### functions ###
 
@@ -114,6 +114,7 @@ help("oRion")
 
 
 --------------------------
+
 ** DISCLAIMER **
 
 I do not take responsibility for any loss incur as a result of using the package.
