@@ -96,7 +96,7 @@
 #' \code{\link{dictLanguage}}, \code{\link{dictInterest}}, 
 #' \code{\link{dictBehaviour}}, \code{\link{dictDevice}}, \code{\link{dictOS}}
 #' 
-#' @author John Coene \email{john.coene@@cmcm.com}
+#' @author John Coene \email{jcoenep@@gmail.com}
 #' 
 #' @export
 updateAdset <- function(adset.id, body){

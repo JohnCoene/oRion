@@ -65,11 +65,10 @@ createAd(body = body)
 }
 
 }
-\author{
-John Coene \email{john.coene@cmcm.com}
-}
 \seealso{
 \code{\link{orionOAuth}}, \code{\link{createAdset}}, 
 \code{\link{createImage}}, \code{\link{helpers}}
 }
-
+\author{
+John Coene \email{jcoenep@gmail.com}
+}

@@ -45,12 +45,11 @@ identical(camps, obj)
 }
 
 }
-\author{
-John Coene \email{john.coene@cmcm.com}
-}
 \seealso{
 \code{\link{orionOAuth}}, \code{\link{listImages}}, 
 \code{\link{listAudiences}}, \code{\link{listCampaigns}}, 
 \code{\link{listAdsets}} and \code{\link{listAds}}
 }
-
+\author{
+John Coene \email{jcoenep@gmail.com}
+}

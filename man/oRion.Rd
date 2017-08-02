@@ -102,6 +102,7 @@ List items
 \item \code{\link{switchIt}}
 }
 }
+
 \examples{
 \dontrun{
 # authenticate
@@ -197,7 +198,6 @@ dat <- getReport(column = c("impression", "conversion"),
 
 }
 \author{
-John Coene \email{john.coene@cmcm.com}
+John Coene \email{jcoenep@gmail.com}
 }
 \keyword{internal}
-

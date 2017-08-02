@@ -102,13 +102,12 @@ showAdset(adset.id = adsets$id[1])
 }
 
 }
-\author{
-John Coene \email{john.coene@cmcm.com}
-}
 \seealso{
 \code{\link{orionOAuth}}, \code{\link{listAdsets}}, 
 \code{\link{createAdset}}, \code{\link{helpers}}, \code{\link{dictCountry}}, 
 \code{\link{dictLanguage}}, \code{\link{dictInterest}}, 
 \code{\link{dictBehaviour}}, \code{\link{dictDevice}}, \code{\link{dictOS}}
 }
-
+\author{
+John Coene \email{jcoenep@gmail.com}
+}

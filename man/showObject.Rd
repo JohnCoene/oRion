@@ -52,12 +52,11 @@ identical(campaign, campaign2)
 }
 
 }
-\author{
-John Coene \email{john.coene@cmcm.com}
-}
 \seealso{
 \code{\link{orionOAuth}}, \code{\link{showAudience}}, 
 \code{\link{showCampaign}}, \code{\link{showAdset}} and 
 \code{\link{showAd}}
 }
-
+\author{
+John Coene \email{jcoenep@gmail.com}
+}

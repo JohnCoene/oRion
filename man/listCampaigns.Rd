@@ -22,10 +22,9 @@ head(camps <- listCampaigns(n = 100))
 }
 
 }
-\author{
-John Coene \email{john.coene@cmcm.com}
-}
 \seealso{
 \code{\link{orionOAuth}}
 }
-
+\author{
+John Coene \email{jcoenep@gmail.com}
+}

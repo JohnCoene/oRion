@@ -110,4 +110,13 @@ help("oRion")
 
 ### Contributors ###
 
-* John Coene <john.coene@cmcm.com> (Author & maintainer)
+* John Coene <jcoenep@gmail.com> (Author)
+
+
+--------------------------
+** DISCLAIMER **
+
+I do not take responsibility for any loss incur as a result of using the package.
+
+--------------------------
+

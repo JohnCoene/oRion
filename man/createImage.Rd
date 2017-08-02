@@ -23,10 +23,9 @@ createImage(file = paste0(.libPaths(), "/png/img/Rlogo.png"))
 }
 
 }
-\author{
-John Coene \email{john.coene@cmcm.com}
-}
 \seealso{
 \code{\link{orionOAuth}}
 }
-
+\author{
+John Coene \email{jcoenep@gmail.com}
+}

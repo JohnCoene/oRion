@@ -30,6 +30,5 @@ createAudience(body = list(
 
 }
 \author{
-John Coene \email{john.coene@cmcm.com}
+John Coene \email{jcoenep@gmail.com}
 }
-

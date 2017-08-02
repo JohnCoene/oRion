@@ -35,10 +35,9 @@ deleteCampaign(campaign.id = campaign$id)
 }
 
 }
-\author{
-John Coene \email{john.coene@cmcm.com}
-}
 \seealso{
 \code{\link{orionOAuth}}, \code{\link{createCampaign}}
 }
-
+\author{
+John Coene \email{jcoenep@gmail.com}
+}

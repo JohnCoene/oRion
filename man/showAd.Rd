@@ -26,10 +26,9 @@ ads <- listAds(n = 100)
 }
 
 }
-\author{
-John Coene \email{john.coene@cmcm.com}
-}
 \seealso{
 \code{\link{orionOAuth}}, \code{\link{listAds}}
 }
-
+\author{
+John Coene \email{jcoenep@gmail.com}
+}

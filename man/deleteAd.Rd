@@ -43,10 +43,9 @@ deleteAd(ad.id = ad$id)
 }
 
 }
-\author{
-John Coene \email{john.coene@cmcm.com}
-}
 \seealso{
 \code{\link{orionOAuth}}, \code{\link{createAd}}
 }
-
+\author{
+John Coene \email{jcoenep@gmail.com}
+}

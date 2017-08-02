@@ -51,7 +51,7 @@
 #' @seealso \code{\link{orionOAuth}}, \code{\link{listAds}}, 
 #' \code{\link{createAd}}, \code{\link{helpers}}
 #' 
-#' @author John Coene \email{john.coene@@cmcm.com}
+#' @author John Coene \email{jcoenep@@gmail.com}
 #' 
 #' @export
 updateAd <- function(ad.id, body){

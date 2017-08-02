@@ -31,7 +31,7 @@
 #' ))
 #' }
 #' 
-#' @author John Coene \email{john.coene@@cmcm.com}
+#' @author John Coene \email{jcoenep@@gmail.com}
 #' 
 #' @export
 dictState <- function(country.code){

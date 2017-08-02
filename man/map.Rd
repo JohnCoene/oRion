@@ -67,12 +67,11 @@ networkD3::simpleNetwork(Data = network, Source = "source.name",
 }
 
 }
-\author{
-John Coene \email{john.coene@cmcm.com}
-}
 \seealso{
 \code{\link{orionOAuth}}, \code{\link{listAudiences}}, 
 \code{\link{listCampaigns}}, \code{\link{listAdsets}}, 
 \code{\link{listAds}}
 }
-
+\author{
+John Coene \email{jcoenep@gmail.com}
+}
