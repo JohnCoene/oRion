@@ -3,7 +3,7 @@
 [![Coverage Status](https://img.shields.io/codecov/c/github/JohnCoene/oRion/master.svg)](https://codecov.io/github/JohnCoene/oRion?branch=master)
 [![Coverage Status](https://img.shields.io/coveralls/JohnCoene/oRion.svg)](https://coveralls.io/r/JohnCoene/oRion?branch=master)
 
-![Developped by Cheetah Mobile](http://www.mobyaffiliates.com/wp-content/uploads/2015/10/12.png)
+![Developped by Cheetah Mobile](https://upload.wikimedia.org/wikipedia/commons/f/f9/Cheetah_Mobile_Logo.png)
 
 # oRion #
 
