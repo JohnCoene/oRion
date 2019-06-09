@@ -115,9 +115,9 @@ help("oRion")
 
 --------------------------
 
-** DISCLAIMER **
+**DISCLAIMER**
 
-I do not take responsibility for any loss incur as a result of using the package.
+I do not take responsibility for any loss incurred as a result of using the package.
 
 --------------------------
 
